@@ -50,25 +50,11 @@ Why would we ever write code to grab a single table? There's several reasons:
 So, to scrape, the first thing we need to do is start with the URL. Let's store it as an object called sboe_url.
 
 ```{r}
-sboe_url <- "https://elections.maryland.gov/elections/2022/primary_results/gen_detail_results_2022_1_1_Republican.html"
+sboe_url <- "https://app.high.powerbigov.us/view?r=eyJrIjoiZjk0MDE5MTYtNTgyYi00NDMyLWI0ODItNTJmN2Y3MjRlNmZhIiwidCI6IjU4ZjFlM2ZhLTU4Y2ItNGNiNi04OGNjLWM5MWNhYzIwN2YxOCJ9"
 ```
 
-When we go to the web page, we can see a nicely-designed page that contains our information.
-
-But what we really care about, for our purposes, is the html code that creates that page.
-
-In our web browser, if we right-click anywhere on the page and select "view source" from the popup menu, we can see the source code.  Or you can just copy this into Google Chrome: view-source:https://elections.maryland.gov/elections/2022/primary_results/gen_detail_results_2022_1_1_Republican.html.
-
-Here's a picture of what some of the source code looks like.
-
-```{r, echo=FALSE}
-knitr::include_graphics(rep("assets/images/rvest2.png"))
-```
 We'll use those HTML tags -- things like `<table>` and `<tr>` -- to grab the info we need.
 
-Okay, step 1.
-
-Let's write a bit of code to tell R to go to the URL for the page and ingest all of that HTML code. In the code below, we're starting with our URL and using the read_html() function from rvest to ingest all of the page html, storing it as an object called naics_industry.
 
 ```{r}
 # read in the html
@@ -79,6 +65,19 @@ results <- sboe_url %>%
 results
 
 ```
+```{r}
+
+# Read the HTML content of the webpage
+url <- "https://app.high.powerbigov.us/view?r=eyJrIjoiZjk0MDE5MTYtNTgyYi00NDMyLWI0ODItNTJmN2Y3MjRlNmZhIiwidCI6IjU4ZjFlM2ZhLTU4Y2ItNGNiNi04OGNjLWM5MWNhYzIwN2YxOCJ9"
+webpage <- read_html(url)
+
+# Use CSS selectors or XPath to locate the elements you want to scrape
+# You can inspect the webpage's HTML structure to determine the appropriate selectors or XPath
+
+# For example, to extract all the text from <p> tags:
+paragraphs <- webpage %>% html_nodes("p") %>% html_text()
+```
+
 
 If you're running this code in R Studio, in our environment window at right, you'll see results as a "list of 2".
 

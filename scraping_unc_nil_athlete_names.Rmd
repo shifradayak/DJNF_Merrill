@@ -13,13 +13,11 @@ knitr::opts_chunk$set(echo = TRUE)
 library(httr)
 library(rvest)
 library(dplyr)
+library(xml2)
 ```
 
 
 ```{r}
-
-library(rvest)
-library(xml2)
 
 # Load the HTML content from the website
 url <- "https://unc.nil.store/"

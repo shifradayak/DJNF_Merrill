@@ -10,21 +10,34 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## R Markdown
+
 ```{r}
 
 # Load necessary libraries
 library(rvest)
 library(dplyr)
 
+```
+
+```{r}
 # Define the URL
 url <- "https://unc.nil.store/collections/ty-adams-11"
+```
 
+```{r}
 # Read the HTML content from the URL
 webpage <- read_html(url)
+```
+
+```{r}
 
 # Extract product names and prices using CSS selectors
 product_elements <- webpage %>% html_nodes("div h3 a") %>% html_text(trim = TRUE)
 price_elements <- webpage %>% html_nodes("span.price-item.price-item--regular") %>% html_text(trim = TRUE)
+
+```
+
+```{r}
 
 # Combine the product names and prices into a data frame
 products <- data.frame("Product Name" = product_elements, "Price" = price_elements)

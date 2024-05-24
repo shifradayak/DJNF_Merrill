@@ -1,0 +1,69 @@
+---
+title: "Scraping NIL School Names"
+author: "Aidan Hughes"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r}
+
+# Load required libraries
+library(httr)
+library(rvest)
+library(dplyr)
+
+```
+
+```{r}
+# URL of the website to scrape
+url <- 'https://nil.store/'
+```
+
+```{r}
+# Fetch the webpage content
+response <- GET(url)
+html_content <- content(response, as = "text")
+```
+
+```{r}
+# Parse the HTML content using rvest
+soup <- read_html(html_content)
+```
+
+```{r}
+# Find the specific div containing the school names and URLs
+schools_nav <- html_node(soup, css = "div.mega_menu_main#schools-nav")
+```
+
+
+```{r}
+
+# Check if the element is found
+if (!is.null(schools_nav)) {
+  # Find all the list items within this div
+  school_list_items <- html_nodes(schools_nav, css = "li.only_link")
+  
+  # Extract the school names and URLs from the list items
+  schools <- lapply(school_list_items, function(item) {
+    link <- html_node(item, "a")
+    if (!is.null(link)) {
+      school_name <- html_text(link, trim = TRUE)
+      school_url <- html_attr(link, "href")
+      list(name = school_name, url = school_url)
+    }
+  })
+  
+  # Filter out NULL values
+  schools <- Filter(Negate(is.null), schools)
+  
+  # Create a data frame from the extracted data
+  df <- do.call(rbind, lapply(schools, as.data.frame))
+  
+  # Print the data frame
+  print(df)
+} else {
+  cat("The specified div element with class 'mega_menu_main' and id 'schools-nav' was not found.\n")
+}
+
+```
+

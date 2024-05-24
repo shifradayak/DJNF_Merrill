@@ -406,6 +406,10 @@ How to conduct filter queries from a dataset
 
 <br>
 
+#### Next Steps
+
+Try [Basic Data Visualization in R] (https://wellsdata.github.io/DJNF_Merrill/Intro_to_R_2024/DJNF_Basic_Data_Viz.html)
+
 # Appendix
 
 <br>

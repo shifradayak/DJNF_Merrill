@@ -369,7 +369,18 @@ University of Maryland
 robwells@umd.edu
 LinkedIn: https://www.linkedin.com/in/rob-wells-7929329/ 
 ver. 5/24/2024 </code></pre>
-<p><br> #### Get Organized</p>
+<div id="goals" class="section level3">
+<h3>Goals</h3>
+<ul>
+<li>Fire up R Studio, understand basic operations</li>
+<li>Use rio::import to load data</li>
+<li>Use the tidyverse package dplyr to sort and filter – Identify trends
+in your data.</li>
+</ul>
+<p><br></p>
+</div>
+<div id="get-organized" class="section level3">
+<h3>Get Organized</h3>
 <ul>
 <li>Create a new directory for your data work this week:
 DJNF_data.<br />
@@ -377,7 +388,7 @@ DJNF_data.<br />
 <li>Download rstudio_first.zip. </li>
 <li>Unzip in DJNF_data.<br />
 </li>
-<li>Open rstudio.rproj.<br />
+<li>Open Intro_to_R_2024.rproj.<br />
 </li>
 <li>Open DJNF_Intro-to_R_RStudio.rmd.</li>
 </ul>
@@ -397,23 +408,22 @@ DJNF_data.<br />
 <p><strong>Chunks: The gray boxes have live R code. Click the green
 arrow at the right on line 55 and run the help.start()
 command</strong></p>
-<pre><code>## If the browser launched by &#39;/usr/bin/open&#39; is already running, it is
-##     *not* restarted, and you must switch to its window.
-## Otherwise, be patient ...</code></pre>
+<pre message="FALSE," warning="FALSE"><code>help.start()</code></pre>
 <p><br> <br></p>
 </div>
 <div id="install-software-to-grab-data" class="section level4">
 <h4>Install software to grab data</h4>
 <pre><code>Tidyverse: Eight separate software packages to perform
-data import, tidying, manipulation, visualisation, and         programming
+data import, tidying, manipulation, visualisation, and programming
 
 Rio: Easy importing features 
 Janitor: Data cleaning</code></pre>
+<p><strong>Below, remove the hash tags # and run the chunk</strong></p>
 <pre class="r"><code>#install.packages(&quot;tidyverse&quot;)
 #install.packages(&quot;rio&quot;) 
 #install.packages(&quot;janitor&quot;)</code></pre>
-<p>After you install a package on your hard drive, you can call it back
-up by summoning a library</p>
+<p>After you install a package on your hard drive, you bring the
+software in active memory by loading a library</p>
 <p>Libraries are bits of software you will have to load each time into R
 to make things run.</p>
 <pre class="r"><code>library(tidyverse)
@@ -424,9 +434,8 @@ Manager, lower right pane <br></p>
 </div>
 <div id="data" class="section level4">
 <h4>Data</h4>
-<pre><code>Open this file in Excel:
+<pre><code>Open [this file in Google Sheets:](https://docs.google.com/spreadsheets/d/1y2w31HHwE31N9pJoIB1W8oWgW7citB4hzjo99XfwVqo/edit#gid=357643135)
 
-./R1_Intro_R_RStudio_Wells/RealMediaSalariesCleaned.xlsx
 
 1) Select RealMediaSalaries2 tab
 
@@ -440,41 +449,39 @@ Mixed string data in Gender Identity / Ethnicity, Job duties</code></pre>
 </div>
 <div id="import-data" class="section level4">
 <h4>Import Data</h4>
-<pre class="r"><code>MediaBucks &lt;- rio::import(&quot;RealMediaSalariesCleaned.xlsx&quot;, which = &quot;RealMediaSalaries2&quot;)
-
-#At Home: See Appendix to load data at home from Internet</code></pre>
+<pre class="r"><code>MediaBucks &lt;- rio::import(&quot;https://docs.google.com/spreadsheets/d/1y2w31HHwE31N9pJoIB1W8oWgW7citB4hzjo99XfwVqo/edit#gid=357643135&quot;, sheet = &quot;RealMediaSalaries2&quot;)</code></pre>
 <p><br> What happened? Look at the table</p>
 <pre class="r"><code>head(MediaBucks)</code></pre>
 <pre><code>##             TITLE                    COMPANY Salary Salary_Details
-## 1 Photojournalist  College Student Newspaper   0.00           &lt;NA&gt;
+## 1 Photojournalist  College Student Newspaper   0.00               
 ## 2    Staff Writer               Paxton Media  12.00           hour
 ## 3  Staff reporter Schurz Communications Inc.  12.00           hour
 ## 4        Reporter          Hearst Newspapers  13.25           hour
 ## 5  Staff Reporter           Ogden Newspapers  14.91           hour
 ## 6   Desk Assitant                       KTLA  15.00           hour
 ##   Salary_Details2     Race Gender    YEARS_EXPERIENCE         LOCATION
-## 1            &lt;NA&gt;    asian   male                 3.0             &lt;NA&gt;
-## 2          anhour    white female                 8.0          Georgia
-## 3         -2012.0    white female                 2.0 Central Kentucky
-## 4    ~32,000/year    white female                 3.0          Houston
+## 1                    asian   male                   3                 
+## 2          anhour    white female                   8          Georgia
+## 3           -2012    white female                   2 Central Kentucky
+## 4    ~32,000/year    white female                   3          Houston
 ## 5         perhour    white   male 3+ years experience             Utah
-## 6            &lt;NA&gt; noanswer female                 2.0      Los Angeles
+## 6                 noanswer female                   2      Los Angeles
 ##                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     JOB_DUTIES
 ## 1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Photo
 ## 2                                                                                                                                                                                                                                                                                                                                                                                                                                                          Write and cover news stories, photograph news, write monthly health magazine, social media director
-## 3                                                                                                                                                                                                                                                                                                                                                                        Reported on anything and everything: local government, breaking news, features, op/eds, columns. Took pictures, managed web uploads and social media accounts, produced short videos.
-## 4                                                                                                                                                                                                                                                                                                                                                                                                                              Report on communities outside of the Houston metro area, take photos, produce online and print content, pitch story ideas, etc.
+## 3                                                                                                                                                                                                                                                                                                                                                                       Reported on anything and everything: local government, breaking news, features, op/eds, columns. Took pictures, managed web uploads and social media accounts, produced short videos. 
+## 4                                                                                                                                                                                                                                                                                                                                                                                                                             Report on communities outside of the Houston metro area, take photos, produce online and print content, pitch story ideas, etc. 
 ## 5                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   daily beat reporting, photos, social media
 ## 6 Organize daily field drives and retrieves file videos\nUse FTP system to send/receive video files from the field\nMakes beat checks of police and fire departments\nLog/transcribe daily video feeds\nAnswers viewer phone calls, taking stories from viewers\nChecks for possible stories via all social media channels\nChecks email for possible stories and upcoming news events\nListens to viewers complaints; accepts criticism in an even handed manner; and offers suggestions or answers as appropriate\nWatch and log daily competition newscasts
-##   PREV_SALARIES_TITLES          SALARY_original Gender_Ethnicity_Original
-## 1                 &lt;NA&gt;                      0.0            Cis male asian
-## 2                 &lt;NA&gt;              $12 an hour              White female
-## 3                 &lt;NA&gt;          $12/hour (2012)          cis white female
-## 4                 &lt;NA&gt; 13.25/hour ~ 32,000/year          Cis white female
-## 5                 &lt;NA&gt;          $14.91 per hour            cis white male
-## 6                 &lt;NA&gt;                 $15/hour                cis female</code></pre>
+##   PREV_SALARIES_TITLES           SALARY_original Gender_Ethnicity_Original
+## 1                                              0            Cis male asian
+## 2                                    $12 an hour              White female
+## 3                                $12/hour (2012)          cis white female
+## 4                      13.25/hour ~ 32,000/year           Cis white female
+## 5                                $14.91 per hour            cis white male
+## 6                                       $15/hour                cis female</code></pre>
 <p>What happened?</p>
-<p>R grabbed the spreadsheet from the folder<br />
+<p>R grabbed the spreadsheet from a Google Sheet<br />
 We told R to grab the first sheet, RealMediaSalaries2<br />
 R created a dataframe called MediaBucks<br />
 basics of R: &lt;- is known as an “assignment operator.”<br />
@@ -530,10 +537,11 @@ $129 million (Q32023=$11.6B)</p>
 <p>average</p>
 <pre class="r"><code>mean(MediaBucks$Salary, na.rm=TRUE)</code></pre>
 <pre><code>## [1] 64194.34</code></pre>
-<p>Distribution</p>
+<p>Distribution by increments of ten</p>
 <pre class="r"><code>quantile(MediaBucks$Salary, c(0.1, 0.2, 0.3, 0.4,0.5, 0.6, 0.7, 0.8, 0.9), na.rm=TRUE)</code></pre>
 <pre><code>##    10%    20%    30%    40%    50%    60%    70%    80%    90% 
 ##  28720  39000  45000  52000  60000  65000  75000  84000 101700</code></pre>
+<p>Distribution by quarter increments</p>
 <pre class="r"><code>quantile(MediaBucks$Salary, c(0.25, 0.50, 0.75, 0.9, 0.99), na.rm=TRUE)</code></pre>
 <pre><code>##    25%    50%    75%    90%    99% 
 ##  42000  60000  78000 101700 200000</code></pre>
@@ -705,6 +713,7 @@ How to build basic tables from a dataset
 How to conduct filter queries from a dataset   </code></pre>
 <p><br></p>
 </div>
+</div>
 <div id="appendix" class="section level1">
 <h1>Appendix</h1>
 <p><br></p>
@@ -728,14 +737,6 @@ and follow the prompts to install it.</li>
 <p>Download R Studio: <a href="https://rstudio.com/products/rstudio/download/#download" class="uri">https://rstudio.com/products/rstudio/download/#download</a>”</p>
 <p>More detailed instructions for installing R and R Studio: <a href="http://www.machlis.com/R4Journalists/download-r-and-rstudio.html" class="uri">http://www.machlis.com/R4Journalists/download-r-and-rstudio.html</a></p>
 <p>Here’s a good overview of the program: <a href="https://docs.google.com/presentation/d/1O0eFLypJLP-PAC63Ghq2QURAnhFo6Dxc7nGt4y_l90s/edit#slide=id.p" class="uri">https://docs.google.com/presentation/d/1O0eFLypJLP-PAC63Ghq2QURAnhFo6Dxc7nGt4y_l90s/edit#slide=id.p</a></p>
-<p><br> <br></p>
-</div>
-<div id="load-data-for-tutorial-at-home" class="section level4">
-<h4>Load Data for Tutorial At Home:</h4>
-<pre><code>If you are doing this tutorial at home on your personal machine, you can load spreadsheets from the Internet as follows:</code></pre>
-<pre class="r"><code>#remove hashtag in front of MediaBucks. Colors change to black and you can run the chunk
-
-#MediaBucks &lt;- rio::import(&quot;https://docs.google.com/spreadsheets/d/1SP3Sqqdv6R8chFamjtgdNlOrUar-hJXvkMSeha2mHQ8/edit#gid=0&quot;, which = &quot;Salaries&quot;, skip = 3)</code></pre>
 <p><br> <br></p>
 </div>
 <div id="tutorials" class="section level4">

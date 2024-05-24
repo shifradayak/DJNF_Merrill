@@ -27,12 +27,21 @@ LinkedIn: https://www.linkedin.com/in/rob-wells-7929329/
 ver. 5/24/2024 
 ```
 
-<br> \#### Get Organized
+### Goals
+    
+-   Fire up R Studio, understand basic operations
+-   Use rio::import to load data
+-   Use the tidyverse package dplyr to sort and filter
+--  Identify trends in your data. 
+    
+<br>
+
+### Get Organized
 
 -   Create a new directory for your data work this week: DJNF_data.\
 -   Download rstudio_first.zip. 
 -   Unzip in DJNF_data.\
--   Open rstudio.rproj.\
+-   Open Intro_to_R_2024.rproj.\
 -   Open DJNF_Intro-to_R_RStudio.rmd.
 
 <br> <br>
@@ -57,7 +66,7 @@ There are four main windows:
 **Chunks: The gray boxes have live R code. Click the green arrow at the
 right on line 55 and run the help.start() command**
 
-```{message=FALSE, warning=FALSE}
+``` {message="FALSE," warning="FALSE"}
 help.start()
 ```
 
@@ -73,14 +82,16 @@ Rio: Easy importing features
 Janitor: Data cleaning
 ```
 
+**Below, remove the hash tags \# and run the chunk**
+
 ```{r}
 #install.packages("tidyverse")
 #install.packages("rio") 
 #install.packages("janitor")
 ```
 
-After you install a package on your hard drive, you can call it back up
-by summoning a library
+After you install a package on your hard drive, you bring the software
+in active memory by loading a library
 
 Libraries are bits of software you will have to load each time into R to
 make things run.
@@ -97,9 +108,8 @@ Manager, lower right pane <br>
 #### Data
 
 ```         
-Open this file in Excel:
+Open [this file in Google Sheets:](https://docs.google.com/spreadsheets/d/1y2w31HHwE31N9pJoIB1W8oWgW7citB4hzjo99XfwVqo/edit#gid=357643135)
 
-./R1_Intro_R_RStudio_Wells/RealMediaSalariesCleaned.xlsx
 
 1) Select RealMediaSalaries2 tab
 
@@ -116,10 +126,10 @@ Mixed string data in Gender Identity / Ethnicity, Job duties
 #### Import Data
 
 ```{r}
-MediaBucks <- rio::import("RealMediaSalariesCleaned.xlsx", which = "RealMediaSalaries2")
+MediaBucks <- rio::import("https://docs.google.com/spreadsheets/d/1y2w31HHwE31N9pJoIB1W8oWgW7citB4hzjo99XfwVqo/edit#gid=357643135", sheet = "RealMediaSalaries2")
 
-#At Home: See Appendix to load data at home from Internet
 ```
+
 
 <br> What happened? Look at the table
 
@@ -129,7 +139,7 @@ head(MediaBucks)
 
 What happened?
 
-R grabbed the spreadsheet from the folder\
+R grabbed the spreadsheet from a Google Sheet\
 We told R to grab the first sheet, RealMediaSalaries2\
 R created a dataframe called MediaBucks\
 basics of R: \<- is known as an “assignment operator.”\
@@ -207,11 +217,13 @@ average
 mean(MediaBucks$Salary, na.rm=TRUE)
 ```
 
-Distribution
+Distribution by increments of ten 
 
 ```{r}
 quantile(MediaBucks$Salary, c(0.1, 0.2, 0.3, 0.4,0.5, 0.6, 0.7, 0.8, 0.9), na.rm=TRUE)
 ```
+
+Distribution by quarter increments
 
 ```{r}
 quantile(MediaBucks$Salary, c(0.25, 0.50, 0.75, 0.9, 0.99), na.rm=TRUE)
@@ -424,20 +436,6 @@ More detailed instructions for installing R and R Studio:
 
 Here's a good overview of the program:
 <https://docs.google.com/presentation/d/1O0eFLypJLP-PAC63Ghq2QURAnhFo6Dxc7nGt4y_l90s/edit#slide=id.p>
-
-<br> <br>
-
-#### Load Data for Tutorial At Home:
-
-```         
-If you are doing this tutorial at home on your personal machine, you can load spreadsheets from the Internet as follows:
-```
-
-```{r}
-#remove hashtag in front of MediaBucks. Colors change to black and you can run the chunk
-
-#MediaBucks <- rio::import("https://docs.google.com/spreadsheets/d/1SP3Sqqdv6R8chFamjtgdNlOrUar-hJXvkMSeha2mHQ8/edit#gid=0", which = "Salaries", skip = 3)
-```
 
 <br> <br>
 

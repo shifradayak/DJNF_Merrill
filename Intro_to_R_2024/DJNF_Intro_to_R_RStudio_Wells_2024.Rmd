@@ -1,18 +1,22 @@
 ---
-title: "R 1: Intro to R and RStudio- 2022"
 output: html_document
 editor_options: 
   markdown: 
     wrap: 72
 ---
 
-### NICAR 2024: Baltimore
+::: {style="text-align: center;"}
+# First Steps in R and R Studio
 
-ver. 2/1/2024 <br>
+### Dow Jones News Fund \@ Merrill College
 
-<img src="images/RStudio-Logo-Blue-Gradient.png" width="300" height="100"/>
-<br>\
-<br>
+**Data Driven Investigative Reporting Training**
+:::
+
+::: {style="text-align: center;"}
+<img src="images/DJNF_Logo.png" width="300" height="150"/>
+<img src="images/merrill-logo-dark.png" width="300" height="50"/>
+:::
 
 ```         
 Rob Wells, Ph.D.
@@ -20,34 +24,24 @@ Philip Merrill College of Journalism
 University of Maryland
 robwells@umd.edu
 LinkedIn: https://www.linkedin.com/in/rob-wells-7929329/ 
+ver. 5/24/2024 
 ```
 
-<br> <br>
+<br> \#### Get Organized
 
-<img src="images/merrill-logo-dark.png" width="300" height="50"/> <br>\
-<br>
-
-### Note:
-
-```         
-Nicar session organizers have installed this software on the session computers.
-See the **"At Home"** notes on how to install the software and data on your personal or work computer so you can work on this lesson after the class
-Directions for loading R and R Studio on your personal / work computers are at the end of this tutorial
-```
-
-<br> <br>
-
-#### Get Organized
-
-```{r}
-#setwd("./Desktop/hands_on_classes/r_1_intro_to_r_and_rstudio_1083")
-#At Home: Skip this step, since your computer doesn't have this folder.
-#Instead, create a new folder on your Desktop or other convenient spot, call it R_Lessons, copy this file R 1_ Intro_to_R_RStudio_Wells_2022.Rmd into the folder, and then launch the file
-```
+-   Create a new directory for your data work this week: DJNF_data.\
+-   Download rstudio_first.zip. 
+-   Unzip in DJNF_data.\
+-   Open rstudio.rproj.\
+-   Open DJNF_Intro-to_R_RStudio.rmd.
 
 <br> <br>
 
 #### Orientation to R Studio
+
+<img src="images/RStudio-Logo-Blue-Gradient.png" width="150" height="50"/>
+<br>\
+<br>
 
 ```         
 There are four main windows:  
@@ -60,17 +54,10 @@ There are four main windows:
 
 <br>
 
-Housekeeping
-
-```{r}
-# setwd("C:/Users/nmradmin/Desktop/hands_on_classes/20220305_r_1_intro_to_r_and_rstudio_saturday_repeat_3034")
-
-```
-
 **Chunks: The gray boxes have live R code. Click the green arrow at the
 right on line 55 and run the help.start() command**
 
-```{r}
+```{r echo=FALSE, message=FALSE, warning=FALSE}
 help.start()
 ```
 
@@ -84,15 +71,6 @@ data import, tidying, manipulation, visualisation, and         programming
 
 Rio: Easy importing features 
 Janitor: Data cleaning
-```
-
-<br> **At Home:**
-
-```         
-Nicar session organizers have installed this software on the session computers.
-If you are doing this lesson at home or elsewhere, 
-delete the hashtag before install.packages and 
-install the software on your personal or work computer
 ```
 
 ```{r}
@@ -146,7 +124,7 @@ MediaBucks <- rio::import("RealMediaSalariesCleaned.xlsx", which = "RealMediaSal
 <br> What happened? Look at the table
 
 ```{r}
-View(MediaBucks)
+head(MediaBucks)
 ```
 
 What happened?

@@ -20,7 +20,7 @@ output: html_document
 -   **2 p.m.**: Welcome at Knight Hall Eaton Theater
     -   Logistics. The week ahead. Rooms meals.
     -   Profiles Introductions by students who profiled each other.
--   **3:30 p.m.**: Use data to find stories. Finding Data for Projects (Wells). Eaton Theater
+-   **3:30 p.m.**: [Introduction to R](https://wellsdata.github.io/DJNF_Merrill/Intro_to_R_2024/DJNF_Intro_to_R_RStudio_Wells_2024.html) (Wells). Eaton Theater
     -   Students gather data for their assigned communities. Produce draft story ideas by 11:59 p.m.
 -   **4:30 p.m.**: Break and then independent work
 -   **5:30 p.m.**: Break

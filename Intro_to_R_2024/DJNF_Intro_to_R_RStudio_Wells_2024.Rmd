@@ -57,7 +57,7 @@ There are four main windows:
 **Chunks: The gray boxes have live R code. Click the green arrow at the
 right on line 55 and run the help.start() command**
 
-```{r echo=FALSE, message=FALSE, warning=FALSE}
+```{message=FALSE, warning=FALSE}
 help.start()
 ```
 
@@ -67,7 +67,7 @@ help.start()
 
 ```         
 Tidyverse: Eight separate software packages to perform
-data import, tidying, manipulation, visualisation, and         programming
+data import, tidying, manipulation, visualisation, and programming
 
 Rio: Easy importing features 
 Janitor: Data cleaning

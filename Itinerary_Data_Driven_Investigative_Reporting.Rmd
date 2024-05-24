@@ -1,6 +1,4 @@
-
-#AIDAN: Add Merrill and DJNF logos to top of doc
-# Student bios and pics in here too
+#AIDAN: Add Merrill and DJNF logos to top of doc \# Student bios and pics in here too
 
 ---
 title: "DJNF: Data-Driven Investigative Reporting"
@@ -13,99 +11,100 @@ output: html_document
 
 ## Pre-Conference
 
-- **By May 29**: Students will have data assignments described.
-- **By May 29**: Students will be sent a data starter kit to load relevant software on their laptops and test out their equipment.
-- **Due Thursday May 30, 11:59 p.m.**: Students assigned to profile each other.
+-   **By May 29**: Students will have data assignments described.
+-   **By May 29**: Students will be sent a data starter kit to load relevant software on their laptops and test out their equipment.
+-   **Due Thursday May 30, 11:59 p.m.**: Students assigned to profile each other.
 
 ## Sunday June 2, 2024
 
-- **2 p.m.**: Welcome at Knight Hall Eaton Theater
-  - Logistics. The week ahead. Rooms meals.
-  - Profiles Introductions by students who profiled each other.
-- **3:30 p.m.**: Use data to find stories. Finding Data for Projects (Wells). Eaton Theater
-  - Students gather data for their assigned communities. Produce draft story ideas by 11:59 p.m.
-- **4:30 p.m.**: Break and then independent work
-- **5:30 p.m.**: Break
-- **6:30 p.m.**: Dinner in Hyattsville - Busboys & Poets. (Meet at Knight Hall board van)
+-   **2 p.m.**: Welcome at Knight Hall Eaton Theater
+    -   Logistics. The week ahead. Rooms meals.
+    -   Profiles Introductions by students who profiled each other.
+-   **3:30 p.m.**: Use data to find stories. Finding Data for Projects (Wells). Eaton Theater
+    -   Students gather data for their assigned communities. Produce draft story ideas by 11:59 p.m.
+-   **4:30 p.m.**: Break and then independent work
+-   **5:30 p.m.**: Break
+-   **6:30 p.m.**: Dinner in Hyattsville - Busboys & Poets. (Meet at Knight Hall board van)
 
 ## Monday June 3, 2024
 
-- **Breakfast**: On your own at dorm
-- **9 a.m.**: Meet at Knight Hall Room 1101
-  - Data Driven Reporting. (Sean Mussenden, the Howard Center)
-    - R for data gathering and analysis
-    - Bring material into R and make sense of it.
-- **10:30 a.m.**: Break. Coffee served
-- **11 a.m.**: Workshop: Use data to find stories. Pair students work on overview. Finding Data for Projects (Wells, Mussenden). Room 1101 
-- **12:30 p.m.**: Lunch in Knight Hall. (Gary Fields, AP Democracy Reporter. Confirmed). Eaton Theater
-- **1:30 p.m.**: Writing a story pitch memo. (Wells and Denny). Room 1101 
-- **2:30 p.m.**: Students gather data for their assigned communities. Produce a story pitch memo by 11:59 p.m. (Wells, Mussenden, TA coach). Room 1101 
-- **4 p.m.**: Diversity: Covering All of the Community. (Prof. Christoph Mergerson). Room 1101 
-- **5:30 p.m.**: Break
-- **6:30 p.m.**: Dinner on campus
+-   **Breakfast**: On your own at dorm
+-   **9 a.m.**: Meet at Knight Hall Room 1101
+    -   Data Driven Reporting. (Sean Mussenden, the Howard Center)
+        -   R for data gathering and analysis
+        -   Bring material into R and make sense of it.
+-   **10:30 a.m.**: Break. Coffee served
+-   **11 a.m.**: Workshop: Use data to find stories. Pair students work on overview. Finding Data for Projects (Wells, Mussenden). Room 1101
+-   **12:30 p.m.**: Lunch in Knight Hall. (Gary Fields, AP Democracy Reporter. Confirmed). Eaton Theater
+-   **1:30 p.m.**: Writing a story pitch memo. (Wells and Denny). Room 1101
+-   **2:30 p.m.**: Students gather data for their assigned communities. Produce a story pitch memo by 11:59 p.m. (Wells, Mussenden, TA coach). Room 1101
+-   **4 p.m.**: Diversity: Covering All of the Community. (Prof. Christoph Mergerson). Room 1101
+-   **5:30 p.m.**: Break
+-   **6:30 p.m.**: Dinner on campus
 
 ## Tuesday June 4, 2024
 
-- **Breakfast**: On your own at dorm
-- **9 a.m.**: Data Visualization. Using Datawrapper for data visualization. (Adam Marton). Room 1101 
-- **10:30 a.m.**: Break. Coffee served
-- **11 a.m.**: Workshop. Students work on R data gathering story pitches. (Wells, Marton, TA as coaches). Room 1101 
-- **12 p.m. - 1 p.m.**: Lunch. Sandwiches served in Knight Hall.
-- **1 p.m. - 2:30 p.m.**: Jeannine Aversa, U.S. Census Bureau or Bureau of Economic Analysis presentation on local GDP data and localizing stories with BEA data. Confirmed. Eaton Theater
-- **2:30 p.m. - 4 p.m.**: Multimedia. (Josh Davidsburg) multimedia for the web, best practices for shooting photos and video with cell phones. Room 1101
-- **4 p.m.**: Break. Drinks.
-- **4:30 p.m.**: Multimedia / data workshop. Additional ideas techniques for gathering (Wells, Davidsburg, TA coach). Room 1101
-- **5:30 p.m.**: Break
-- **6:30 p.m.**: Dinner in Hyattsville - Franklins. (Meet at Knight Hall board van)
+-   **Breakfast**: On your own at dorm
+-   **9 a.m.**: Data Visualization. Using Datawrapper for data visualization. (Adam Marton). Room 1101
+-   **10:30 a.m.**: Break. Coffee served
+-   **11 a.m.**: Workshop. Students work on R data gathering story pitches. (Wells, Marton, TA as coaches). Room 1101
+-   **12 p.m. - 1 p.m.**: Lunch. Sandwiches served in Knight Hall.
+-   **1 p.m. - 2:30 p.m.**: Jeannine Aversa, U.S. Census Bureau or Bureau of Economic Analysis presentation on local GDP data and localizing stories with BEA data. Confirmed. Eaton Theater
+-   **2:30 p.m. - 4 p.m.**: Multimedia. (Josh Davidsburg) multimedia for the web, best practices for shooting photos and video with cell phones. Room 1101
+-   **4 p.m.**: Break. Drinks.
+-   **4:30 p.m.**: Multimedia / data workshop. Additional ideas techniques for gathering (Wells, Davidsburg, TA coach). Room 1101
+-   **5:30 p.m.**: Break
+-   **6:30 p.m.**: Dinner in Hyattsville - Franklins. (Meet at Knight Hall board van)
 
 ## Wednesday June 5, 2024
 
-- **Breakfast**: On your own at dorm
-- **9 a.m.**: Data Analysis. (Derek Willis, Merrill College) on GitHub pages, getting your data on the web. Room 1101
-- **10:30 a.m.**: Break. Coffee served.
-- **11 a.m.**: Workshop. Open workshop on projects. (Wells, Willis as coaches). Room 1101
-- **12:30 p.m.**: Lunch in Knight Hall. Data analysis workshop. (Wells, Willis, TA coach). Room 1101
-- **1:30 p.m.**: Speaker: Connie Mitchell Ford on business reporting. Room 1101
-  - Three ways to get business and economic data and how to localize it. SEC and financial reports. Trade data.
-- **3 p.m.**: Break
-- **3:30 p.m.**: Workshop. Connie Mitchell Ford workshop on project proposals. (Wells, TA as coaches). Room 1101
-- **5 p.m.**: Break
-- **6:30 p.m.**: Dinner on campus
-- **11:59 p.m.**: Second draft of reporting memos due
+-   **Breakfast**: On your own at dorm
+-   **9 a.m.**: Data Analysis. (Derek Willis, Merrill College) on GitHub pages, getting your data on the web. Room 1101
+-   **10:30 a.m.**: Break. Coffee served.
+-   **11 a.m.**: Workshop. Open workshop on projects. (Wells, Willis as coaches). Room 1101
+-   **12:30 p.m.**: Lunch in Knight Hall. Data analysis workshop. (Wells, Willis, TA coach). Room 1101
+-   **1:30 p.m.**: Speaker: Connie Mitchell Ford on business reporting. Room 1101
+    -   Three ways to get business and economic data and how to localize it. SEC and financial reports. Trade data.
+-   **3 p.m.**: Break
+-   **3:30 p.m.**: Workshop. Connie Mitchell Ford workshop on project proposals. (Wells, TA as coaches). Room 1101
+-   **5 p.m.**: Break
+-   **6:30 p.m.**: Dinner on campus
+-   **11:59 p.m.**: Second draft of reporting memos due
 
 ## Thursday June 6, 2024
 
-- **Breakfast**: On your own at dorm
-- **8:30 a.m.**: Meet at Knight Hall, board van, depart for College Park Metro
-- **10:00 a.m.**: Tour U.S. Capitol press galleries with Siobhan Hughes, WSJ. Confirmed
-- **Noon**: Lunch in the U.S. Capitol. Meeting with other journalists.
-- **2 p.m.**: Tour of Associated Press D.C. bureau. (Chad Day). Confirmed
-- **3:30 p.m.**: Open to explore D.C. or join Wells for an adventure
-- **6 p.m.**: Dinner in Washington D.C.: Ben’s Chili Bowl
+-   **Breakfast**: On your own at dorm
+-   **8:30 a.m.**: Meet at Knight Hall, board van, depart for College Park Metro
+-   **10:00 a.m.**: Tour U.S. Capitol press galleries with Siobhan Hughes, WSJ. Confirmed
+-   **Noon**: Lunch in the U.S. Capitol. Meeting with other journalists.
+-   **2 p.m.**: Tour of Associated Press D.C. bureau. (Chad Day). Confirmed
+-   **3:30 p.m.**: Open to explore D.C. or join Wells for an adventure
+-   **6 p.m.**: Dinner in Washington D.C.: Ben’s Chili Bowl
 
 ## Friday June 7, 2024
 
-- **Breakfast**: On your own at dorm
-- **9 a.m.**: Using AI in journalism, algorithmic accountability. (Prof. Daniel Trielli)
-  - Conceptual discussion of AI and possibilities
-- **10:00 a.m. - 10:30 a.m.**: Break
-- **10:30 a.m.**: Workshop on projects. (Wells, Trielli, TA coach)
-- **12:30 p.m.**: Lunch in Knight Hall. (Prof. Kevin Blackistone on racial justice in sports business). Confirmed
-- **2 p.m.**: Workshop on projects (Wells, TA coach)
-- **4 p.m.**: Meet at Knight Hall, board van, depart for College Park Metro, dinner in Washington D.C., attend a community jazz show at Westminster Church. Meet with Rev. Brian Hamilton beforehand to discuss Southwest D.C. history
+-   **Breakfast**: On your own at dorm
+-   **9 a.m.**: Using AI in journalism, algorithmic accountability. (Prof. Daniel Trielli)
+    -   Conceptual discussion of AI and possibilities
+-   **10:00 a.m. - 10:30 a.m.**: Break
+-   **10:30 a.m.**: Workshop on projects. (Wells, Trielli, TA coach)
+-   **12:30 p.m.**: Lunch in Knight Hall. (Prof. Kevin Blackistone on racial justice in sports business). Confirmed
+-   **2 p.m.**: Aidan Hughes on constructing a NIL scraper
+-   **2:30 p.m.**: Workshop on projects (Wells, TA coach)
+-   **3:30 p.m.**: Meet at Knight Hall, board van, depart for College Park Metro, dinner in Washington D.C., attend a community jazz show at Westminster Church. Meet with Rev. Brian Hamilton beforehand to discuss Southwest D.C. history
 
 ## Saturday June 8, 2024
 
-- **Breakfast**: On your own at dorm
-- **10:00 a.m.**: Students present web pages, story pitches, solicit feedback
-- **12:30 p.m.**: Lunch in Knight Hall
-- **2 p.m.**: Prof. Karen Denny on skills to survive in the newsroom.
-- **4 p.m.**: Free time / Final work on projects. (Wells, TA coach)
-- **5:30 p.m.**: Dinner in Riverdale, La Fantome Food Hall (Meet at Knight Hall board van)
+-   **Breakfast**: On your own at dorm
+-   **10:00 a.m.**: Students present web pages, story pitches, solicit feedback
+-   **12:30 p.m.**: Lunch in Knight Hall
+-   **2 p.m.**: Prof. Karen Denny on skills to survive in the newsroom.
+-   **4 p.m.**: Free time / Final work on projects. (Wells, TA coach)
+-   **5:30 p.m.**: Dinner in Riverdale, La Fantome Food Hall (Meet at Knight Hall board van)
 
 ## Sunday June 9, 2024
 
-- Depart
+-   Depart
 
 # Instructors
 
@@ -123,7 +122,7 @@ He also teaches traditional courses incorporating data visualization, programmin
 
 Derek Willis, one of the nation’s leading data journalists and an experienced educator, joined the Philip Merrill College of Journalism in Fall 2021 as a lecturer in data and computational journalism.
 
-Willis came to Merrill College having spent 25 years winning awards at some of the top news outlets in the country. His latest stop was ProPublica, where he served as a news applications developer since 2015. 
+Willis came to Merrill College having spent 25 years winning awards at some of the top news outlets in the country. His latest stop was ProPublica, where he served as a news applications developer since 2015.
 
 He previously held interactive journalism roles with The New York Times and The Washington Post, after working as a database reporter for The Washington Post, The Center for Public Integrity, Congressional Quarterly and The Palm Beach Post.
 
@@ -132,7 +131,6 @@ He previously held interactive journalism roles with The New York Times and The 
 ![](pictures/daniel_trielli.jpg)
 
 Dr. Daniel Trielli joined the Philip Merrill College of Journalism's faculty in Fall 2023 as assistant professor of media and democracy.
-
 
 He researches the impact of algorithmic curation on journalism and political information, and studies how Google affects the news and the audiences that use it to search. He is interested in data and computational journalism, media literacy and algorithmic accountability. Trielli came to Merrill College as a master's student in 2015 after a 10-year career as a journalist in Brazil at the national newspaper, O Estado de S. Paulo, and the regional newspaper, Diário do Grande ABC.
 
@@ -184,8 +182,7 @@ She previously worked as the Maryland editor for The Washington Times, and at th
 
 ## Christoph Mergerson
 
-![](pictures/Christoph_Mergerson.jpg)
-Christoph Mergerson, who completed his Ph.D. in Communication, Information and Media at Rutgers University, joined the Philip Merrill College of Journalism in Fall 2021 as a visiting assistant professor. He was appointed to the rank of assistant professor in Fall 2022.
+![](pictures/Christoph_Mergerson.jpg) Christoph Mergerson, who completed his Ph.D. in Communication, Information and Media at Rutgers University, joined the Philip Merrill College of Journalism in Fall 2021 as a visiting assistant professor. He was appointed to the rank of assistant professor in Fall 2022.
 
 Mergerson's research and teaching interests include journalism history, weather journalism, race and media, and journalism and democracy. Mergerson arrived at Merrill with ongoing research that examines whether news media in the Southern United States are producing racially inclusive, public-service journalism.
 

@@ -1,4 +1,4 @@
-<img src="DJNF_photos/Merrill_logo.png" width="300" height="200"/> <img src="DJNF_photos/DJNF_logo.png" width="300" height="100"/>
+<img src="images/Merrill_logo.png" width="300" height="200"/> <img src="images/DJNF_logo.png" width="300" height="100"/>
 
 ---
 title: "DJNF: Data-Driven Investigative Reporting"
@@ -113,7 +113,7 @@ output: html_document
 
 **Sean Mussenden**
 
-<img src="DJNF_photos/Sean_Mussenden.jpg" width="300" height="300"/>
+<img src="images/Sean_Mussenden.jpg" width="300" height="300"/>
 
 Sean Mussenden, a former Washington correspondent, is the data editor for the Howard Center for Investigative Journalism. He previously oversaw an experiential, hands-on journalism training program at Merrill College that is integral to the college’s “teaching hospital” model of professional instruction: Capital News Service.
 
@@ -121,7 +121,7 @@ He also teaches traditional courses incorporating data visualization, programmin
 
 **Derek Willis**
 
-<img src="DJNF_photos/Derek_Willis.jpg" width="300" height="300"/>
+<img src="images/Derek_Willis.jpg" width="300" height="300"/>
 
 Derek Willis, one of the nation’s leading data journalists and an experienced educator, joined the Philip Merrill College of Journalism in Fall 2021 as a lecturer in data and computational journalism.
 
@@ -131,7 +131,7 @@ He previously held interactive journalism roles with The New York Times and The 
 
 **Daniel Trielli**
 
-<img src="DJNF_photos/daniel_trielli.jpg" width="300" height="300"/>
+<img src="images/daniel_trielli.jpg" width="300" height="300"/>
 
 Daniel Trielli joined the Philip Merrill College of Journalism's faculty in Fall 2023 as assistant professor of media and democracy.
 
@@ -139,7 +139,7 @@ He researches the impact of algorithmic curation on journalism and political inf
 
 **Adam Marton**
 
-<img src="DJNF_photos/Adam_Marton.jpg" width="300" height="300"/>
+<img src="images/Adam_Marton.jpg" width="300" height="300"/>
 
 Adam Marton is an award-winning journalist and graphic designer who joined the Philip Merrill College of Journalism in 2018 after 13 years at The Baltimore Sun.
 
@@ -147,7 +147,7 @@ Marton is focused on quality storytelling across media, using design and technol
 
 **Rob Wells**
 
-<img src="DJNF_photos/Rob_Wells.jpg" width="300" height="300"/>
+<img src="images/Rob_Wells.jpg" width="300" height="300"/>
 
 Rob Wells, a 2016 Ph.D. alum of Merrill College, returned to the university in the Spring 2022 semester after more than five years at the University of Arkansas, where he rose to the rank of associate professor and led Arkansas' journalism graduate program. Wells has more than two decades of business journalism experience at The Associated Press, Bloomberg News and The Wall Street Journal.
 
@@ -155,7 +155,7 @@ Wells is the author of “The Enforcers: How Little-Known Trade Reporters Expose
 
 **Constance Mitchell Ford**
 
-<img src="DJNF_photos/Constance_Mitchell_Ford.jpg" width="300" height="300"/>
+<img src="images/Constance_Mitchell_Ford.jpg" width="300" height="300"/>
 
 Constance Mitchell Ford, a 1977 University of Maryland graduate, is a financial journalist who spent more than three decades covering economics, banking, investing and real estate.
 
@@ -163,7 +163,7 @@ Most of those years were spent at The Wall Street Journal in New York, most rece
 
 **Josh Davidsburg**
 
-<img src="DJNF_photos/Josh_Davidsburg.jpg" width="300" height="300"/>
+<img src="images/Josh_Davidsburg.jpg" width="300" height="300"/>
 
 Josh Davidsburg is an award-winning broadcast journalist, documentary filmmaker who earned his M.A. at Merrill College in 2024 and his B.A. at Merrill in 2001.
 
@@ -173,7 +173,7 @@ He specializes in streaming media and the intersection between cinema and journa
 
 **Karen Denny**
 
-<img src="DJNF_photos/Karen_Denny.jpg" width="300" height="300"/>
+<img src="images/Karen_Denny.jpg" width="300" height="300"/>
 
 Karen Denny is Merrill College's director of internships and career development. She previously served as the Annapolis bureau director of the Capital News Service, until taking over leadership of the career center at the beginning of 2022. Denny is a former editor with the McClatchy-Tribune (formerly Knight Ridder/Tribune) News Service, where she founded the wire’s Newsfeatures and International sections, and most recently was a features editor.
 
@@ -181,7 +181,7 @@ She previously worked as the Maryland editor for The Washington Times, and at th
 
 **Christoph Mergerson**
 
-<img src="DJNF_photos/Christoph_Mergerson.jpg" width="300" height="300"/>
+<img src="images/Christoph_Mergerson.jpg" width="300" height="300"/>
 
 Christoph Mergerson, who completed his Ph.D. in Communication, Information and Media at Rutgers University, joined the Philip Merrill College of Journalism in Fall 2021 as a visiting assistant professor. He was appointed to the rank of assistant professor in Fall 2022.
 
@@ -189,7 +189,7 @@ Mergerson's research and teaching interests include journalism history, weather 
 
 **Kevin Blackistone**
 
-<img src="DJNF_photos/Kevin_Blackstone.jpeg" width="300" height="300"/>
+<img src="images/Kevin_Blackstone.jpeg" width="300" height="300"/>
 
 Kevin Blackistone is a longtime national sports columnist now at The Washington Post, a panelist on ESPN’s “Around the Horn,” a contributor to National Public Radio and coauthor of “A Gift for Ron,” a memoir by former NFL star Everson Walls published in November 2009 that details his kidney donation to onetime teammate Ron Springs.
 
@@ -199,7 +199,7 @@ Blackistone is a recipient of numerous awards, including awards for sports colum
 
 **Aidan Hughes**
 
-<img src="DJNF_photos/Aidan_Hughes.jpg" width="300" height="300"/>
+<img src="images/Aidan_Hughes.jpg" width="300" height="300"/>
 
 Aidan Hughes is a Howard Fellow and graduate student at Merrill College with a background in data, politics, and peace and conflict studies. He earned a B.A. in International Studies and Creative Writing from Virginia Tech in 2017, followed by an M.A. in Conflict Transformation and Social Justice from Queen’s University Belfast.
 
@@ -252,49 +252,49 @@ Hamilton is pastor and preacher at the Westminister Presbyterian Church (USA) in
 
 **Martha Contreras**
 
-<img src="DJNF_photos/Martha_Contreras.jpg" width="400" height="300"/>
+<img src="images/Martha_Contreras.jpg" width="300" height="300"/>
 
 Martha Contreras is a senior at Northwestern University pursuing Journalism and International Studies majors and a Legal Studies minor. Contreras is a National Association of Hispanic Journalists chapter president and is interested in covering immigration, investigative journalism, politics, education, and foreign affairs. She will be interning at the Investigative Project on Race and Equity.
 
 **Shifra Dayak**
 
-<img src="DJNF_photos/Shifra_Dayak.jpeg" width="400" height="300"/>
+<img src="images/Shifra_Dayak.jpeg" width="300" height="300"/>
 
 Shifra Dayak is a recent graduate of the University of Maryland, having completed a B.A. in Journalism and B.S. in Environmental Science and Policy. She is most interested in covering politics, the environment, race and identity, labor issues, and business. She will be interning at the Connecticut Mirror, and in September will be joining NOTUS as an Allbritton Journalism Institute fellow.
 
 **Shradha Dinesh**
 
-<img src="DJNF_photos/Shradha_Dinesh.jpeg" width="300" height="300"/>
+<img src="images/Shradha_Dinesh.jpeg" width="300" height="300"/>
 
 Shradha Dinesh is a senior at William and Mary, majoring in Data Science and Political Journalism. Dinesh has been recognized as a ProPublica Emerging Reporter (2023-24) and is a Pulitzer Center Reporting Fellow. Dinesh is interested in covering climate, education, and public policy/government meetings and will be interning at the Howard Center at the University of Maryland this Summer
 
 **Cameron Fozi**
 
-<img src="DJNF_photos/Cameron_Fozi.jpg" width="300" height="300"/>
+<img src="images/Cameron_Fozi.jpg" width="300" height="300"/>
 
 Cameron Fozi is a recent graduate of UC Berkeley, having majored in Data Science. Fozi has received multiple awards from the California College Media Association for social justice reporting, graphics reporting, and enterprise reporting. He is interested in Business Reporting, Data Journalism, and Digital Media and will be interning with the Bay City News Foundation this summer.
 
 **Hannah Marszaleck**
 
-<img src="DJNF_photos/Hannah_Marszalek.JPG" width="200" height="300"/>
+<img src="images/Hannah_Marszalek.JPG" width="200" height="300"/>
 
 Hannah Marszaleck is a recent graduate of the University of Maryland, having majored in Journalism with a minor in History. Marszaleck will be interning with Inside Climate News this summer, and is most interested in Environment, Entertainment, Education, and Public Policy reporting.
 
 **Hannah Rosenberger**
 
-<img src="DJNF_photos/Hannah_Rosenberger.jpeg" width="250" height="300"/>
+<img src="images/Hannah_Rosenberger.jpeg" width="250" height="300"/>
 
 Hannah Rosenberger is a recent graduate of UNC Chapel Hill, graduating with majors in Journalism and English & Comparative Literature, with a minor in Hispanic Studies. She was a senior writer at The Daily Tar Heel for three years and is most interested in education, business or legal reporting. She will be interning at ASI Media/Counselor magazine.
 
 **Rachel Sanchez Smith**
 
-<img src="DJNF_photos/rachell sanchez smith.jpg" width="300" height="300"/>
+<img src="images/rachell sanchez smith.jpg" width="300" height="300"/>
 
 Rachel Sanchez Smith is a senior at the University of Arkansas majoring in Journalism and Political Science. She has won awards for her reporting with KUAF and ArkansasCovid and is most interested in Health Labor, Politics, Human Rights, Immigration, Government, and Investigative/Watchdog reporting. She will be interning with the Arkansas Democrat-Gazette.
 
 **Michael Zhang**
 
-<img src="DJNF_photos/Michael_Zhang.jpg" width="250" height="300"/>
+<img src="images/michael_zhang3.png" width="300" height="300"/>
 
 Michael Zhang is a senior at the University of Texas at Austin majoring in Sociology with minors in Computer Science and Journalism. Zhang has previously worked or interned at The Daily Texan, The Daily Dot and KPRC News. Zhang is most interested in investigative reporting, especially relating to policing, and will be interning with Houston Landing.
 
@@ -302,4 +302,4 @@ Michael Zhang is a senior at the University of Texas at Austin majoring in Socio
 
 **Campus Map**
 
-<img src="DJNF_photos/marked_campus_map.PNG"/>
+<img src="images/marked_campus_map.PNG"/>

@@ -1,13 +1,27 @@
-<img src="images/Merrill_logo.png" width="300" height="200"/> <img src="images/DJNF_logo.png" width="300" height="100"/>
-
 ---
-title: "DJNF: Data-Driven Investigative Reporting"
-author: "Philip Merrill College of Journalism"
-date: "Sunday, June 2 - Saturday, June 8, 2024"
 output: html_document
+editor_options: 
+  markdown: 
+    wrap: 72
 ---
 
+::: {style="text-align: center; color: #337DFF;"}
+# Data-Driven Investigative Reporting
+
+### Dow Jones News Fund \@ Merrill College
+
+#### Sunday, June 2 - Saturday, June 8, 2024
+:::
+
+::: {style="text-align: center;"}
+<img src="images/DJNF_Logo.png" width="300" height="150"/>
+<img src="images/Merrill_logo.png" width="350" height="250"/>
+:::
+
+::: {style="text-align: center; color: #337DFF;"}
 # Itinerary
+
+:::
 
 **Pre-Conference**
 
@@ -109,7 +123,9 @@ output: html_document
 -   Breakfast available at Yahentamitsi Dining Hall.
 -   Depart
 
+::: {style="text-align: center; color: #337DFF;"}
 # Instructors
+:::
 
 **Sean Mussenden**
 
@@ -203,9 +219,12 @@ Blackistone is a recipient of numerous awards, including awards for sports colum
 
 Aidan Hughes is a Howard Fellow and graduate student at Merrill College with a background in data, politics, and peace and conflict studies. He earned a B.A. in International Studies and Creative Writing from Virginia Tech in 2017, followed by an M.A. in Conflict Transformation and Social Justice from Queen’s University Belfast.
 
-Hughes’ time in post-conflict Northern Ireland, coupled with his professional experience as a data scientist, fuels his interest in harnessing the strengths of both storytelling and data analysis to examine social issues.
+Hughes’ time in post-conflict Northern Ireland, coupled with his professional experience as a data scientist, fuels his interest in harnessing the strengths of both storytelling and data analysis to examine social issues.  
 
+
+::: {style="text-align: center; color: #337DFF;"}
 # Guest Speakers
+:::
 
 **Gary Fields**  
 
@@ -247,18 +266,19 @@ He is an adjunct lecturer at Georgetown University School of Continuing Studies 
 
 Hamilton is pastor and preacher at the Westminister Presbyterian Church (USA) in Southwest Washington, D.C. Hamilton serves the community as President of the SW Renaissance Development Corporation that runs Westminster's Jazz and Blues ministry that resulted in the award-winning programs Friday Night Jazz, Blue Monday Blues, Thinking About Jazz, SW Catering and more. He has lived and worked in the community for nearly three decades and is passionate about improving community relations and the social and economic conditions of Southwest residents.
 
-
+::: {style="text-align: center; color: #337DFF;"}
 # DJNF Data Interns
+:::
 
 **Martha Contreras**
 
-<img src="images/Martha_Contreras.jpg" width="300" height="300"/>
+<img src="images/Martha_Contreras2.jpg" width="300" height="300"/>
 
 Martha Contreras is a senior at Northwestern University pursuing Journalism and International Studies majors and a Legal Studies minor. Contreras is a National Association of Hispanic Journalists chapter president and is interested in covering immigration, investigative journalism, politics, education, and foreign affairs. She will be interning at the Investigative Project on Race and Equity.
 
 **Shifra Dayak**
 
-<img src="images/Shifra_Dayak.jpeg" width="300" height="300"/>
+<img src="images/Shifra_Dayak.jpeg" width="350" height="300"/>
 
 Shifra Dayak is a recent graduate of the University of Maryland, having completed a B.A. in Journalism and B.S. in Environmental Science and Policy. She is most interested in covering politics, the environment, race and identity, labor issues, and business. She will be interning at the Connecticut Mirror, and in September will be joining NOTUS as an Allbritton Journalism Institute fellow.
 
@@ -298,7 +318,10 @@ Rachel Sanchez Smith is a senior at the University of Arkansas majoring in Journ
 
 Michael Zhang is a senior at the University of Texas at Austin majoring in Sociology with minors in Computer Science and Journalism. Zhang has previously worked or interned at The Daily Texan, The Daily Dot and KPRC News. Zhang is most interested in investigative reporting, especially relating to policing, and will be interning with Houston Landing.
 
+::: {style="text-align: center; color: #337DFF;"}
 # Resources
+:::
+
 
 **Campus Map**
 

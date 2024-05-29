@@ -14,8 +14,16 @@ editor_options:
 :::
 
 ::: {style="text-align: center;"}
-<img src="images/DJNF_Logo.png" width="300" height="150"/>
-<img src="images/Merrill_logo.png" width="350" height="250"/>
+<img src="images/DJNF_Logo.png" width="300" height="125"/>
+<img src="images/Merrill_logo.png" width="370" height="250"/>
+:::
+
+::: {style="font-weight:bold;"}
+```markdown
+Rob Wells, director
+Karen Denny, co-director  
+Aidan Hughes, assistant  
+```
 :::
 
 ::: {style="text-align: center; color: #337DFF;"}

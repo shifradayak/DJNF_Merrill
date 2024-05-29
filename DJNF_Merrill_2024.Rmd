@@ -447,7 +447,7 @@ at Columbia.
 
 **Rev. Brian Hamilton**
 
-<img src="images/brian_hamilton.png" width="300" height="300"/>
+<img src="images/brian_hamilton.jpg" width="300" height="350"/>
 
 Hamilton is pastor and preacher at the Westminister Presbyterian Church
 (USA) in Southwest Washington, D.C. Hamilton serves the community as
@@ -464,7 +464,7 @@ the social and economic conditions of Southwest residents.
 
 **Martha Contreras**
 
-<img src="images/Martha_Contreras2.jpg" width="300" height="300"/>
+<img src="images/Martha_Contreras2.jpg" width="300" height="275"/>
 
 Martha Contreras is a senior at Northwestern University pursuing
 Journalism and International Studies majors and a Legal Studies minor.
@@ -475,7 +475,7 @@ interning at the Investigative Project on Race and Equity.
 
 **Shifra Dayak**
 
-<img src="images/Shifra_Dayak.jpeg" width="350" height="300"/>
+<img src="images/Shifra_Dayak.jpeg" width="300" height="200"/>
 
 Shifra Dayak is a recent graduate of the University of Maryland, having
 completed a B.A. in Journalism and B.S. in Environmental Science and

@@ -5,7 +5,7 @@ editor_options:
     wrap: 72
 ---
 
-::: {style="text-align: center;"}
+::: {style="text-align: center; color: #337DFF;"}
 # First Steps in R and R Studio
 
 ### Dow Jones News Fund \@ Merrill College
@@ -28,12 +28,12 @@ ver. 5/24/2024
 ```
 
 ### Goals
-    
+
 -   Fire up R Studio, understand basic operations
 -   Use rio::import to load data
--   Use the tidyverse package dplyr to sort and filter
---  Identify trends in your data. 
-    
+-   Use the tidyverse package dplyr to sort and filter -- Identify
+    trends in your data.
+
 <br>
 
 ### Get Organized
@@ -130,7 +130,6 @@ MediaBucks <- rio::import("https://docs.google.com/spreadsheets/d/1y2w31HHwE31N9
 
 ```
 
-
 <br> What happened? Look at the table
 
 ```{r}
@@ -217,7 +216,7 @@ average
 mean(MediaBucks$Salary, na.rm=TRUE)
 ```
 
-Distribution by increments of ten 
+Distribution by increments of ten
 
 ```{r}
 quantile(MediaBucks$Salary, c(0.1, 0.2, 0.3, 0.4,0.5, 0.6, 0.7, 0.8, 0.9), na.rm=TRUE)
@@ -408,7 +407,8 @@ How to conduct filter queries from a dataset
 
 #### Next Steps
 
-Try [Basic Data Visualization in R] (https://wellsdata.github.io/DJNF_Merrill/Intro_to_R_2024/DJNF_Basic_Data_Viz.html)
+Try [Basic Data Visualization in R]
+(<https://wellsdata.github.io/DJNF_Merrill/Intro_to_R_2024/DJNF_Basic_Data_Viz.html>)
 
 # Appendix
 

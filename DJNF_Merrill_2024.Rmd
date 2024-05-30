@@ -71,6 +71,8 @@ Aidan Hughes, assistant
 
 -   **11 a.m.**: Workshop: Use data to find stories. (Wells, Mussenden).
     Room 1101
+    
+      -    [GitHub refresher](https://wellsdata.github.io/data_journalism_class/_book/github.html) for those who need it.
 
 -   **12:30 p.m.**: Lunch in Knight Hall.
 
@@ -490,7 +492,7 @@ interning at the Investigative Project on Race and Equity.
 
 **Shifra Dayak**
 
-<img src="images/Shifra_Dayak.jpeg" width="300" height="200"/>
+<img src="images/Shifra_Dayak.jpeg" width="300" height="225"/>
 
 Shifra Dayak is a recent graduate of the University of Maryland, having
 completed a B.A. in Journalism and B.S. in Environmental Science and
@@ -569,6 +571,11 @@ relating to policing, and will be interning with Houston Landing.
 **Campus Map**
 
 <img src="images/marked_campus_map.PNG"/>
+
+<br>
+**Data Journalism Text**
+
+[Data Journalism with R and the Tidyverse](https://wellsdata.github.io/data_journalism_class/_book/)
 
 <br>
 

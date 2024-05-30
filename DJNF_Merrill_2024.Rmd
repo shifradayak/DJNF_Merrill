@@ -71,8 +71,10 @@ Aidan Hughes, assistant
 
 -   **11 a.m.**: Workshop: Use data to find stories. (Wells, Mussenden).
     Room 1101
-    
-      -    [GitHub refresher](https://wellsdata.github.io/data_journalism_class/_book/github.html) for those who need it.
+
+    -   [GitHub
+        refresher](https://wellsdata.github.io/data_journalism_class/_book/github.html)
+        for those who need it.
 
 -   **12:30 p.m.**: Lunch in Knight Hall.
 
@@ -84,7 +86,8 @@ Aidan Hughes, assistant
     -   [Slides for
         talk](https://docs.google.com/presentation/d/1zdlk2Ss9jE_SZL2HuHvUbZeUteEO0OBasFKpXtjuZIY/edit?usp=sharing)
 
--   **2:30 p.m.**: Workshop for [story pitch memo due at 11:59 p.m.](https://docs.google.com/document/d/1A-dlzWX7ksOt6LRHYpuPDk7SPPWxyZEmGt2wC0lM7Mg/edit)
+-   **2:30 p.m.**: Workshop for [story pitch memo due at 11:59
+    p.m.](https://docs.google.com/document/d/1A-dlzWX7ksOt6LRHYpuPDk7SPPWxyZEmGt2wC0lM7Mg/edit)
     (Wells, Mussenden, TA coach). Room 1101
 
 -   **4 p.m.**: Diversity: Covering All of the Community. (Prof.
@@ -97,7 +100,8 @@ Aidan Hughes, assistant
 
 -   **6:30 p.m.**: Dinner on campus
 
--   **11:59 p.m.**: [Draft story pitch    memo](https://docs.google.com/document/d/1A-dlzWX7ksOt6LRHYpuPDk7SPPWxyZEmGt2wC0lM7Mg/edit),
+-   **11:59 p.m.**: [Draft story pitch
+    memo](https://docs.google.com/document/d/1A-dlzWX7ksOt6LRHYpuPDk7SPPWxyZEmGt2wC0lM7Mg/edit),
     emailed to Wells.
 
 **Tuesday June 4, 2024**
@@ -132,8 +136,10 @@ Aidan Hughes, assistant
 -   **10:30 a.m.**: Break. Coffee served.
 -   **11 a.m.**: Workshop. Open workshop on projects. (Wells, Willis as
     coaches). Room 1101
--   **12:30 p.m.**: Lunch in Knight Hall. Workshop. (Wells, Willis, TA
-    coach). Room 1101
+-   **12:30 p.m.**: Lunch in Knight Hall.
+    -   Brief remarks by Alex Pyles, Associate Dean, Academic Affairs,
+        Philip Merrill College of Journalism
+    -   Workshop. (Wells, Willis, TA coach). Room 1101
 -   **1:30 p.m.**: Speaker: Connie Mitchell Ford on business reporting.
     Room 1101
     -   Three ways to get business and economic data and how to localize
@@ -572,10 +578,10 @@ relating to policing, and will be interning with Houston Landing.
 
 <img src="images/marked_campus_map.PNG"/>
 
-<br>
-**Data Journalism Text**
+<br> **Data Journalism Text**
 
-[Data Journalism with R and the Tidyverse](https://wellsdata.github.io/data_journalism_class/_book/)
+[Data Journalism with R and the
+Tidyverse](https://wellsdata.github.io/data_journalism_class/_book/)
 
 <br>
 

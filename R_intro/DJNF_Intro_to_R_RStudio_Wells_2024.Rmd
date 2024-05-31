@@ -14,8 +14,8 @@ editor_options:
 :::
 
 ::: {style="text-align: center;"}
-<img src="intro_images/DJNF_Logo.png" width="300" height="150"/>
-<img src="intro_images/merrill-logo-dark.png" width="300" height="50"/>
+<img src="DJNF_Logo.png" width="300" height="150"/>
+<img src="merrill-logo-dark.png" width="300" height="50"/>
 :::
 
 ```         
@@ -48,7 +48,7 @@ ver. 5/24/2024
 
 #### Orientation to R Studio
 
-<img src="intro_images/RStudio-Logo-Blue-Gradient.png" width="150" height="50"/>
+<img src="RStudio-Logo-Blue-Gradient.png" width="150" height="50"/>
 <br>\
 <br>
 
@@ -407,8 +407,8 @@ How to conduct filter queries from a dataset
 
 #### Next Steps
 
-Try [Basic Data Visualization in R]
-(<https://wellsdata.github.io/DJNF_Merrill/Intro_to_R_2024/DJNF_Basic_Data_Viz.html>)
+Try [Basic Data Visualization in R](https://wellsdata.github.io/DJNF_Merrill/Intro_to_R_2024/DJNF_Basic_Data_Viz.html)
+
 
 # Appendix
 

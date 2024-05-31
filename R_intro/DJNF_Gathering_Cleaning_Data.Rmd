@@ -14,8 +14,8 @@ editor_options:
 :::
 
 ::: {style="text-align: center;"}
-<img src="intro_images/DJNF_Logo.png" width="300" height="150"/>
-<img src="intro_images/merrill-logo-dark.png" width="300" height="50"/>
+<img src="DJNF_Logo.png" width="300" height="150"/>
+<img src="merrill-logo-dark.png" width="300" height="50"/>
 :::
 
 ```         
@@ -40,9 +40,9 @@ ver. 5/29/2024
 #### APIs - basics   
 
 
-    [A beginner's guide to APIs](https://medium.com/@LewisMenelaws/a-beginners-guide-to-web-apis-and-how-they-will-help-you-23923a0da450)
+[A beginner's guide to APIs](https://medium.com/@LewisMenelaws/a-beginners-guide-to-web-apis-and-how-they-will-help-you-23923a0da450)
 
-    [A gentle introduction to APIs for data journalists](https://trendct.org/2016/12/29/fetching-airport-delays-with-python-a-gentle-guide-to-apis-for-journalists/)
+[A gentle introduction to APIs for data journalists](https://trendct.org/2016/12/29/fetching-airport-delays-with-python-a-gentle-guide-to-apis-for-journalists/)
   
 ### Import from an API
 
@@ -76,7 +76,7 @@ res <- fromJSON('http://ergast.com/api/f1/2004/1/results.json')
 
 <br> 
 
-<img src="intro_images/API_drivers.png" width="800" height="400" />
+<img src="API_drivers.png" width="800" height="400" />
 <br>   
 <br> 
 

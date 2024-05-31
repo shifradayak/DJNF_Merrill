@@ -6,15 +6,16 @@ editor_options:
 ---
 
 ::: {style="text-align: center; color: #337DFF;"}
-# Basic Visualization in R 
+# Basic Visualization in R
+
 ## Dow Jones News Fund \@ Merrill College
+
 ### Data Driven Investigative Reporting Training
 :::
 
-
 ::: {style="text-align: center;"}
-<img src="intro_images/DJNF_Logo.png" width="300" height="150"/>
-<img src="intro_images/merrill-logo-dark.png" width="300" height="50"/>
+<img src="DJNF_Logo.png" width="300" height="150"/>
+<img src="merrill-logo-dark.png" width="300" height="50"/>
 :::
 
 ```         
@@ -25,35 +26,39 @@ robwells@umd.edu
 LinkedIn: https://www.linkedin.com/in/rob-wells-7929329/ 
 ver. 5/29/2024 
 ```
+
 <br>
 
 ## Learning Objectives
-    
--    Gain confidence using the tidyverse packages dplyr and ggplot2   
--    Sort, filter, group, summarize, join, and visualize   
--    Identify trends in your data.   
+
+-   Gain confidence using the tidyverse packages dplyr and ggplot2\
+-   Sort, filter, group, summarize, join, and visualize\
+-   Identify trends in your data.
 
 <br>
- 
+
 #### Analysis of San Francisco Police Calls for Service Data
 
 ::: {style="text-align: center;"}
-<img src="intro_images/bubble.png" width="700" height="600"/>
+<img src="bubble.png" width="700" height="600"/>
 :::
 
 ##### Here is [the original dataset: 3,048,797 records](https://data.sfgov.org/Public-Safety/Police-Department-Calls-for-Service/hz9m-tj6z/data)
 
-    311 logs calls on general non-emergency issues ranging from blocked sidewalks to graffiti to homeless concerns. Details: https://support.datasf.org/help/311-case-data-faq
+```         
+311 logs calls on general non-emergency issues ranging from blocked sidewalks to graffiti to homeless concerns. Details: https://support.datasf.org/help/311-case-data-faq
+```
 
-**This tutorial uses a subset of this data** 
+**This tutorial uses a subset of this data**
 
-    The Calls for Service were filtered as follows:  
-    CONTAINS homeless, 915, 919, 920: Downloaded 157,237 records 3/31/16 to 11/30/2019. 
-    This is 5.1% of all calls in the broader database.
-    File renamed to: SF_311_Jan29.xlsx   
-   
+```         
+The Calls for Service were filtered as follows:  
+CONTAINS homeless, 915, 919, 920: Downloaded 157,237 records 3/31/16 to 11/30/2019. 
+This is 5.1% of all calls in the broader database.
+File renamed to: SF_311_Jan29.xlsx   
+```
+
 <br>
-
 
 ## Part 1: Load Software, Interview Data
 
@@ -65,7 +70,6 @@ library(janitor)
 library(lubridate)
 ```
 
-
 **Load Data**
 
 ```{r}
@@ -73,18 +77,20 @@ SF <- rio::import("https://docs.google.com/spreadsheets/d/1-nkosLJKkfeLSl-UG82DD
 ```
 
 **Interview the Data**
+
 ```{r}
 head(SF)
 ```
 
-**Really Interview the Data**
-How big are you? Rows? Columns? List of column names? 
+**Really Interview the Data** How big are you? Rows? Columns? List of
+column names?
 
 ```{r}
 glimpse(SF)
 ```
 
-**Clean column names, Process dates** 
+**Clean column names, Process dates**
+
 ```{r}
 #This cleans column names
 SF <- janitor::clean_names(SF)
@@ -96,10 +102,11 @@ SF$year <- year(SF$call_date2)
 
 **Sort by Date**
 
-```
+```         
 We're using a weirdo command called a 'pipe' - %>% - that joins
 lines of code. In the example below, the SF table is filtered in descending order and the results are dumped into a new file called SF1.
 ```
+
 ```{r}
 #descending order
 SF1 <- SF %>% 
@@ -108,6 +115,7 @@ arrange(desc(report_date))
 ```
 
 **Create a Table: 311 Calls by Year**
+
 ```{r}
 Years <- SF %>% 
   count(year) %>% 
@@ -128,7 +136,7 @@ ggplot(data=Years) +
 
 ```
 
-**That's ugly. Add some color: fill=n **
+**That's ugly. Add some color: fill=n**
 
 ```{r}
 ggplot(data=Years) +
@@ -137,6 +145,7 @@ ggplot(data=Years) +
 ```
 
 **Ditch the legend: theme(legend.position = "none")**
+
 ```{r}
 
 ggplot(Years,aes(x = year, y = n,
@@ -147,6 +156,7 @@ ggplot(Years,aes(x = year, y = n,
 ```
 
 **Add Headlines, Annotations and Credits: labs(title =**
+
 ```{r}
 
 ggplot(Years,aes(x = year, y = n,
@@ -183,8 +193,9 @@ SF %>%
 
 ### Your Turn
 
-**1) Which Day Had the Most 311 Calls?**
-Using count to tabulate calls by day
+**1) Which Day Had the Most 311 Calls?** Using count to tabulate calls
+by day
+
 ```{r}
 
 ```
@@ -199,7 +210,9 @@ Using count to tabulate calls by day
 
 # Part 3: Analysis
 
-**Summary**: Using the summary() function, describe the minimum, maximum, median and mean of calls in the Days table
+**Summary**: Using the summary() function, describe the minimum,
+maximum, median and mean of calls in the Days table
+
 ```{r}
 #Adding the $n allows us to calculate the data on a specific column
 Days <- SF %>% 
@@ -209,9 +222,11 @@ Days <- SF %>%
 summary(Days$n)
 ```
 
-Between March 31, 2016 and Nov. 30, 2019, San Francisco residents placed **an average 117 calls** to police complaining about homeless people.
+Between March 31, 2016 and Nov. 30, 2019, San Francisco residents placed
+**an average 117 calls** to police complaining about homeless people.
 
-**Most Calls**: Identify the day with the most calls 
+**Most Calls**: Identify the day with the most calls
+
 ```{r}
 #Group_by gathers and allows tabulation of all days
 Days %>%
@@ -219,8 +234,9 @@ Days %>%
   filter(n == max(n)) 
 ```
 
-**See what happens without group_by**
-Only the top value is computed, not the aggregation of the component parts
+**See what happens without group_by** Only the top value is computed,
+not the aggregation of the component parts
+
 ```{r}
 
 Days %>%
@@ -228,20 +244,19 @@ Days %>%
   filter(n == max(n)) 
 
 ```
-<br>   
-<br> 
-**Breaking Down Group_By**
-<br> 
 
-<img src="intro_images/group_by.png" width="400" height="400" />
-<br>   
-<br> 
+<br>\
+<br> **Breaking Down Group_By** <br>
 
--- **Many thanks**, [Ben Stenhaug](https://www.youtube.com/watch?v=6xbGZDUu5W4)
-<br>   
-<br> 
+<img src="group_by.png" width="400" height="400"/> <br>\
+<br>
+
+-- **Many thanks**, [Ben
+Stenhaug](https://www.youtube.com/watch?v=6xbGZDUu5W4) <br>\
+<br>
 
 **Export to spreadsheet**
+
 ```{r}
 write.csv(Days,"Days.csv")
 ```
@@ -250,8 +265,9 @@ write.csv(Days,"Days.csv")
 
 ### Your Turn
 
-**Question**: Identify the top 5 days with the most calls?
-Pro tip: [slice_max to the rescue](https://dplyr.tidyverse.org/reference/slice.html)
+**Question**: Identify the top 5 days with the most calls? Pro tip:
+[slice_max to the
+rescue](https://dplyr.tidyverse.org/reference/slice.html)
 
 ```{r}
 
@@ -260,6 +276,7 @@ Pro tip: [slice_max to the rescue](https://dplyr.tidyverse.org/reference/slice.h
 **Question**: Identify the top 5 days with the fewest calls?
 
 Pro tip: [slice_min](https://dplyr.tidyverse.org/reference/slice.html)
+
 ```{r}
 
 
@@ -269,16 +286,16 @@ Pro tip: [slice_min](https://dplyr.tidyverse.org/reference/slice.html)
 
 ### Types of Complaints
 
-
 **Interviewing: Types of Complaints**
+
 ```{r}
 SF1 <- SF %>% count(original_crime_type_name) %>% 
     arrange(desc(n))
 head(SF1)
 ```
 
-
 **Interviewing: Actions Taken**
+
 ```{r}
 Action <- SF %>% 
   count(disposition) %>% 
@@ -286,9 +303,8 @@ Action <- SF %>%
 head(Action)
 ```
 
-
-**Tabulate types of events**. 
-What are the top five complaints in this data and provide the number of complaints
+**Tabulate types of events**. What are the top five complaints in this
+data and provide the number of complaints
 
 ```{r}
 Types <- SF %>% count(original_crime_type_name) %>% 
@@ -302,9 +318,10 @@ Types
 
 **Question**: What were the common days for arrests?
 
-**Task: Tabulate arrests by day of the week**  
+**Task: Tabulate arrests by day of the week**
 
-[Background on dealing with dates](https://github.com/profrobwells/Data-Analysis-Class-Jour-405v-5003/blob/master/Readings/dealing-with-dates.pdf)
+[Background on dealing with
+dates](https://github.com/profrobwells/Data-Analysis-Class-Jour-405v-5003/blob/master/Readings/dealing-with-dates.pdf)
 
 ```{r}
 SF <- SF %>% 
@@ -322,6 +339,7 @@ SF %>%
 ```
 
 **Make an ugly bubble chart**
+
 ```{r}
   #using the code above
 SF %>%
@@ -333,10 +351,11 @@ SF %>%
   geom_point(aes(size = n, color = n))
 ```
 
-
 **Clean up bubble chart**
 
-    We add y-axis label, headline & ditch the legend
+```         
+We add y-axis label, headline & ditch the legend
+```
 
 ```{r}
   #using the code above
@@ -355,9 +374,11 @@ SF %>%
 
 **Refined Bubble Chart**
 
-    Scaled y axis: scale_y_continuous
-    Bumped up bubble size: scale_size_area
-    saved chart to object: bubble
+```         
+Scaled y axis: scale_y_continuous
+Bumped up bubble size: scale_size_area
+saved chart to object: bubble
+```
 
 ```{r}
   #using the code above
@@ -377,19 +398,21 @@ bubble <- SF %>%
        caption = "Graphic by Rob Wells, 5/24/2024")
 bubble
 ```
+
 **Export to Hi Res File**
+
 ```{r}
 ggsave("bubble.png",device = "png",width=9,height=6, dpi=800)
 ```
 
 <br>
 
-**Ready for More?**
-Check out [Gathering and Cleaning Data, which describes APIs](https://wellsdata.github.io/DJNF_Merrill/Intro_to_R_2024/DJNF_Gathering_Cleaning_Data.html)
+**Ready for More?** Check out [Gathering and Cleaning Data, which
+describes
+APIs](https://wellsdata.github.io/DJNF_Merrill/Intro_to_R_2024/DJNF_Gathering_Cleaning_Data.html)
 
 <br>
 
 ::: {style="text-align: center; color: #337DFF;"}
-#### --30-- 
-
-::: 
+#### --30--
+:::

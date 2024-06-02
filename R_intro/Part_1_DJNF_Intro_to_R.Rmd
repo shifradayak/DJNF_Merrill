@@ -87,9 +87,9 @@ Janitor: Data cleaning
 **Below, remove the hash tags \# and run the chunk**
 
 ```{r}
-#install.packages("tidyverse")
-#install.packages("rio") 
-#install.packages("janitor")
+install.packages("tidyverse")
+install.packages("rio") 
+install.packages("janitor")
 ```
 
 After you install a package on your hard drive, you bring the software
@@ -98,10 +98,12 @@ in active memory by loading a library
 Libraries are bits of software you will have to load each time into R to
 make things run.
 
-```{r message=FALSE, warning=FALSE}
+```{r}
 library(tidyverse)
-#load the librar for rio 
-#load the librar for janitor
+#load the library for rio 
+library(rio)
+#load the library for janitor
+library(janitor)
 
 ```
 
@@ -162,7 +164,7 @@ nrow(MediaBucks)
 How many columns?
 
 ```{r}
-#use the command ncol to determine the number of columns
+ncol(MediaBucks)
 ```
 
 Dimensions: Gives number rows, then columns
@@ -174,7 +176,7 @@ dim(MediaBucks)
 Names of your columns
 
 ```{r}
-#use the command colnames to determine the number of columns
+colnames(MediaBucks)
 
 ```
 
@@ -188,13 +190,13 @@ Check data types
 
 ```{r}
 #During class, remove hashtag on next line and run chunk
-#str(MediaBucks)
+str(MediaBucks)
 ```
 
 Let's look at the first six rows
 
 ```{r}
-#Display the first six rows of data
+head(MediaBucks)
 ```
 
 Here is a quick way to view the range of your data
@@ -220,6 +222,7 @@ average
 #We just used sum to determine total salaries.
 #mean is the command to determine averages.
 #replace sum for mean: sum(MediaBucks$Salary, na.rm=TRUE)
+mean(MediaBucks$Salary, na.rm=TRUE)
 
 ```
 
@@ -281,7 +284,6 @@ MediaBucks %>%
 
 Better idea: Check Averages!
 
-
 ```{r}
 #Using the example code above, create a column called Avg_Salary and use the mean command to produce the calculation
 #Adapt the code below to do this:
@@ -291,6 +293,12 @@ Better idea: Check Averages!
 #   group_by(Gender) %>% 
 #   summarize(Total = sum(Salary, na.rm=TRUE))
 
+MediaBucks |>
+  select(Gender, Salary) |>
+  group_by(Gender) |>
+  summarise (
+    Avg_Salary = mean(Salary, na.rm = TRUE)
+  )
 
 
 ```
@@ -344,14 +352,17 @@ Questions
 ```
 
 ```{r}
-#1: Build a table for NewYorkTimes employees   
+#1: Build a table for NewYorkTimes employees  
+
+NYT <- subset(MediaBucks, COMPANY=="NewYorkTimes" )
 
 
 ```
 
-
 ```{r}
 #2: Determine median salary of NewYorkTimes employees   
+
+summary(NYT$Salary)
 
 
 ```
@@ -359,6 +370,10 @@ Questions
 ```{r}
 #3: Identify title, gender and race of the highest paid position at NYT  
 
+NYT |>
+  arrange(desc(Salary))
+
+#Executive Editor -- news, no gender specified, Black
 
 ```
 
@@ -366,11 +381,19 @@ Questions
 #4: Build a table that filters "Business" in the Company column. Determine Summary of the Salary column.
 #Build a second table that filters "Bloomberg" in the Company column.  Determine Summary of the Salary column.
 
+Business <- subset(MediaBucks, grepl("?Business", COMPANY)) 
+
+Bloomberg <- subset(MediaBucks, grepl("?Bloomberg", COMPANY)) 
+
+summary(Business$Salary)
+
+summary(Bloomberg$Salary)
+
 #Which one is higher?
+#The average for Bloomberg is higher
 
 
 ```
-
 
 <br> \#### More Tables
 
@@ -385,16 +408,32 @@ Table with just reporter salaries
 ```{r}
 Reporters <- subset(MediaBucks, grepl("?reporter", TITLE))
 summary(Reporters$Salary)
+
+Reporters |>
+  arrange(desc(Salary))
 ```
 
 Questions:
 
 ```         
-1: Who is making $230,504 as a reporter???   
-2: Make a table for editors, figure out medians.   
+1: Who is making $230,504 as a reporter???  
+  Senior reporter at ProPublica
+2: Make a table for editors, figure out medians. 
 3: Find highest paid editor. Resent them.   
 4: Make a table for any position involving data  
 ```
+
+```{r}
+Editors <- subset(MediaBucks, grepl("?editor | Editor", TITLE))
+summary(Editors$Salary)
+
+Editors |>
+  arrange(desc(Salary))
+```
+```{r}
+Data <- subset(MediaBucks, grepl("?data | Data", TITLE))
+```
+
 
 Table with Black reporters at Wall Street Journal
 
@@ -448,8 +487,8 @@ How to conduct filter queries from a dataset
 
 #### Next Steps
 
-Try [Basic Data Visualization in R](https://wellsdata.github.io/DJNF_Merrill/Intro_to_R_2024/DJNF_Basic_Data_Viz.html)
-
+Try [Basic Data Visualization in
+R](https://wellsdata.github.io/DJNF_Merrill/Intro_to_R_2024/DJNF_Basic_Data_Viz.html)
 
 # Appendix
 

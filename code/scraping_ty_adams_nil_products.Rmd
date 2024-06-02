@@ -48,3 +48,7 @@ print(products)
 
 ```
 
+```{r}
+write.csv(products, "../data/unc_nil_products.csv")
+
+```

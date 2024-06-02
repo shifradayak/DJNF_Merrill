@@ -67,3 +67,7 @@ if (!is.null(schools_nav)) {
 
 ```
 
+```{r}
+write.csv(df, "../data/nil_schools.csv")
+
+```

@@ -45,4 +45,7 @@ print(athletes)
 
 ```
 
+```{r}
+write.csv(athletes, "../data/unc_nil_athletes.csv")
 
+```

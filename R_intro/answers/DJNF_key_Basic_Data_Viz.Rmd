@@ -13,6 +13,15 @@ editor_options:
 ### Data Driven Investigative Reporting Training
 :::
 
+
+::: {style="text-align: center; color: green;"}
+
+#### Answer Key
+
+:::
+
+
+
 ::: {style="text-align: center;"}
 <img src="DJNF_Logo.png" width="300" height="150"/>
 <img src="merrill-logo-dark.png" width="300" height="50"/>
@@ -197,13 +206,27 @@ SF %>%
 by day
 
 ```{r}
+Days <- SF %>% 
+  count(call_date2) %>% 
+  arrange(desc(n))
+
+head(Days)
 
 ```
 
-**2) Chart Calls by Day**
+**2) Chart Calls by Day** Use the code above and add a ggplot chart to it
 
 ```{r}
-
+SF %>% 
+  count(call_date2) %>% 
+  #Sandwich it onto a simple ggplot
+  ggplot(aes(x = call_date2, y = n, fill = n)) +
+  geom_bar(stat = "identity") +
+  labs(title = "311 Calls for Service By Day, San Francisco", 
+       subtitle = "SF PD Service Call Data, 2016-2019",
+       caption = "Graphic by Wells",
+       y="Number of Calls",
+       x="Day")
 ```
 
 <br>
@@ -270,7 +293,12 @@ write.csv(Days,"Days.csv")
 rescue](https://dplyr.tidyverse.org/reference/slice.html)
 
 ```{r}
-
+Days %>% 
+  slice_max(n, n = 5)
+#Or
+#Filter by the value
+# Days %>% 
+#   filter(n == 232)
 ```
 
 **Question**: Identify the top 5 days with the fewest calls?
@@ -278,6 +306,12 @@ rescue](https://dplyr.tidyverse.org/reference/slice.html)
 Pro tip: [slice_min](https://dplyr.tidyverse.org/reference/slice.html)
 
 ```{r}
+Days %>% 
+  slice_min(n, n = 5)
+#Or
+#Filter by the value
+# Days %>% 
+#   filter(n == 10)
 
 
 ```

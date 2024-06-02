@@ -305,9 +305,9 @@ MediaSalary <- MediaBucks %>%
 Questions:
 
 ```         
-1: View the range of your data    
+1: View the range of your salary data    
 2: Number of rows  
-3: Number of rows cut with filter  
+3: Number of rows cut with filter of greater that 500 
 ```
 
 <br>

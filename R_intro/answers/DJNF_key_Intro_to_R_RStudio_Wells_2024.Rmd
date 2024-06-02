@@ -13,6 +13,13 @@ editor_options:
 **Data Driven Investigative Reporting Training**
 :::
 
+::: {style="text-align: center; color: green;"}
+
+#### Answer Key
+
+:::
+
+
 ::: {style="text-align: center;"}
 <img src="DJNF_Logo.png" width="300" height="150"/>
 <img src="merrill-logo-dark.png" width="300" height="50"/>
@@ -24,7 +31,7 @@ Philip Merrill College of Journalism
 University of Maryland
 robwells@umd.edu
 LinkedIn: https://www.linkedin.com/in/rob-wells-7929329/ 
-ver. 5/24/2024 
+ver. 6/2/2024 
 ```
 
 ### Goals
@@ -293,10 +300,32 @@ MediaSalary <- MediaBucks %>%
 Questions:
 
 ```         
-1: View the range of your data    
+1: View the range of your salary data    
 2: Number of rows  
-3: Number of rows cut with filter  
+3: Number of rows cut with filter of 500 or greater 
 ```
+
+
+```{r}
+#1: View the range of your salary data  
+summary(MediaBucks$Salary)
+```
+
+```{r}
+#2: Number of rows  
+nrow(MediaBucks)
+```
+
+
+
+```{r}
+#3: Number of rows cut with filter of 500 or greater 
+MediaSalary <- MediaBucks %>% 
+  filter(Salary >= 1000)
+```
+
+
+```{r}
 
 <br>
 
@@ -329,6 +358,38 @@ Questions
 2: Determine median salary of NewYorkTimes employees   
 3: Identify title, gender and race of the highest paid position at NYT   
 4: Search for "Business" in Company, check salaries, compare to "Bloomberg"   
+```
+
+```{r}
+#1: Build a table for NewYorkTimes employees
+NYT <- subset(MediaBucks, COMPANY=="NewYorkTimes") 
+```
+
+```{r}
+#2: Determine median salary of NewYorkTimes employees
+summary(NYT$Salary)
+```
+
+```{r}
+#3: Identify title, gender and race of the highest paid position at NYT
+NYT %>% 
+  filter(Salary == 350000)
+```
+
+```{r}
+#4: Build a table that filters "Business" in the Company column. Determine Summary of the Salary column.
+#Build a second table that filters "Bloomberg" in the Company column.  Determine Summary of the Salary column.
+
+#Which one is higher?
+
+Biz <- subset(MediaBucks, grepl("?Business", COMPANY))
+summary(Biz$Salary)
+
+#$46,000
+Bloom <- subset(MediaBucks, grepl("?Bloomberg", COMPANY))
+summary(Bloom$Salary)
+#$50,350
+
 ```
 
 <br> \#### More Tables

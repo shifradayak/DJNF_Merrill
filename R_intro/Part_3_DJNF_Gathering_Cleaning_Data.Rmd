@@ -54,7 +54,11 @@ ver. 5/29/2024
 #install.packages("tidyverse")
 #install.packages("jsonlite")
 
-#load the tidyverse, janitor, lubricate, jsonlite and tidyr libraries
+library(tidyverse)
+library(janitor)
+library(lubridate)
+library(jsonlite)
+library(tidyr)
 ```
 
 **Details about software: jsonlite**

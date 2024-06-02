@@ -66,8 +66,7 @@ File renamed to: SF_311_Jan29.xlsx
 
 ```{r message=FALSE, warning=FALSE}
 #background on tidyverse: https://www.tidyverse.org/packages/
-
-#load tidyverse, janitor and lubridate libraries
+#load the lubridate, tidyverse and janitor libraries
 
 ```
 
@@ -176,9 +175,9 @@ ggplot(Years,aes(x = year, y = n,
 
 ```{r}
 #Copy section of code from above...
-SF %>% 
-   count(year) %>% 
-   group_by(year) %>% 
+# SF %>% 
+#    count(year) %>% 
+#    group_by(year) %>% 
 #Sandwich it onto a simple ggplot that you created in the prior code chunk
   
 ```

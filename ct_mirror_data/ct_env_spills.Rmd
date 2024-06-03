@@ -2,7 +2,60 @@
 title: "ct_env_spills"
 output: html_document
 date: "2024-06-02"
+editor_options: 
+  markdown: 
+    wrap: sentence
 ---
+
+## STORY PITCH
+
+**Shifra Dayak, [shifrandayak\@gmail.com](mailto:shifrandayak@gmail.com){.email}, 202-215-7408**
+
+**06/03/2024**
+
+What the story's about: This story is about trends in reported environmental spills from the 1960s until now in Connecticut.
+The story will examine how and why spills have changed over the years, and — zooming in on approximately the last 10 years — what places and people have been the most impacted by spills and why, as well as what implications those impacts and any follow-ups on the part of regulatory and response authorities have on environmental justice.
+
+Why now: Environmental spills are fairly common and ongoing in Connecticut, with a [recent oil spill](https://www.nbcconnecticut.com/news/local/i-91-south-closed-enfield-oil-spill/3269785/) closing down part of a major interstate highway, [sewage](https://www.courant.com/2023/12/18/ct-towns-have-seen-nearly-150-sewage-spills-this-year-see-where-why-and-whats-being-done/) spilling into waterways in the last year and more, so telling this story now can help contextualize those recent spills and inform audiences in Connecticut about how environmental hazards (or the lack thereof) in their communities fit into larger historical patterns/
+
+Three sources: For this story, I can interview Lori Saliby, the director of the state environment department's emergency response and spill prevention division, for context on how spill reporting works and why we might be seeing some of the trends that appear in this dataset.
+I'd also reach out to state and local politicians in Connecticut that have been involved in environmental advocacy, some of whom are listed as part of the [Center for Climate Integrity](https://climateintegrity.org/leaders).
+In Hartford, which has seen the most spills per a chloropeth map at the end of this file, CCI lists at least six politicians.
+Finally, I'd want to talk to a few residents in places that have experienced spills — what have their experiences been like?
+Do they feel that the cleanup and response process was adequate and took their community into account?
+Did the spill(s) impact their health?
+
+Potential impact: This story could help communities that have faced environmental hazards and injustice be brought to the forefront.
+If, through reporting, a lack of action on responding to these reported spills is exposed, the story could help remedy that and spark action from regulatory and response authorities.
+
+Three things that surprised/interested me: First, reported spills peaked in 2001.
+In the analysis section of this markdown, there's some exploration of what could have contributed to this, including tying in historical context about changing state hazardous waste regulations in late 2001 and 2002, as well as anxiety about anthrax during the 2001 attacks.
+I'd like to talk to some of the above sources to see if these theories are true, and if not, why else spills have declined steadily since then.
+Second, Hartford has seen the most spills reported.
+I thought coastal towns would see the most reports, so the fact that this landlocked city tops the list was surprising.
+Third, there's a lot of variation in spills in coastal towns.
+Southwestern towns also top the list for spills, but southern and eastern coastal towns haven't had as many spills.
+It would be interesting to see if there are any other factors at play here, like how rich or poor various coastal towns are and how prominent different industries are.
+
+Context: The Connecticut Courant reported at the end of 2023 on [sewage spills](https://www.courant.com/2023/12/18/ct-towns-have-seen-nearly-150-sewage-spills-this-year-see-where-why-and-whats-being-done/) during the year and how they impacted waterways in the state.
+Most sewage-related spills are because of outdated sewer systems, according to the piece — an issue that the state's environment department is working to remedy.
+That's the most overarching spill-related reporting recently.
+Other stories have largely been about individual incidents and have mostly covered breaking news, rather than trends or implications of spills.
+But Connecticut Public reported last year on a new [environmental justice screening tool](https://www.ctpublic.org/news/2023-07-26/this-new-map-shows-which-ct-communities-are-hardest-hit-by-environmental-hazards) for Connecticut that shows what communities and census tracts are most heavily impacted by environmental injustices.
+Notably, the map tool itself shows that the [most hard-hit communities](https://connecticut.maps.arcgis.com/apps/webappviewer/index.html?id=5adac07c27db40bbabc193af58634e5a) approximately line up with the parts of the state that have seen the most spills reported from 2010 until now.
+
+Visuals: Data visualizations could include charts of spills over time and spills broken down by type (e.g. sewage vs. oil spills vs. other stuff), and maps of where the most spills have occurred in Connecticut.
+Photo and video could include visuals of places that have been impacted by spills, like the coastline in a southwestern Connecticut town or a site in Hartford where a spill was reported in the last decade.
+
+Other information to gather: Perspectives from experts on what's caused the decline in spill reports since 2001 could be helpful.
+Also, I want to look into any confounding factors that could have changed how spills have been reported throughout history, like reporting requirements becoming more or less stringent with different state administrations.
+In addition to the data analysis below, I also want to look more into the following things with the dataset: if certain types of spills are more common in certain places, what the response record and rate for spills has been like (if responses varied by time or by town), how trends in spills across the state might have changed overtime in terms of what towns have been most impacted, if there are particular companies or actors that are responsible for a disproportionate number of spills.
+For context, I'll also need to gather information on why spills in certain towns might be more prominent — are there manufacturing facilities, shipping routes or the like in certain spaces that make spills common?
+I'd also like to look into legal action related to any of these spills or actors, and what the outcome of litigation has been, if any.
+
+Estimated delivery: Mid-July 2024
+
+## CLEANING, ANALYZING AND VISUALIZING THE DATA
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -10,6 +63,7 @@ library(dplyr)
 library(tidyverse)
 library(janitor)
 library(lubridate)
+library(ggplot2)
 ```
 
 ```{r}
@@ -17,6 +71,7 @@ library(lubridate)
 spills <- read_csv("spills.csv") |>
   clean_names()
 ```
+
 ```{r}
 #Taking out 2024 because not enough data has been recorded yet, and then grouping by year to calculate how many spills reported per year
 spills_by_year <- spills |>
@@ -28,14 +83,25 @@ spills_by_year <- spills |>
 
 spills_by_year
 ```
+
 ```{r}
 #Exporting the new grouped table
 spills_by_year |> write_csv("spills_by_year.csv")
 ```
 
 ```{r}
+#Charting the spills by year 
+ggplot(spills_by_year, aes(x=year, y=spill_number)) +
+  geom_line()
+
+```
+
+Charting this shows us that spills peaked in 2001 and have been on a relatively steady decline since then, despite some minor variation from year to year.
+This led me to take a brief look at the top year in particular.
+
+```{r}
 #Looking at 2001, because most spills happened then 
-spills_2001 <- spills |>
+spills_2001_by_date <- spills |>
   filter (year == "2001") |> 
   group_by (release_date_and_time) |>
   summarise(
@@ -44,8 +110,130 @@ spills_2001 <- spills |>
   filter (count > 1) |>
   arrange(desc(count))
 
-#Examining the dates with a lot of spills reported in 2001
+#Examining the top date with the most spills reported in 2001
 spills_individual_2001 <- spills |>
-  filter (year == "2001") 
+  filter (year == "2001", release_date_and_time == "10/16/2001 12:00:00 AM")
+
+#Examining the nature/type of reports in 2001 at a glance
+spill_types_2001 <- spills |>
+  filter (year == "2001") |>
+  group_by(release_substance) |>
+  summarise (
+    reports_by_substance = n()
+  ) |> 
+  arrange(desc(reports_by_substance))
+
 ```
 
+```{r}
+#Filtering for relevant release substance to see roughly what percentage of reports are related to white powder 
+
+spill_types_2001 |>
+  filter(str_detect(release_substance, "WHITE | SUSPICIOUS | ANTHRAX")) |>
+  mutate(total_anthrax_related = sum(reports_by_substance))
+  
+```
+
+```{r}
+#What percentage of reports in 2001 were related to anthrax (either directly or presumably?) 
+
+spills_2001 <- spills |>
+  filter (year == "2001") 
+
+spills_2001 |>
+  nrow()
+
+anthrax_spills_2001 <- spills |>
+  filter (year == "2001") |> 
+  filter(str_detect(release_substance, "WHITE | SUSPICIOUS | ANTHRAX"))
+
+anthrax_spills_2001 |>
+  nrow()
+
+(582/10421)*100
+```
+
+```{r}
+#Doing the same thing for 2002, to see if anthrax was less of a concern in that year. In this, we calculate the total number of reports (of any kind) for 2002
+spills_2002 <- spills |>
+  filter (year == "2002") 
+
+spills_2002 |>
+  nrow()
+```
+
+```{r}
+#Calculating the number of presumably anthrax-related reports in 2002 
+anthrax_spills_2002 <- spills_2002 |>
+  filter(str_detect(release_substance, "WHITE | SUSPICIOUS | ANTHRAX"))
+
+anthrax_spills_2002 |>
+  nrow()
+
+#And then what percentage of all 2002 reports this makes up
+(113/8812)*100
+```
+
+There probably is not much to look at with any particular incidents in 2001 specifically, as indicated by the data — even though there were a lot of spill reports on the top day (the day with the most reports), they all seem to be from different places/incidents, so it's not like there was one big incident that we need to look at in-depth.
+
+I did research to see if there are any indications about what could have caused the fairly steady drop after the peak in 2001.
+It looks like there were three rounds of changes to Connecticut's hazardous waste management laws from October 2001 to September 2002, which aligned state laws with federal hazardous waste management standards.
+It's a little bit counterintuitive, because these legislative changes largely REDUCED the management requirements for certain types of hazardous waste — but when thinking about it, this could have led to the decline in reports, since less stringent management means less need for reporting.
+This is the opposite of how stricter requirements could have led to a decline (more strict requirements could have reduced the actual number of spills).
+Of course, the reason why the number of reports declined could, in fact, be from fewer spills themselves.
+We're not sure from the data alone what the driving factor is, but both could be possible explanations.
+From a regulatory perspective, these reforms also included some changes to corrective action guidelines (in line with the EPA's federal reforms to the Resource Conservation and Recovery Act, which deals with hazardous waste cleanup), but this probably didn't affect the reporting numbers much, since this dataset deals purely with total reports and not what happens after.
+
+Another big factor that could have caused the peak is the 2001 anthrax scare.
+As compared to the year immediately following (2002), a bigger chunk of all spills reported in 2001 seem to be related to anthrax or anthrax scares, with keywords like "powder" and "white substance."
+
+Let's move on to grouping by place, to see if there are trends in where spills have been reported.
+To narrow down the scope, let's look at roughly the last decade of recorded data (2010 and after).
+
+```{r}
+
+#Filtering for 2010 and after
+after_2010_spills <- spills |>
+  filter (year > 2009)
+
+#Standardizing stylization of place names 
+after_2010_spills$town_of_release <- toupper(after_2010_spills$town_of_release)
+
+
+#Cleaning up some messy/wrong names 
+after_2010_spills <- after_2010_spills |>
+  mutate(
+    town_of_release = case_when (
+      town_of_release == "GRONTON" ~ "GROTON",
+      town_of_release == "GROTOM" ~ "GROTON",
+      town_of_release == "MIFORD" ~ "MILFORD",
+      town_of_release == "MILLFORD" ~ "MILFORD",
+      town_of_release == "MONTOVILLE" ~ "MONTVILLE",
+      town_of_release == "OOLD SAYBROOK" ~ "OLD SAYBROOK",
+      town_of_release == "WATERTOWM" ~ "WATERTOWN",
+      town_of_release == "NORTHFORD" ~ "NORTH BRANFORD",
+      .default = town_of_release
+    )
+  )
+
+#Grouping by place 
+spills_by_town <- after_2010_spills |>
+  group_by (town_of_release) |>
+  summarise (
+    reports_by_town = n()
+  ) |>
+  arrange(desc(reports_by_town)) |>
+  slice(1:170)
+
+#Exporting as CSV so we can map in Datawrapper 
+spills_by_town |>
+  write_csv("spills_by_town.csv")
+  
+
+
+```
+
+To clean up the data by town (in the chunk of code above), I cross-compared with name keys in a map of Connecticut towns on Datawrapper, and took out any instances of towns that didn't have a key.
+
+Here's the [resulting map](https://datawrapper.dwcdn.net/E1Zmt/2/https://datawrapper.dwcdn.net/E1Zmt/2/) I created on Datawrapper of spills by town.
+It seems as though more spills were reported from towns in central Connecticut and southwestern Connecticut.

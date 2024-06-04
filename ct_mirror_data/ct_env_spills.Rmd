@@ -24,6 +24,7 @@ In Hartford, which has seen the most spills per a chloropeth map at the end of t
 Finally, I'd want to talk to a few residents in places that have experienced spills — what have their experiences been like?
 Do they feel that the cleanup and response process was adequate and took their community into account?
 Did the spill(s) impact their health?
+Ideally, at least a couple of these residents would be from places that have experienced high spill rates.
 
 Potential impact: This story could help communities that have faced environmental hazards and injustice be brought to the forefront.
 If, through reporting, a lack of action on responding to these reported spills is exposed, the story could help remedy that and spark action from regulatory and response authorities.
@@ -31,11 +32,11 @@ If, through reporting, a lack of action on responding to these reported spills i
 Three things that surprised/interested me: First, reported spills peaked in 2001.
 In the analysis section of this markdown, there's some exploration of what could have contributed to this, including tying in historical context about changing state hazardous waste regulations in late 2001 and 2002, as well as anxiety about anthrax during the 2001 attacks.
 I'd like to talk to some of the above sources to see if these theories are true, and if not, why else spills have declined steadily since then.
-Second, Hartford has seen the most spills reported.
-I thought coastal towns would see the most reports, so the fact that this landlocked city tops the list was surprising.
-Third, there's a lot of variation in spills in coastal towns.
-Southwestern towns also top the list for spills, but southern and eastern coastal towns haven't had as many spills.
-It would be interesting to see if there are any other factors at play here, like how rich or poor various coastal towns are and how prominent different industries are.
+Second, while the top spill substances have relatively remained the same over the years, the share involving fuel oil has dropped significantly overtime.
+I'd like to know why that is.
+Third, there's a lot of variation between where the most spills have happened and where the highest rates of spills have been.
+Looking at just raw numbers shows patterns that line up with other environmental injustice maps, which point to central and southwestern Connecticut as facing lots of issues.
+But looking at per-1,000 rates shows us some random towns here and there that have seen disproportionate spills, which is surprising.
 
 Context: The Connecticut Courant reported at the end of 2023 on [sewage spills](https://www.courant.com/2023/12/18/ct-towns-have-seen-nearly-150-sewage-spills-this-year-see-where-why-and-whats-being-done/) during the year and how they impacted waterways in the state.
 Most sewage-related spills are because of outdated sewer systems, according to the piece — an issue that the state's environment department is working to remedy.
@@ -44,8 +45,11 @@ Other stories have largely been about individual incidents and have mostly cover
 But Connecticut Public reported last year on a new [environmental justice screening tool](https://www.ctpublic.org/news/2023-07-26/this-new-map-shows-which-ct-communities-are-hardest-hit-by-environmental-hazards) for Connecticut that shows what communities and census tracts are most heavily impacted by environmental injustices.
 Notably, the map tool itself shows that the [most hard-hit communities](https://connecticut.maps.arcgis.com/apps/webappviewer/index.html?id=5adac07c27db40bbabc193af58634e5a) approximately line up with the parts of the state that have seen the most spills reported from 2010 until now.
 
-Visuals: Data visualizations could include charts of spills over time and spills broken down by type (e.g. sewage vs. oil spills vs. other stuff), and maps of where the most spills have occurred in Connecticut.
+Visuals: Data visualizations could include charts of spills over time and spills broken down by type across the years, and maps of where the most spills have occurred in Connecticut per 1,000 residents.
+I'd also like to create a point map visualization showing where some of the spills from multiple-time offender companies occurred, possibly layered on top of regional data showing income levels or non-white population percentage in different cities and towns.
+This will help readers draw conclusions about whether spills are more common in certain parts of Connecticut.
 Photo and video could include visuals of places that have been impacted by spills, like the coastline in a southwestern Connecticut town or a site in Hartford where a spill was reported in the last decade.
+I'd also like to create a behind-the-scenes video showing how I analyzed some of the data and created some of the visualizations.
 
 Other information to gather: Perspectives from experts on what's caused the decline in spill reports since 2001 could be helpful.
 Also, I want to look into any confounding factors that could have changed how spills have been reported throughout history, like reporting requirements becoming more or less stringent with different state administrations.
@@ -89,14 +93,7 @@ spills_by_year
 spills_by_year |> write_csv("spills_by_year.csv")
 ```
 
-```{r}
-#Charting the spills by year 
-ggplot(spills_by_year, aes(x=year, y=spill_number)) +
-  geom_line()
-
-```
-
-Charting this shows us that spills peaked in 2001 and have been on a relatively steady decline since then, despite some minor variation from year to year.
+[Charting this](https://public.flourish.studio/visualisation/18240536/) shows us that spills peaked in 2001 and have been on a relatively steady decline since then, despite some minor variation from year to year.
 This led me to take a brief look at the top year in particular.
 
 ```{r}
@@ -125,67 +122,152 @@ spill_types_2001 <- spills |>
 
 ```
 
-```{r}
-#Filtering for relevant release substance to see roughly what percentage of reports are related to white powder 
-
-spill_types_2001 |>
-  filter(str_detect(release_substance, "WHITE | SUSPICIOUS | ANTHRAX")) |>
-  mutate(total_anthrax_related = sum(reports_by_substance))
-  
-```
-
-```{r}
-#What percentage of reports in 2001 were related to anthrax (either directly or presumably?) 
-
-spills_2001 <- spills |>
-  filter (year == "2001") 
-
-spills_2001 |>
-  nrow()
-
-anthrax_spills_2001 <- spills |>
-  filter (year == "2001") |> 
-  filter(str_detect(release_substance, "WHITE | SUSPICIOUS | ANTHRAX"))
-
-anthrax_spills_2001 |>
-  nrow()
-
-(582/10421)*100
-```
-
-```{r}
-#Doing the same thing for 2002, to see if anthrax was less of a concern in that year. In this, we calculate the total number of reports (of any kind) for 2002
-spills_2002 <- spills |>
-  filter (year == "2002") 
-
-spills_2002 |>
-  nrow()
-```
-
-```{r}
-#Calculating the number of presumably anthrax-related reports in 2002 
-anthrax_spills_2002 <- spills_2002 |>
-  filter(str_detect(release_substance, "WHITE | SUSPICIOUS | ANTHRAX"))
-
-anthrax_spills_2002 |>
-  nrow()
-
-#And then what percentage of all 2002 reports this makes up
-(113/8812)*100
-```
-
 There probably is not much to look at with any particular incidents in 2001 specifically, as indicated by the data — even though there were a lot of spill reports on the top day (the day with the most reports), they all seem to be from different places/incidents, so it's not like there was one big incident that we need to look at in-depth.
 
-I did research to see if there are any indications about what could have caused the fairly steady drop after the peak in 2001.
+I did research to see if there are any driving factors for the steady drop after the peak in 2001.
 It looks like there were three rounds of changes to Connecticut's hazardous waste management laws from October 2001 to September 2002, which aligned state laws with federal hazardous waste management standards.
 It's a little bit counterintuitive, because these legislative changes largely REDUCED the management requirements for certain types of hazardous waste — but when thinking about it, this could have led to the decline in reports, since less stringent management means less need for reporting.
 This is the opposite of how stricter requirements could have led to a decline (more strict requirements could have reduced the actual number of spills).
+
 Of course, the reason why the number of reports declined could, in fact, be from fewer spills themselves.
 We're not sure from the data alone what the driving factor is, but both could be possible explanations.
 From a regulatory perspective, these reforms also included some changes to corrective action guidelines (in line with the EPA's federal reforms to the Resource Conservation and Recovery Act, which deals with hazardous waste cleanup), but this probably didn't affect the reporting numbers much, since this dataset deals purely with total reports and not what happens after.
 
-Another big factor that could have caused the peak is the 2001 anthrax scare.
-As compared to the year immediately following (2002), a bigger chunk of all spills reported in 2001 seem to be related to anthrax or anthrax scares, with keywords like "powder" and "white substance."
+The last chunk of code above shows us that fuel oil, antifreeze and transformer oil were the top substances spilled in 2001.
+I'm curious what the biggest types of spills recorded in this dataset overall have been, outside of just 2021.
+
+```{r}
+spills_by_type <- spills |>
+  group_by(release_substance) |>
+  summarise (
+    substance_type = n()
+  ) |>
+  arrange(desc(substance_type))
+  
+```
+
+Grouping by release substance (above) confirms that those same three substances have made up the most spills across all years in this dataset.
+Now, let's break this down further and group by substance type and year, to see how some of the top substances spilled may vary across this dataset.
+One possible hole: the way that substances are reported in this dataset is very non-standardized, so these numbers could be undercounting the actual number of spills in each substance category.
+For instance, most fuel oil spills are written as "#2 FUEL OIL," but some may be written as "#2 fuel oil" and thus not counted.
+Cleaning the data and then redoing this count will make it more accurate, but this is just a rough estimate.
+
+```{r}
+#Fuel oil 
+fuel_oil <- spills |> 
+  filter(release_substance == "#2 FUEL OIL") |>
+  group_by (year) |>
+  summarise (
+    fuel_oil = n()
+  ) |>
+  arrange(year)
+
+#Antifreeze
+antifreeze <- spills |> 
+  filter(release_substance == "ANTIFREEZE") |>
+  group_by (year) |>
+  summarise (
+    antifreeze = n()
+  ) |>
+  arrange(year)
+
+#Transformer oil
+transformer_oil <- spills |> 
+  filter(release_substance == "TRANSFORMER OIL") |>
+  group_by (year) |>
+  summarise (
+    transformer_oil = n()
+  ) |>
+  arrange(year)
+
+#Gasoline 
+gasoline <- spills |> 
+  filter(release_substance == "GASOLINE") |>
+  group_by (year) |>
+  summarise (
+    gasoline = n()
+  ) |>
+  arrange(year)
+
+#Diesel fuel 
+diesel_fuel <- spills |> 
+  filter(release_substance == "DIESEL FUEL") |>
+  group_by (year) |>
+  summarise (
+    diesel_fuel = n()
+  ) |>
+  arrange(year)
+
+#Joining all of these 
+substance_dfs <- list(antifreeze, diesel_fuel, fuel_oil, gasoline, transformer_oil)
+
+substances_across_years <-reduce(substance_dfs, left_join, by = "year")
+
+#Calculating the numbers as a percentage of all spills 
+substances_pct_total <- substances_across_years |>
+ inner_join(spills_by_year, by=c("year")) |>
+  rename (total_spills = spill_number) |>
+  mutate (antifreeze = (antifreeze/total_spills)*100, 
+          diesel_fuel = (diesel_fuel/total_spills)*100,
+          fuel_oil = (fuel_oil/total_spills)*100,
+          gasoline = (gasoline/total_spills)*100,
+          transformer_oil = (transformer_oil/total_spills)*100
+          )
+
+#Renaming column names for more clarity 
+substances_pct_total <- substances_pct_total |>
+  rename (
+    antifreeze_pct = antifreeze, 
+    diesel_fuel_pct = diesel_fuel, 
+    fuel_oil_pct = fuel_oil, 
+    gasoline_pct = gasoline, 
+    transformer_oil_pct = transformer_oil
+  )
+
+#Exporting
+substances_pct_total |>
+  write_csv("substances_pct_total.csv")
+
+```
+
+When we [chart by substance by year](https://public.flourish.studio/visualisation/18242246/), we can see that patterns have remained relatively the same — except for fuel oil, which no longer makes up as large a share of total reported spills as it used to.
+There were some years where antifreeze and transformer oil also peaked, making up the biggest share of spills.
+Possible reasons for these variations could be another interesting thing to ask sources about.
+
+Going back to 2001, I also want to zoom in on one particular category of substances.
+One big factor that could have caused the peak in that year is the 2001 anthrax scare.
+
+As compared to the year immediately following (2002), a bigger chunk of all spills reported in 2001 seem to be related to anthrax or anthrax scares, with keywords like "powder" and "white substance." See below for the code I used to figure that out:
+
+```{r}
+#Filtering for relevant release substance, then calculating the percentage of those that make up the total reports in 2001
+
+spill_types_2001 |>
+  mutate(total_reports = sum(reports_by_substance)) |>
+  filter(str_detect(release_substance, "WHITE | SUSPICIOUS | ANTHRAX")) |>
+  mutate(total_anthrax_related_pct = (sum(reports_by_substance))/total_reports*100)
+  
+```
+
+```{r}
+#Doing the same thing for 2002, to see if anthrax was less of a concern in that year
+
+spill_types_2002 <- spills |>
+  filter (year == "2002") |>
+  group_by(release_substance) |>
+  summarise (
+    reports_by_substance = n()
+  ) |> 
+  arrange(desc(reports_by_substance))
+
+spill_types_2002 |>
+  mutate(total_reports = sum(reports_by_substance)) |>
+  filter(str_detect(release_substance, "WHITE | SUSPICIOUS | ANTHRAX")) |>
+  mutate(total_anthrax_related_pct = (sum(reports_by_substance))/total_reports*100)
+
+```
+
+We can see that anthrax-related reports in 2001 made up more than 5 percent of total reports that year, whereas anthrax-related reports in 2002 made up just over 1 percent of total reports that year, showing a significant difference and lending support to the hypothesis that anthrax reports drove at least part of the massive peak in 2001 reports.
 
 Let's move on to grouping by place, to see if there are trends in where spills have been reported.
 To narrow down the scope, let's look at roughly the last decade of recorded data (2010 and after).
@@ -225,7 +307,7 @@ spills_by_town <- after_2010_spills |>
   arrange(desc(reports_by_town)) |>
   slice(1:170)
 
-#Exporting as CSV so we can map in Datawrapper 
+#Exporting as CSV so we can map in Flourish  
 spills_by_town |>
   write_csv("spills_by_town.csv")
   
@@ -233,7 +315,39 @@ spills_by_town |>
 
 ```
 
-To clean up the data by town (in the chunk of code above), I cross-compared with name keys in a map of Connecticut towns on Datawrapper, and took out any instances of towns that didn't have a key.
+To clean up the data by town (in the chunk of code above), I cross-compared with name keys in a GeoJSON file of Connecticut municipalities, and took out any instances of towns that didn't correspond to the shapefile data (or spills that had no town attached to them).
 
-Here's the [resulting map](https://datawrapper.dwcdn.net/E1Zmt/3/) I created on Datawrapper of spills by town.
-It seems as though more spills were reported from towns in central Connecticut and southwestern Connecticut.
+Here's the [resulting map](https://public.flourish.studio/visualisation/18244615/) I created on Flourish of spills by town.
+More spills were reported from towns in central Connecticut and southwestern Connecticut.
+
+That's just with raw numbers.
+To see what the impact on people is, we can further expand this map by normalizing the number of spills per 1,000 residents in each town.
+
+```{r}
+#Reading in and joining a table that has populations for each town 
+town_populations <- read_csv("pop_towns2022.csv") |>
+  clean_names () |>
+  rename (town_of_release = town)
+
+#Making joining easier by getting rid of the N/A row in the spills by town table and renaming
+spills_by_town <- spills_by_town |>
+  arrange(town_of_release)
+
+#Joining and calculating spills per 1000 people
+spills_per_thousand <- spills_by_town |>
+ inner_join(town_populations, by=c("town_of_release")) |>
+  mutate (per_thousand_spill_rate = (reports_by_town/population)*1000) |>
+  arrange(desc(per_thousand_spill_rate))
+
+#Exporting 
+spills_per_thousand |> write_csv("spills_per_thousand.csv")
+```
+
+Here's a [map](https://public.flourish.studio/visualisation/18244185/) that shows those results charted.
+The patterns look different — the southwestern and central towns that saw the largest numbers of spills didn't necessarily see the highest spill rates.
+The highest rates were spread out across the state, with Franklin, Stafford and Bloomfield at the top of the list.
+This would be another interesting thing to ask sources about.
+Why are there so many spills in these places, relative to the number of people who live there?
+Some higher rates make sense — Groton, for instance, is home to a large U.S.
+Navy submarine contracting company.
+But others, like Franklin (a small rural town) might point to some hidden answers.

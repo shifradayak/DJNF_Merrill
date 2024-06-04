@@ -235,5 +235,5 @@ spills_by_town |>
 
 To clean up the data by town (in the chunk of code above), I cross-compared with name keys in a map of Connecticut towns on Datawrapper, and took out any instances of towns that didn't have a key.
 
-Here's the [resulting map](https://datawrapper.dwcdn.net/E1Zmt/2/https://datawrapper.dwcdn.net/E1Zmt/2/) I created on Datawrapper of spills by town.
+Here's the [resulting map](https://datawrapper.dwcdn.net/E1Zmt/3/) I created on Datawrapper of spills by town.
 It seems as though more spills were reported from towns in central Connecticut and southwestern Connecticut.

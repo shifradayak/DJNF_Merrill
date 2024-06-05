@@ -344,6 +344,12 @@ spills_per_thousand |> write_csv("spills_per_thousand.csv")
 ```
 
 Here's a [map](https://public.flourish.studio/visualisation/18244185/) that shows those results charted.
+
+```{r, results='asis'}
+cat ('<div class="flourish-embed flourish-map" data-src="visualisation/18244185"><script src="https://public.flourish.studio/resources/embed.js"></script></div>')
+
+```
+
 The patterns look different — the southwestern and central towns that saw the largest numbers of spills didn't necessarily see the highest spill rates.
 The highest rates were spread out across the state, with Franklin, Stafford and Bloomfield at the top of the list.
 This would be another interesting thing to ask sources about.

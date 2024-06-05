@@ -1,5 +1,5 @@
 ---
-title: "ct_env_spills"
+title: "Connecticut Environmental Spills"
 output: html_document
 date: "2024-06-02"
 editor_options: 
@@ -94,6 +94,12 @@ spills_by_year |> write_csv("spills_by_year.csv")
 ```
 
 [Charting this](https://public.flourish.studio/visualisation/18240536/) shows us that spills peaked in 2001 and have been on a relatively steady decline since then, despite some minor variation from year to year.
+
+```{r, results = 'asis'}
+cat('<div class="flourish-embed flourish-chart" data-src="visualisation/18240536"><script src="https://public.flourish.studio/resources/embed.js"></script></div>')
+
+```
+
 This led me to take a brief look at the top year in particular.
 
 ```{r}
@@ -234,6 +240,11 @@ When we [chart by substance by year](https://public.flourish.studio/visualisatio
 There were some years where antifreeze and transformer oil also peaked, making up the biggest share of spills.
 Possible reasons for these variations could be another interesting thing to ask sources about.
 
+```{r, results = 'asis'}
+cat('<div class="flourish-embed flourish-chart" data-src="visualisation/18242246"><script src="https://public.flourish.studio/resources/embed.js"></script></div>')
+
+```
+
 Going back to 2001, I also want to zoom in on one particular category of substances.
 One big factor that could have caused the peak in that year is the 2001 anthrax scare.
 
@@ -319,6 +330,11 @@ To clean up the data by town (in the chunk of code above), I cross-compared with
 
 Here's the [resulting map](https://public.flourish.studio/visualisation/18244615/) I created on Flourish of spills by town.
 More spills were reported from towns in central Connecticut and southwestern Connecticut.
+
+```{r, results = 'asis'}
+cat('<div class="flourish-embed flourish-map" data-src="visualisation/18244615"><script src="https://public.flourish.studio/resources/embed.js"></script></div>')
+
+```
 
 That's just with raw numbers.
 To see what the impact on people is, we can further expand this map by normalizing the number of spills per 1,000 residents in each town.

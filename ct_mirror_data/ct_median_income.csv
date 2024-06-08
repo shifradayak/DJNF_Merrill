@@ -1,0 +1,884 @@
+geoid,name,median_income
+09001010101,"Census Tract 101.01, Fairfield County, Connecticut",186726
+09001010102,"Census Tract 101.02, Fairfield County, Connecticut",250001
+09001010201,"Census Tract 102.01, Fairfield County, Connecticut",250001
+09001010202,"Census Tract 102.02, Fairfield County, Connecticut",151528
+09001010300,"Census Tract 103, Fairfield County, Connecticut",250001
+09001010400,"Census Tract 104, Fairfield County, Connecticut",155733
+09001010500,"Census Tract 105, Fairfield County, Connecticut",87589
+09001010600,"Census Tract 106, Fairfield County, Connecticut",111029
+09001010700,"Census Tract 107, Fairfield County, Connecticut",90000
+09001010800,"Census Tract 108, Fairfield County, Connecticut",175850
+09001010900,"Census Tract 109, Fairfield County, Connecticut",200556
+09001011000,"Census Tract 110, Fairfield County, Connecticut",247500
+09001011100,"Census Tract 111, Fairfield County, Connecticut",250001
+09001011200,"Census Tract 112, Fairfield County, Connecticut",250001
+09001011300,"Census Tract 113, Fairfield County, Connecticut",97234
+09001020101,"Census Tract 201.01, Fairfield County, Connecticut",78903
+09001020102,"Census Tract 201.02, Fairfield County, Connecticut",51538
+09001020200,"Census Tract 202, Fairfield County, Connecticut",239458
+09001020301,"Census Tract 203.01, Fairfield County, Connecticut",178426
+09001020302,"Census Tract 203.02, Fairfield County, Connecticut",231250
+09001020400,"Census Tract 204, Fairfield County, Connecticut",161111
+09001020500,"Census Tract 205, Fairfield County, Connecticut",179306
+09001020600,"Census Tract 206, Fairfield County, Connecticut",136458
+09001020700,"Census Tract 207, Fairfield County, Connecticut",137548
+09001020800,"Census Tract 208, Fairfield County, Connecticut",196776
+09001020900,"Census Tract 209, Fairfield County, Connecticut",81299
+09001021000,"Census Tract 210, Fairfield County, Connecticut",141659
+09001021100,"Census Tract 211, Fairfield County, Connecticut",89976
+09001021200,"Census Tract 212, Fairfield County, Connecticut",137750
+09001021300,"Census Tract 213, Fairfield County, Connecticut",109679
+09001021401,"Census Tract 214.01, Fairfield County, Connecticut",75128
+09001021402,"Census Tract 214.02, Fairfield County, Connecticut",68424
+09001021501,"Census Tract 215.01, Fairfield County, Connecticut",43585
+09001021502,"Census Tract 215.02, Fairfield County, Connecticut",43708
+09001021601,"Census Tract 216.01, Fairfield County, Connecticut",93485
+09001021602,"Census Tract 216.02, Fairfield County, Connecticut",91522
+09001021701,"Census Tract 217.01, Fairfield County, Connecticut",65238
+09001021702,"Census Tract 217.02, Fairfield County, Connecticut",96538
+09001021801,"Census Tract 218.01, Fairfield County, Connecticut",103750
+09001021802,"Census Tract 218.02, Fairfield County, Connecticut",74050
+09001021900,"Census Tract 219, Fairfield County, Connecticut",89286
+09001022000,"Census Tract 220, Fairfield County, Connecticut",95000
+09001022101,"Census Tract 221.01, Fairfield County, Connecticut",42425
+09001022102,"Census Tract 221.02, Fairfield County, Connecticut",92222
+09001022201,"Census Tract 222.01, Fairfield County, Connecticut",104327
+09001022202,"Census Tract 222.02, Fairfield County, Connecticut",97250
+09001022300,"Census Tract 223, Fairfield County, Connecticut",89605
+09001022400,"Census Tract 224, Fairfield County, Connecticut",176000
+09001030100,"Census Tract 301, Fairfield County, Connecticut",250001
+09001030200,"Census Tract 302, Fairfield County, Connecticut",250001
+09001030300,"Census Tract 303, Fairfield County, Connecticut",250001
+09001030400,"Census Tract 304, Fairfield County, Connecticut",198750
+09001030500,"Census Tract 305, Fairfield County, Connecticut",246136
+09001035101,"Census Tract 351.01, Fairfield County, Connecticut",136176
+09001035102,"Census Tract 351.02, Fairfield County, Connecticut",187222
+09001035200,"Census Tract 352, Fairfield County, Connecticut",250001
+09001035300,"Census Tract 353, Fairfield County, Connecticut",250001
+09001035400,"Census Tract 354, Fairfield County, Connecticut",250001
+09001042500,"Census Tract 425, Fairfield County, Connecticut",141250
+09001042600,"Census Tract 426, Fairfield County, Connecticut",109732
+09001042700,"Census Tract 427, Fairfield County, Connecticut",105685
+09001042800,"Census Tract 428, Fairfield County, Connecticut",95767
+09001042900,"Census Tract 429, Fairfield County, Connecticut",160972
+09001043000,"Census Tract 430, Fairfield County, Connecticut",106573
+09001043100,"Census Tract 431, Fairfield County, Connecticut",162946
+09001043200,"Census Tract 432, Fairfield County, Connecticut",64821
+09001043300,"Census Tract 433, Fairfield County, Connecticut",103542
+09001043400,"Census Tract 434, Fairfield County, Connecticut",89545
+09001043500,"Census Tract 435, Fairfield County, Connecticut",114931
+09001043600,"Census Tract 436, Fairfield County, Connecticut",96786
+09001043700,"Census Tract 437, Fairfield County, Connecticut",73183
+09001043800,"Census Tract 438, Fairfield County, Connecticut",78946
+09001043900,"Census Tract 439, Fairfield County, Connecticut",93033
+09001044000,"Census Tract 440, Fairfield County, Connecticut",58288
+09001044100,"Census Tract 441, Fairfield County, Connecticut",81880
+09001044200,"Census Tract 442, Fairfield County, Connecticut",63033
+09001044300,"Census Tract 443, Fairfield County, Connecticut",106266
+09001044400,"Census Tract 444, Fairfield County, Connecticut",89022
+09001044500,"Census Tract 445, Fairfield County, Connecticut",59688
+09001044600,"Census Tract 446, Fairfield County, Connecticut",242222
+09001045101,"Census Tract 451.01, Fairfield County, Connecticut",236071
+09001045102,"Census Tract 451.02, Fairfield County, Connecticut",196250
+09001045200,"Census Tract 452, Fairfield County, Connecticut",167705
+09001045300,"Census Tract 453, Fairfield County, Connecticut",250001
+09001045400,"Census Tract 454, Fairfield County, Connecticut",213830
+09001050100,"Census Tract 501, Fairfield County, Connecticut",250001
+09001050200,"Census Tract 502, Fairfield County, Connecticut",179074
+09001050301,"Census Tract 503.01, Fairfield County, Connecticut",196625
+09001050302,"Census Tract 503.02, Fairfield County, Connecticut",250001
+09001050400,"Census Tract 504, Fairfield County, Connecticut",146174
+09001050500,"Census Tract 505, Fairfield County, Connecticut",198403
+09001050600,"Census Tract 506, Fairfield County, Connecticut",250001
+09001055100,"Census Tract 551, Fairfield County, Connecticut",187297
+09001055200,"Census Tract 552, Fairfield County, Connecticut",236607
+09001060100,"Census Tract 601, Fairfield County, Connecticut",141029
+09001060200,"Census Tract 602, Fairfield County, Connecticut",100000
+09001060300,"Census Tract 603, Fairfield County, Connecticut",214958
+09001060400,"Census Tract 604, Fairfield County, Connecticut",233922
+09001060500,"Census Tract 605, Fairfield County, Connecticut",250001
+09001060600,"Census Tract 606, Fairfield County, Connecticut",173250
+09001060700,"Census Tract 607, Fairfield County, Connecticut",165086
+09001060800,"Census Tract 608, Fairfield County, Connecticut",150729
+09001060900,"Census Tract 609, Fairfield County, Connecticut",169323
+09001061000,"Census Tract 610, Fairfield County, Connecticut",83836
+09001061100,"Census Tract 611, Fairfield County, Connecticut",188060
+09001061200,"Census Tract 612, Fairfield County, Connecticut",96625
+09001061300,"Census Tract 613, Fairfield County, Connecticut",96125
+09001061400,"Census Tract 614, Fairfield County, Connecticut",78173
+09001061500,"Census Tract 615, Fairfield County, Connecticut",201429
+09001061600,"Census Tract 616, Fairfield County, Connecticut",148194
+09001070100,"Census Tract 701, Fairfield County, Connecticut",91858
+09001070200,"Census Tract 702, Fairfield County, Connecticut",47383
+09001070300,"Census Tract 703, Fairfield County, Connecticut",18093
+09001070400,"Census Tract 704, Fairfield County, Connecticut",41027
+09001070500,"Census Tract 705, Fairfield County, Connecticut",33946
+09001070600,"Census Tract 706, Fairfield County, Connecticut",30435
+09001070900,"Census Tract 709, Fairfield County, Connecticut",30929
+09001071000,"Census Tract 710, Fairfield County, Connecticut",56837
+09001071100,"Census Tract 711, Fairfield County, Connecticut",47837
+09001071200,"Census Tract 712, Fairfield County, Connecticut",41350
+09001071300,"Census Tract 713, Fairfield County, Connecticut",35147
+09001071400,"Census Tract 714, Fairfield County, Connecticut",44799
+09001071600,"Census Tract 716, Fairfield County, Connecticut",19698
+09001071900,"Census Tract 719, Fairfield County, Connecticut",46369
+09001072000,"Census Tract 720, Fairfield County, Connecticut",52039
+09001072100,"Census Tract 721, Fairfield County, Connecticut",59306
+09001072200,"Census Tract 722, Fairfield County, Connecticut",51991
+09001072300,"Census Tract 723, Fairfield County, Connecticut",68006
+09001072400,"Census Tract 724, Fairfield County, Connecticut",63687
+09001072500,"Census Tract 725, Fairfield County, Connecticut",61820
+09001072600,"Census Tract 726, Fairfield County, Connecticut",64194
+09001072700,"Census Tract 727, Fairfield County, Connecticut",70544
+09001072800,"Census Tract 728, Fairfield County, Connecticut",65127
+09001072900,"Census Tract 729, Fairfield County, Connecticut",65529
+09001073000,"Census Tract 730, Fairfield County, Connecticut",107188
+09001073100,"Census Tract 731, Fairfield County, Connecticut",55455
+09001073200,"Census Tract 732, Fairfield County, Connecticut",38209
+09001073300,"Census Tract 733, Fairfield County, Connecticut",42794
+09001073400,"Census Tract 734, Fairfield County, Connecticut",56935
+09001073500,"Census Tract 735, Fairfield County, Connecticut",50924
+09001073600,"Census Tract 736, Fairfield County, Connecticut",53529
+09001073700,"Census Tract 737, Fairfield County, Connecticut",42689
+09001073800,"Census Tract 738, Fairfield County, Connecticut",23669
+09001073900,"Census Tract 739, Fairfield County, Connecticut",34333
+09001074000,"Census Tract 740, Fairfield County, Connecticut",37350
+09001074300,"Census Tract 743, Fairfield County, Connecticut",39175
+09001074400,"Census Tract 744, Fairfield County, Connecticut",49638
+09001080100,"Census Tract 801, Fairfield County, Connecticut",63287
+09001080200,"Census Tract 802, Fairfield County, Connecticut",66750
+09001080400,"Census Tract 804, Fairfield County, Connecticut",67877
+09001080500,"Census Tract 805, Fairfield County, Connecticut",84643
+09001080600,"Census Tract 806, Fairfield County, Connecticut",70083
+09001080700,"Census Tract 807, Fairfield County, Connecticut",80833
+09001080800,"Census Tract 808, Fairfield County, Connecticut",104000
+09001080900,"Census Tract 809, Fairfield County, Connecticut",96543
+09001081000,"Census Tract 810, Fairfield County, Connecticut",70438
+09001081100,"Census Tract 811, Fairfield County, Connecticut",131538
+09001081200,"Census Tract 812, Fairfield County, Connecticut",124340
+09001081300,"Census Tract 813, Fairfield County, Connecticut",71691
+09001090100,"Census Tract 901, Fairfield County, Connecticut",145294
+09001090200,"Census Tract 902, Fairfield County, Connecticut",127411
+09001090300,"Census Tract 903, Fairfield County, Connecticut",122132
+09001090400,"Census Tract 904, Fairfield County, Connecticut",137426
+09001090500,"Census Tract 905, Fairfield County, Connecticut",137386
+09001090600,"Census Tract 906, Fairfield County, Connecticut",140804
+09001090700,"Census Tract 907, Fairfield County, Connecticut",161464
+09001100100,"Census Tract 1001, Fairfield County, Connecticut",123810
+09001100200,"Census Tract 1002, Fairfield County, Connecticut",127877
+09001100300,"Census Tract 1003, Fairfield County, Connecticut",139833
+09001105100,"Census Tract 1051, Fairfield County, Connecticut",156667
+09001105200,"Census Tract 1052, Fairfield County, Connecticut",168911
+09001110100,"Census Tract 1101, Fairfield County, Connecticut",76389
+09001110201,"Census Tract 1102.01, Fairfield County, Connecticut",98090
+09001110202,"Census Tract 1102.02, Fairfield County, Connecticut",73973
+09001110301,"Census Tract 1103.01, Fairfield County, Connecticut",86339
+09001110302,"Census Tract 1103.02, Fairfield County, Connecticut",110921
+09001110400,"Census Tract 1104, Fairfield County, Connecticut",119261
+09001110500,"Census Tract 1105, Fairfield County, Connecticut",148536
+09001110601,"Census Tract 1106.01, Fairfield County, Connecticut",130530
+09001110602,"Census Tract 1106.02, Fairfield County, Connecticut",106786
+09001200100,"Census Tract 2001, Fairfield County, Connecticut",86367
+09001200200,"Census Tract 2002, Fairfield County, Connecticut",55991
+09001200301,"Census Tract 2003.01, Fairfield County, Connecticut",154565
+09001200302,"Census Tract 2003.02, Fairfield County, Connecticut",123194
+09001205100,"Census Tract 2051, Fairfield County, Connecticut",110377
+09001205200,"Census Tract 2052, Fairfield County, Connecticut",143870
+09001205300,"Census Tract 2053, Fairfield County, Connecticut",123713
+09001210101,"Census Tract 2101.01, Fairfield County, Connecticut",76406
+09001210102,"Census Tract 2101.02, Fairfield County, Connecticut",21831
+09001210201,"Census Tract 2102.01, Fairfield County, Connecticut",57554
+09001210202,"Census Tract 2102.02, Fairfield County, Connecticut",61181
+09001210300,"Census Tract 2103, Fairfield County, Connecticut",62422
+09001210401,"Census Tract 2104.01, Fairfield County, Connecticut",80923
+09001210402,"Census Tract 2104.02, Fairfield County, Connecticut",90511
+09001210501,"Census Tract 2105.01, Fairfield County, Connecticut",68470
+09001210502,"Census Tract 2105.02, Fairfield County, Connecticut",93779
+09001210600,"Census Tract 2106, Fairfield County, Connecticut",54502
+09001210701,"Census Tract 2107.01, Fairfield County, Connecticut",50168
+09001210702,"Census Tract 2107.02, Fairfield County, Connecticut",68142
+09001210800,"Census Tract 2108, Fairfield County, Connecticut",84792
+09001210900,"Census Tract 2109, Fairfield County, Connecticut",123691
+09001211000,"Census Tract 2110, Fairfield County, Connecticut",94649
+09001211100,"Census Tract 2111, Fairfield County, Connecticut",NA
+09001211201,"Census Tract 2112.01, Fairfield County, Connecticut",87039
+09001211202,"Census Tract 2112.02, Fairfield County, Connecticut",85399
+09001211300,"Census Tract 2113, Fairfield County, Connecticut",120662
+09001211400,"Census Tract 2114, Fairfield County, Connecticut",85146
+09001220100,"Census Tract 2201, Fairfield County, Connecticut",123333
+09001220200,"Census Tract 2202, Fairfield County, Connecticut",134726
+09001220300,"Census Tract 2203, Fairfield County, Connecticut",118480
+09001230100,"Census Tract 2301, Fairfield County, Connecticut",117557
+09001230200,"Census Tract 2302, Fairfield County, Connecticut",146964
+09001230300,"Census Tract 2303, Fairfield County, Connecticut",132034
+09001230400,"Census Tract 2304, Fairfield County, Connecticut",151364
+09001230501,"Census Tract 2305.01, Fairfield County, Connecticut",126806
+09001230502,"Census Tract 2305.02, Fairfield County, Connecticut",144250
+09001240100,"Census Tract 2401, Fairfield County, Connecticut",128725
+09001240200,"Census Tract 2402, Fairfield County, Connecticut",151667
+09001245100,"Census Tract 2451, Fairfield County, Connecticut",196563
+09001245200,"Census Tract 2452, Fairfield County, Connecticut",146037
+09001245300,"Census Tract 2453, Fairfield County, Connecticut",136875
+09001245400,"Census Tract 2454, Fairfield County, Connecticut",180543
+09001245500,"Census Tract 2455, Fairfield County, Connecticut",181094
+09001245600,"Census Tract 2456, Fairfield County, Connecticut",186107
+09001257100,"Census Tract 2571, Fairfield County, Connecticut",123889
+09001257200,"Census Tract 2572, Fairfield County, Connecticut",52227
+09001990000,"Census Tract 9900, Fairfield County, Connecticut",NA
+09003330100,"Census Tract 3301, Hartford County, Connecticut",105921
+09003400101,"Census Tract 4001.01, Hartford County, Connecticut",76719
+09003400102,"Census Tract 4001.02, Hartford County, Connecticut",83542
+09003400200,"Census Tract 4002, Hartford County, Connecticut",141350
+09003400300,"Census Tract 4003, Hartford County, Connecticut",111291
+09003405100,"Census Tract 4051, Hartford County, Connecticut",71442
+09003405200,"Census Tract 4052, Hartford County, Connecticut",71591
+09003405300,"Census Tract 4053, Hartford County, Connecticut",80792
+09003405401,"Census Tract 4054.01, Hartford County, Connecticut",102500
+09003405402,"Census Tract 4054.02, Hartford County, Connecticut",53057
+09003405500,"Census Tract 4055, Hartford County, Connecticut",76759
+09003405600,"Census Tract 4056, Hartford County, Connecticut",85893
+09003405700,"Census Tract 4057, Hartford County, Connecticut",37250
+09003405801,"Census Tract 4058.01, Hartford County, Connecticut",82361
+09003405802,"Census Tract 4058.02, Hartford County, Connecticut",112647
+09003405900,"Census Tract 4059, Hartford County, Connecticut",84500
+09003406001,"Census Tract 4060.01, Hartford County, Connecticut",50787
+09003406002,"Census Tract 4060.02, Hartford County, Connecticut",99281
+09003406100,"Census Tract 4061, Hartford County, Connecticut",58097
+09003410101,"Census Tract 4101.01, Hartford County, Connecticut",142753
+09003410102,"Census Tract 4101.02, Hartford County, Connecticut",146023
+09003415300,"Census Tract 4153, Hartford County, Connecticut",44009
+09003415400,"Census Tract 4154, Hartford County, Connecticut",59851
+09003415500,"Census Tract 4155, Hartford County, Connecticut",43155
+09003415600,"Census Tract 4156, Hartford County, Connecticut",42550
+09003415700,"Census Tract 4157, Hartford County, Connecticut",50096
+09003415800,"Census Tract 4158, Hartford County, Connecticut",48036
+09003415900,"Census Tract 4159, Hartford County, Connecticut",26771
+09003416000,"Census Tract 4160, Hartford County, Connecticut",38615
+09003416100,"Census Tract 4161, Hartford County, Connecticut",45927
+09003416200,"Census Tract 4162, Hartford County, Connecticut",26400
+09003416300,"Census Tract 4163, Hartford County, Connecticut",38384
+09003416400,"Census Tract 4164, Hartford County, Connecticut",110724
+09003416500,"Census Tract 4165, Hartford County, Connecticut",57489
+09003416600,"Census Tract 4166, Hartford County, Connecticut",45149
+09003416700,"Census Tract 4167, Hartford County, Connecticut",54265
+09003416800,"Census Tract 4168, Hartford County, Connecticut",69139
+09003417100,"Census Tract 4171, Hartford County, Connecticut",31830
+09003417200,"Census Tract 4172, Hartford County, Connecticut",50347
+09003417300,"Census Tract 4173, Hartford County, Connecticut",NA
+09003417400,"Census Tract 4174, Hartford County, Connecticut",72383
+09003417500,"Census Tract 4175, Hartford County, Connecticut",80714
+09003420400,"Census Tract 4204, Hartford County, Connecticut",86786
+09003420500,"Census Tract 4205, Hartford County, Connecticut",68725
+09003420601,"Census Tract 4206.01, Hartford County, Connecticut",58026
+09003420602,"Census Tract 4206.02, Hartford County, Connecticut",86179
+09003420700,"Census Tract 4207, Hartford County, Connecticut",83611
+09003430100,"Census Tract 4301, Hartford County, Connecticut",72625
+09003430201,"Census Tract 4302.01, Hartford County, Connecticut",114513
+09003430202,"Census Tract 4302.02, Hartford County, Connecticut",138782
+09003430203,"Census Tract 4302.03, Hartford County, Connecticut",89444
+09003430301,"Census Tract 4303.01, Hartford County, Connecticut",138676
+09003430302,"Census Tract 4303.02, Hartford County, Connecticut",86435
+09003430400,"Census Tract 4304, Hartford County, Connecticut",98438
+09003430501,"Census Tract 4305.01, Hartford County, Connecticut",67184
+09003430502,"Census Tract 4305.02, Hartford County, Connecticut",157308
+09003430602,"Census Tract 4306.02, Hartford County, Connecticut",113114
+09003430603,"Census Tract 4306.03, Hartford County, Connecticut",37868
+09003430604,"Census Tract 4306.04, Hartford County, Connecticut",103344
+09003460100,"Census Tract 4601, Hartford County, Connecticut",115045
+09003460202,"Census Tract 4602.02, Hartford County, Connecticut",114141
+09003460203,"Census Tract 4602.03, Hartford County, Connecticut",120511
+09003460204,"Census Tract 4602.04, Hartford County, Connecticut",71275
+09003460301,"Census Tract 4603.01, Hartford County, Connecticut",119773
+09003460302,"Census Tract 4603.02, Hartford County, Connecticut",98953
+09003462101,"Census Tract 4621.01, Hartford County, Connecticut",117965
+09003462102,"Census Tract 4621.02, Hartford County, Connecticut",210833
+09003462201,"Census Tract 4622.01, Hartford County, Connecticut",108147
+09003462202,"Census Tract 4622.02, Hartford County, Connecticut",151094
+09003464101,"Census Tract 4641.01, Hartford County, Connecticut",137000
+09003464102,"Census Tract 4641.02, Hartford County, Connecticut",77353
+09003466101,"Census Tract 4661.01, Hartford County, Connecticut",133885
+09003466102,"Census Tract 4661.02, Hartford County, Connecticut",137303
+09003466201,"Census Tract 4662.01, Hartford County, Connecticut",93125
+09003466202,"Census Tract 4662.02, Hartford County, Connecticut",161165
+09003466300,"Census Tract 4663, Hartford County, Connecticut",142903
+09003466400,"Census Tract 4664, Hartford County, Connecticut",107647
+09003468101,"Census Tract 4681.01, Hartford County, Connecticut",125881
+09003468102,"Census Tract 4681.02, Hartford County, Connecticut",113600
+09003470100,"Census Tract 4701, Hartford County, Connecticut",112857
+09003471100,"Census Tract 4711, Hartford County, Connecticut",78500
+09003471200,"Census Tract 4712, Hartford County, Connecticut",44509
+09003471300,"Census Tract 4713, Hartford County, Connecticut",68158
+09003471400,"Census Tract 4714, Hartford County, Connecticut",106902
+09003471500,"Census Tract 4715, Hartford County, Connecticut",92839
+09003473100,"Census Tract 4731, Hartford County, Connecticut",95000
+09003473400,"Census Tract 4734, Hartford County, Connecticut",79766
+09003473501,"Census Tract 4735.01, Hartford County, Connecticut",111830
+09003473502,"Census Tract 4735.02, Hartford County, Connecticut",93765
+09003473601,"Census Tract 4736.01, Hartford County, Connecticut",113194
+09003473602,"Census Tract 4736.02, Hartford County, Connecticut",79375
+09003473700,"Census Tract 4737, Hartford County, Connecticut",95388
+09003473800,"Census Tract 4738, Hartford County, Connecticut",64818
+09003476100,"Census Tract 4761, Hartford County, Connecticut",73007
+09003476200,"Census Tract 4762, Hartford County, Connecticut",89583
+09003476300,"Census Tract 4763, Hartford County, Connecticut",78352
+09003477101,"Census Tract 4771.01, Hartford County, Connecticut",117768
+09003477103,"Census Tract 4771.03, Hartford County, Connecticut",117306
+09003477104,"Census Tract 4771.04, Hartford County, Connecticut",NA
+09003477200,"Census Tract 4772, Hartford County, Connecticut",108375
+09003480300,"Census Tract 4803, Hartford County, Connecticut",84430
+09003480400,"Census Tract 4804, Hartford County, Connecticut",91321
+09003480500,"Census Tract 4805, Hartford County, Connecticut",85438
+09003480600,"Census Tract 4806, Hartford County, Connecticut",38533
+09003480700,"Census Tract 4807, Hartford County, Connecticut",52817
+09003480800,"Census Tract 4808, Hartford County, Connecticut",81538
+09003480900,"Census Tract 4809, Hartford County, Connecticut",111875
+09003481000,"Census Tract 4810, Hartford County, Connecticut",135363
+09003481100,"Census Tract 4811, Hartford County, Connecticut",84375
+09003481200,"Census Tract 4812, Hartford County, Connecticut",84221
+09003481300,"Census Tract 4813, Hartford County, Connecticut",96078
+09003484100,"Census Tract 4841, Hartford County, Connecticut",74586
+09003484200,"Census Tract 4842, Hartford County, Connecticut",106186
+09003487100,"Census Tract 4871, Hartford County, Connecticut",128750
+09003487201,"Census Tract 4872.01, Hartford County, Connecticut",135327
+09003487202,"Census Tract 4872.02, Hartford County, Connecticut",184135
+09003487300,"Census Tract 4873, Hartford County, Connecticut",133750
+09003487400,"Census Tract 4874, Hartford County, Connecticut",136250
+09003487500,"Census Tract 4875, Hartford County, Connecticut",102676
+09003490100,"Census Tract 4901, Hartford County, Connecticut",64593
+09003490303,"Census Tract 4903.03, Hartford County, Connecticut",101480
+09003490304,"Census Tract 4903.04, Hartford County, Connecticut",105750
+09003492100,"Census Tract 4921, Hartford County, Connecticut",118857
+09003492200,"Census Tract 4922, Hartford County, Connecticut",108897
+09003492300,"Census Tract 4923, Hartford County, Connecticut",77600
+09003492400,"Census Tract 4924, Hartford County, Connecticut",97386
+09003492500,"Census Tract 4925, Hartford County, Connecticut",127344
+09003492600,"Census Tract 4926, Hartford County, Connecticut",110391
+09003494100,"Census Tract 4941, Hartford County, Connecticut",93068
+09003494201,"Census Tract 4942.01, Hartford County, Connecticut",83272
+09003494202,"Census Tract 4942.02, Hartford County, Connecticut",107143
+09003494300,"Census Tract 4943, Hartford County, Connecticut",95556
+09003494400,"Census Tract 4944, Hartford County, Connecticut",91875
+09003494500,"Census Tract 4945, Hartford County, Connecticut",90282
+09003494600,"Census Tract 4946, Hartford County, Connecticut",81184
+09003496100,"Census Tract 4961, Hartford County, Connecticut",56734
+09003496200,"Census Tract 4962, Hartford County, Connecticut",80068
+09003496300,"Census Tract 4963, Hartford County, Connecticut",116927
+09003496400,"Census Tract 4964, Hartford County, Connecticut",165387
+09003496500,"Census Tract 4965, Hartford County, Connecticut",133650
+09003496600,"Census Tract 4966, Hartford County, Connecticut",138456
+09003496700,"Census Tract 4967, Hartford County, Connecticut",84167
+09003496800,"Census Tract 4968, Hartford County, Connecticut",80680
+09003496900,"Census Tract 4969, Hartford County, Connecticut",92527
+09003497000,"Census Tract 4970, Hartford County, Connecticut",190909
+09003497100,"Census Tract 4971, Hartford County, Connecticut",76402
+09003497200,"Census Tract 4972, Hartford County, Connecticut",114038
+09003497300,"Census Tract 4973, Hartford County, Connecticut",144306
+09003497400,"Census Tract 4974, Hartford County, Connecticut",185962
+09003497500,"Census Tract 4975, Hartford County, Connecticut",114125
+09003497600,"Census Tract 4976, Hartford County, Connecticut",143828
+09003497700,"Census Tract 4977, Hartford County, Connecticut",175119
+09003500100,"Census Tract 5001, Hartford County, Connecticut",30677
+09003500200,"Census Tract 5002, Hartford County, Connecticut",22500
+09003500300,"Census Tract 5003, Hartford County, Connecticut",18185
+09003500400,"Census Tract 5004, Hartford County, Connecticut",44792
+09003500500,"Census Tract 5005, Hartford County, Connecticut",49583
+09003500900,"Census Tract 5009, Hartford County, Connecticut",22830
+09003501200,"Census Tract 5012, Hartford County, Connecticut",21719
+09003501300,"Census Tract 5013, Hartford County, Connecticut",19032
+09003501400,"Census Tract 5014, Hartford County, Connecticut",22309
+09003501500,"Census Tract 5015, Hartford County, Connecticut",27371
+09003501700,"Census Tract 5017, Hartford County, Connecticut",30750
+09003501800,"Census Tract 5018, Hartford County, Connecticut",19848
+09003502100,"Census Tract 5021, Hartford County, Connecticut",86343
+09003502300,"Census Tract 5023, Hartford County, Connecticut",68583
+09003502400,"Census Tract 5024, Hartford County, Connecticut",47766
+09003502500,"Census Tract 5025, Hartford County, Connecticut",34375
+09003502600,"Census Tract 5026, Hartford County, Connecticut",56454
+09003502700,"Census Tract 5027, Hartford County, Connecticut",28490
+09003502800,"Census Tract 5028, Hartford County, Connecticut",28626
+09003502900,"Census Tract 5029, Hartford County, Connecticut",60536
+09003503000,"Census Tract 5030, Hartford County, Connecticut",25370
+09003503101,"Census Tract 5031.01, Hartford County, Connecticut",27081
+09003503102,"Census Tract 5031.02, Hartford County, Connecticut",29914
+09003503300,"Census Tract 5033, Hartford County, Connecticut",34964
+09003503500,"Census Tract 5035, Hartford County, Connecticut",37813
+09003503700,"Census Tract 5037, Hartford County, Connecticut",29978
+09003503800,"Census Tract 5038, Hartford County, Connecticut",11715
+09003503900,"Census Tract 5039, Hartford County, Connecticut",45699
+09003504000,"Census Tract 5040, Hartford County, Connecticut",59583
+09003504100,"Census Tract 5041, Hartford County, Connecticut",38266
+09003504200,"Census Tract 5042, Hartford County, Connecticut",28370
+09003504300,"Census Tract 5043, Hartford County, Connecticut",43333
+09003504500,"Census Tract 5045, Hartford County, Connecticut",40711
+09003504800,"Census Tract 5048, Hartford County, Connecticut",57982
+09003504900,"Census Tract 5049, Hartford County, Connecticut",43587
+09003510100,"Census Tract 5101, Hartford County, Connecticut",42595
+09003510200,"Census Tract 5102, Hartford County, Connecticut",48913
+09003510300,"Census Tract 5103, Hartford County, Connecticut",45963
+09003510400,"Census Tract 5104, Hartford County, Connecticut",53388
+09003510500,"Census Tract 5105, Hartford County, Connecticut",62292
+09003510600,"Census Tract 5106, Hartford County, Connecticut",39888
+09003510700,"Census Tract 5107, Hartford County, Connecticut",76351
+09003510800,"Census Tract 5108, Hartford County, Connecticut",68214
+09003510900,"Census Tract 5109, Hartford County, Connecticut",83393
+09003511000,"Census Tract 5110, Hartford County, Connecticut",107616
+09003511100,"Census Tract 5111, Hartford County, Connecticut",99125
+09003511200,"Census Tract 5112, Hartford County, Connecticut",49457
+09003511300,"Census Tract 5113, Hartford County, Connecticut",40998
+09003511400,"Census Tract 5114, Hartford County, Connecticut",86333
+09003514101,"Census Tract 5141.01, Hartford County, Connecticut",96875
+09003514103,"Census Tract 5141.03, Hartford County, Connecticut",91346
+09003514104,"Census Tract 5141.04, Hartford County, Connecticut",84120
+09003514200,"Census Tract 5142, Hartford County, Connecticut",71250
+09003514300,"Census Tract 5143, Hartford County, Connecticut",81503
+09003514400,"Census Tract 5144, Hartford County, Connecticut",58906
+09003514500,"Census Tract 5145, Hartford County, Connecticut",76504
+09003514600,"Census Tract 5146, Hartford County, Connecticut",55333
+09003514700,"Census Tract 5147, Hartford County, Connecticut",42621
+09003514800,"Census Tract 5148, Hartford County, Connecticut",58808
+09003514900,"Census Tract 5149, Hartford County, Connecticut",97909
+09003515000,"Census Tract 5150, Hartford County, Connecticut",112950
+09003515101,"Census Tract 5151.01, Hartford County, Connecticut",114464
+09003515102,"Census Tract 5151.02, Hartford County, Connecticut",76269
+09003515200,"Census Tract 5152, Hartford County, Connecticut",103256
+09003520100,"Census Tract 5201, Hartford County, Connecticut",143250
+09003520201,"Census Tract 5202.01, Hartford County, Connecticut",169219
+09003520202,"Census Tract 5202.02, Hartford County, Connecticut",161875
+09003520301,"Census Tract 5203.01, Hartford County, Connecticut",94814
+09003520302,"Census Tract 5203.02, Hartford County, Connecticut",86250
+09003520400,"Census Tract 5204, Hartford County, Connecticut",140368
+09003520501,"Census Tract 5205.01, Hartford County, Connecticut",156625
+09003524100,"Census Tract 5241, Hartford County, Connecticut",126850
+09003524200,"Census Tract 5242, Hartford County, Connecticut",82945
+09003524300,"Census Tract 5243, Hartford County, Connecticut",95445
+09003524400,"Census Tract 5244, Hartford County, Connecticut",41985
+09003524501,"Census Tract 5245.01, Hartford County, Connecticut",43531
+09003524502,"Census Tract 5245.02, Hartford County, Connecticut",39779
+09003524600,"Census Tract 5246, Hartford County, Connecticut",39234
+09003524700,"Census Tract 5247, Hartford County, Connecticut",77826
+09003980001,"Census Tract 9800.01, Hartford County, Connecticut",NA
+09003980002,"Census Tract 9800.02, Hartford County, Connecticut",NA
+09003980003,"Census Tract 9800.03, Hartford County, Connecticut",NA
+09003980100,"Census Tract 9801, Hartford County, Connecticut",NA
+09005250100,"Census Tract 2501, Litchfield County, Connecticut",138272
+09005253100,"Census Tract 2531, Litchfield County, Connecticut",58908
+09005253200,"Census Tract 2532, Litchfield County, Connecticut",115297
+09005253400,"Census Tract 2534, Litchfield County, Connecticut",103176
+09005253500,"Census Tract 2535, Litchfield County, Connecticut",104671
+09005260200,"Census Tract 2602, Litchfield County, Connecticut",60789
+09005261100,"Census Tract 2611, Litchfield County, Connecticut",87688
+09005262100,"Census Tract 2621, Litchfield County, Connecticut",93385
+09005263200,"Census Tract 2632, Litchfield County, Connecticut",95089
+09005265100,"Census Tract 2651, Litchfield County, Connecticut",133125
+09005266100,"Census Tract 2661, Litchfield County, Connecticut",89348
+09005267100,"Census Tract 2671, Litchfield County, Connecticut",109712
+09005268100,"Census Tract 2681, Litchfield County, Connecticut",107328
+09005290100,"Census Tract 2901, Litchfield County, Connecticut",107969
+09005293100,"Census Tract 2931, Litchfield County, Connecticut",106406
+09005296100,"Census Tract 2961, Litchfield County, Connecticut",127344
+09005298300,"Census Tract 2983, Litchfield County, Connecticut",94504
+09005298400,"Census Tract 2984, Litchfield County, Connecticut",166548
+09005300100,"Census Tract 3001, Litchfield County, Connecticut",105920
+09005300400,"Census Tract 3004, Litchfield County, Connecticut",101932
+09005300500,"Census Tract 3005, Litchfield County, Connecticut",87188
+09005303100,"Census Tract 3031, Litchfield County, Connecticut",94167
+09005306100,"Census Tract 3061, Litchfield County, Connecticut",100156
+09005310100,"Census Tract 3101, Litchfield County, Connecticut",57702
+09005310200,"Census Tract 3102, Litchfield County, Connecticut",46750
+09005310300,"Census Tract 3103, Litchfield County, Connecticut",46607
+09005310400,"Census Tract 3104, Litchfield County, Connecticut",81115
+09005310500,"Census Tract 3105, Litchfield County, Connecticut",68438
+09005310601,"Census Tract 3106.01, Litchfield County, Connecticut",95278
+09005310602,"Census Tract 3106.02, Litchfield County, Connecticut",75868
+09005310700,"Census Tract 3107, Litchfield County, Connecticut",65824
+09005310801,"Census Tract 3108.01, Litchfield County, Connecticut",50156
+09005310803,"Census Tract 3108.03, Litchfield County, Connecticut",62174
+09005310804,"Census Tract 3108.04, Litchfield County, Connecticut",49767
+09005320101,"Census Tract 3201.01, Litchfield County, Connecticut",53911
+09005320102,"Census Tract 3201.02, Litchfield County, Connecticut",66383
+09005320200,"Census Tract 3202, Litchfield County, Connecticut",71265
+09005342100,"Census Tract 3421, Litchfield County, Connecticut",95338
+09005349100,"Census Tract 3491, Litchfield County, Connecticut",101789
+09005349200,"Census Tract 3492, Litchfield County, Connecticut",69662
+09005360100,"Census Tract 3601, Litchfield County, Connecticut",73229
+09005360200,"Census Tract 3602, Litchfield County, Connecticut",101571
+09005360300,"Census Tract 3603, Litchfield County, Connecticut",81389
+09005360400,"Census Tract 3604, Litchfield County, Connecticut",70994
+09005362101,"Census Tract 3621.01, Litchfield County, Connecticut",74606
+09005362102,"Census Tract 3621.02, Litchfield County, Connecticut",113750
+09005425300,"Census Tract 4253, Litchfield County, Connecticut",91971
+09005425400,"Census Tract 4254, Litchfield County, Connecticut",92600
+09005425500,"Census Tract 4255, Litchfield County, Connecticut",72107
+09005425601,"Census Tract 4256.01, Litchfield County, Connecticut",76382
+09005425602,"Census Tract 4256.02, Litchfield County, Connecticut",80938
+09005425700,"Census Tract 4257, Litchfield County, Connecticut",75653
+09007541100,"Census Tract 5411, Middlesex County, Connecticut",43929
+09007541200,"Census Tract 5412, Middlesex County, Connecticut",75664
+09007541301,"Census Tract 5413.01, Middlesex County, Connecticut",68462
+09007541302,"Census Tract 5413.02, Middlesex County, Connecticut",75590
+09007541401,"Census Tract 5414.01, Middlesex County, Connecticut",141250
+09007541402,"Census Tract 5414.02, Middlesex County, Connecticut",64932
+09007541500,"Census Tract 5415, Middlesex County, Connecticut",56188
+09007541600,"Census Tract 5416, Middlesex County, Connecticut",26061
+09007541700,"Census Tract 5417, Middlesex County, Connecticut",36744
+09007542000,"Census Tract 5420, Middlesex County, Connecticut",80250
+09007542100,"Census Tract 5421, Middlesex County, Connecticut",65417
+09007542200,"Census Tract 5422, Middlesex County, Connecticut",94286
+09007550100,"Census Tract 5501, Middlesex County, Connecticut",98208
+09007550201,"Census Tract 5502.01, Middlesex County, Connecticut",119568
+09007550202,"Census Tract 5502.02, Middlesex County, Connecticut",109934
+09007560100,"Census Tract 5601, Middlesex County, Connecticut",131000
+09007560200,"Census Tract 5602, Middlesex County, Connecticut",76534
+09007570100,"Census Tract 5701, Middlesex County, Connecticut",77824
+09007570200,"Census Tract 5702, Middlesex County, Connecticut",122672
+09007570300,"Census Tract 5703, Middlesex County, Connecticut",94229
+09007580100,"Census Tract 5801, Middlesex County, Connecticut",90125
+09007585100,"Census Tract 5851, Middlesex County, Connecticut",133652
+09007590101,"Census Tract 5901.01, Middlesex County, Connecticut",120903
+09007590102,"Census Tract 5901.02, Middlesex County, Connecticut",112397
+09007595101,"Census Tract 5951.01, Middlesex County, Connecticut",107885
+09007595102,"Census Tract 5951.02, Middlesex County, Connecticut",88374
+09007600100,"Census Tract 6001, Middlesex County, Connecticut",93333
+09007610100,"Census Tract 6101, Middlesex County, Connecticut",75417
+09007610200,"Census Tract 6102, Middlesex County, Connecticut",96658
+09007610300,"Census Tract 6103, Middlesex County, Connecticut",111827
+09007610400,"Census Tract 6104, Middlesex County, Connecticut",109583
+09007620100,"Census Tract 6201, Middlesex County, Connecticut",79090
+09007630101,"Census Tract 6301.01, Middlesex County, Connecticut",88015
+09007630102,"Census Tract 6301.02, Middlesex County, Connecticut",123571
+09007640100,"Census Tract 6401, Middlesex County, Connecticut",117900
+09007670100,"Census Tract 6701, Middlesex County, Connecticut",109651
+09007670200,"Census Tract 6702, Middlesex County, Connecticut",87100
+09007680101,"Census Tract 6801.01, Middlesex County, Connecticut",91250
+09007680102,"Census Tract 6801.02, Middlesex County, Connecticut",63384
+09007680200,"Census Tract 6802, Middlesex County, Connecticut",71886
+09007990100,"Census Tract 9901, Middlesex County, Connecticut",NA
+09009120100,"Census Tract 1201, New Haven County, Connecticut",76420
+09009120200,"Census Tract 1202, New Haven County, Connecticut",50085
+09009125100,"Census Tract 1251, New Haven County, Connecticut",83750
+09009125200,"Census Tract 1252, New Haven County, Connecticut",55446
+09009125300,"Census Tract 1253, New Haven County, Connecticut",57602
+09009125400,"Census Tract 1254, New Haven County, Connecticut",47382
+09009130101,"Census Tract 1301.01, New Haven County, Connecticut",67256
+09009130102,"Census Tract 1301.02, New Haven County, Connecticut",83178
+09009130201,"Census Tract 1302.01, New Haven County, Connecticut",132531
+09009130202,"Census Tract 1302.02, New Haven County, Connecticut",86694
+09009140101,"Census Tract 1401.01, New Haven County, Connecticut",85763
+09009140102,"Census Tract 1401.02, New Haven County, Connecticut",68951
+09009140200,"Census Tract 1402, New Haven County, Connecticut",19457
+09009140300,"Census Tract 1403, New Haven County, Connecticut",50000
+09009140400,"Census Tract 1404, New Haven County, Connecticut",71094
+09009140500,"Census Tract 1405, New Haven County, Connecticut",40000
+09009140600,"Census Tract 1406, New Haven County, Connecticut",35092
+09009140700,"Census Tract 1407, New Haven County, Connecticut",32654
+09009140800,"Census Tract 1408, New Haven County, Connecticut",28125
+09009140900,"Census Tract 1409, New Haven County, Connecticut",52718
+09009141000,"Census Tract 1410, New Haven County, Connecticut",111579
+09009141100,"Census Tract 1411, New Haven County, Connecticut",119159
+09009141200,"Census Tract 1412, New Haven County, Connecticut",53987
+09009141301,"Census Tract 1413.01, New Haven County, Connecticut",34950
+09009141400,"Census Tract 1414, New Haven County, Connecticut",54591
+09009141500,"Census Tract 1415, New Haven County, Connecticut",36375
+09009141600,"Census Tract 1416, New Haven County, Connecticut",32246
+09009141800,"Census Tract 1418, New Haven County, Connecticut",64861
+09009141900,"Census Tract 1419, New Haven County, Connecticut",81111
+09009142000,"Census Tract 1420, New Haven County, Connecticut",50634
+09009142100,"Census Tract 1421, New Haven County, Connecticut",49125
+09009142200,"Census Tract 1422, New Haven County, Connecticut",80313
+09009142300,"Census Tract 1423, New Haven County, Connecticut",30049
+09009142400,"Census Tract 1424, New Haven County, Connecticut",39474
+09009142500,"Census Tract 1425, New Haven County, Connecticut",42484
+09009142601,"Census Tract 1426.01, New Haven County, Connecticut",46875
+09009142604,"Census Tract 1426.04, New Haven County, Connecticut",66298
+09009142605,"Census Tract 1426.05, New Haven County, Connecticut",23275
+09009142700,"Census Tract 1427, New Haven County, Connecticut",39496
+09009142800,"Census Tract 1428, New Haven County, Connecticut",90851
+09009150100,"Census Tract 1501, New Haven County, Connecticut",79462
+09009150200,"Census Tract 1502, New Haven County, Connecticut",71346
+09009150300,"Census Tract 1503, New Haven County, Connecticut",88705
+09009150400,"Census Tract 1504, New Haven County, Connecticut",86210
+09009150500,"Census Tract 1505, New Haven County, Connecticut",107321
+09009150600,"Census Tract 1506, New Haven County, Connecticut",119917
+09009150700,"Census Tract 1507, New Haven County, Connecticut",135938
+09009150800,"Census Tract 1508, New Haven County, Connecticut",91667
+09009150900,"Census Tract 1509, New Haven County, Connecticut",131554
+09009151000,"Census Tract 1510, New Haven County, Connecticut",94028
+09009151100,"Census Tract 1511, New Haven County, Connecticut",107917
+09009151200,"Census Tract 1512, New Haven County, Connecticut",86071
+09009154101,"Census Tract 1541.01, New Haven County, Connecticut",68239
+09009154102,"Census Tract 1541.02, New Haven County, Connecticut",68132
+09009154200,"Census Tract 1542, New Haven County, Connecticut",54145
+09009154500,"Census Tract 1545, New Haven County, Connecticut",44797
+09009154600,"Census Tract 1546, New Haven County, Connecticut",63798
+09009154700,"Census Tract 1547, New Haven County, Connecticut",99816
+09009154800,"Census Tract 1548, New Haven County, Connecticut",98542
+09009154900,"Census Tract 1549, New Haven County, Connecticut",75540
+09009155000,"Census Tract 1550, New Haven County, Connecticut",66727
+09009155100,"Census Tract 1551, New Haven County, Connecticut",50938
+09009157100,"Census Tract 1571, New Haven County, Connecticut",86773
+09009157200,"Census Tract 1572, New Haven County, Connecticut",156851
+09009157300,"Census Tract 1573, New Haven County, Connecticut",146591
+09009157400,"Census Tract 1574, New Haven County, Connecticut",142880
+09009160100,"Census Tract 1601, New Haven County, Connecticut",173542
+09009160200,"Census Tract 1602, New Haven County, Connecticut",170592
+09009161100,"Census Tract 1611, New Haven County, Connecticut",136667
+09009165100,"Census Tract 1651, New Haven County, Connecticut",65036
+09009165200,"Census Tract 1652, New Haven County, Connecticut",144821
+09009165300,"Census Tract 1653, New Haven County, Connecticut",106967
+09009165400,"Census Tract 1654, New Haven County, Connecticut",70875
+09009165500,"Census Tract 1655, New Haven County, Connecticut",54531
+09009165600,"Census Tract 1656, New Haven County, Connecticut",63116
+09009165700,"Census Tract 1657, New Haven County, Connecticut",96179
+09009165801,"Census Tract 1658.01, New Haven County, Connecticut",72173
+09009165802,"Census Tract 1658.02, New Haven County, Connecticut",116250
+09009165900,"Census Tract 1659, New Haven County, Connecticut",110907
+09009166002,"Census Tract 1660.02, New Haven County, Connecticut",101859
+09009166003,"Census Tract 1660.03, New Haven County, Connecticut",54625
+09009166004,"Census Tract 1660.04, New Haven County, Connecticut",89023
+09009167101,"Census Tract 1671.01, New Haven County, Connecticut",127667
+09009167102,"Census Tract 1671.02, New Haven County, Connecticut",164861
+09009167201,"Census Tract 1672.01, New Haven County, Connecticut",90313
+09009167202,"Census Tract 1672.02, New Haven County, Connecticut",86917
+09009167301,"Census Tract 1673.01, New Haven County, Connecticut",102714
+09009170100,"Census Tract 1701, New Haven County, Connecticut",30000
+09009170200,"Census Tract 1702, New Haven County, Connecticut",48429
+09009170300,"Census Tract 1703, New Haven County, Connecticut",44716
+09009170400,"Census Tract 1704, New Haven County, Connecticut",74375
+09009170500,"Census Tract 1705, New Haven County, Connecticut",101114
+09009170600,"Census Tract 1706, New Haven County, Connecticut",61506
+09009170700,"Census Tract 1707, New Haven County, Connecticut",59034
+09009170800,"Census Tract 1708, New Haven County, Connecticut",51818
+09009170900,"Census Tract 1709, New Haven County, Connecticut",29250
+09009171000,"Census Tract 1710, New Haven County, Connecticut",24832
+09009171100,"Census Tract 1711, New Haven County, Connecticut",70934
+09009171201,"Census Tract 1712.01, New Haven County, Connecticut",98086
+09009171202,"Census Tract 1712.02, New Haven County, Connecticut",77083
+09009171300,"Census Tract 1713, New Haven County, Connecticut",61627
+09009171400,"Census Tract 1714, New Haven County, Connecticut",51313
+09009171500,"Census Tract 1715, New Haven County, Connecticut",53304
+09009171600,"Census Tract 1716, New Haven County, Connecticut",71480
+09009171700,"Census Tract 1717, New Haven County, Connecticut",92277
+09009175100,"Census Tract 1751, New Haven County, Connecticut",75849
+09009175200,"Census Tract 1752, New Haven County, Connecticut",69375
+09009175300,"Census Tract 1753, New Haven County, Connecticut",79106
+09009175400,"Census Tract 1754, New Haven County, Connecticut",85278
+09009175501,"Census Tract 1755.01, New Haven County, Connecticut",156684
+09009175502,"Census Tract 1755.02, New Haven County, Connecticut",75109
+09009175600,"Census Tract 1756, New Haven County, Connecticut",94932
+09009175700,"Census Tract 1757, New Haven County, Connecticut",104792
+09009175800,"Census Tract 1758, New Haven County, Connecticut",114125
+09009175900,"Census Tract 1759, New Haven County, Connecticut",86607
+09009176000,"Census Tract 1760, New Haven County, Connecticut",106118
+09009180101,"Census Tract 1801.01, New Haven County, Connecticut",65729
+09009180102,"Census Tract 1801.02, New Haven County, Connecticut",73864
+09009180200,"Census Tract 1802, New Haven County, Connecticut",61642
+09009180300,"Census Tract 1803, New Haven County, Connecticut",57200
+09009180400,"Census Tract 1804, New Haven County, Connecticut",62216
+09009180500,"Census Tract 1805, New Haven County, Connecticut",78333
+09009180601,"Census Tract 1806.01, New Haven County, Connecticut",93828
+09009180602,"Census Tract 1806.02, New Haven County, Connecticut",90924
+09009184101,"Census Tract 1841.01, New Haven County, Connecticut",64623
+09009184200,"Census Tract 1842, New Haven County, Connecticut",66813
+09009184300,"Census Tract 1843, New Haven County, Connecticut",95263
+09009184400,"Census Tract 1844, New Haven County, Connecticut",87602
+09009184500,"Census Tract 1845, New Haven County, Connecticut",99906
+09009184600,"Census Tract 1846, New Haven County, Connecticut",170656
+09009184700,"Census Tract 1847, New Haven County, Connecticut",96848
+09009186100,"Census Tract 1861, New Haven County, Connecticut",95000
+09009186200,"Census Tract 1862, New Haven County, Connecticut",107757
+09009190100,"Census Tract 1901, New Haven County, Connecticut",73906
+09009190200,"Census Tract 1902, New Haven County, Connecticut",121150
+09009190301,"Census Tract 1903.01, New Haven County, Connecticut",139699
+09009190302,"Census Tract 1903.02, New Haven County, Connecticut",110557
+09009190303,"Census Tract 1903.03, New Haven County, Connecticut",119271
+09009194101,"Census Tract 1941.01, New Haven County, Connecticut",89028
+09009194102,"Census Tract 1941.02, New Haven County, Connecticut",100068
+09009194201,"Census Tract 1942.01, New Haven County, Connecticut",155145
+09009194202,"Census Tract 1942.02, New Haven County, Connecticut",149122
+09009341100,"Census Tract 3411, New Haven County, Connecticut",90804
+09009343101,"Census Tract 3431.01, New Haven County, Connecticut",129803
+09009343102,"Census Tract 3431.02, New Haven County, Connecticut",145313
+09009343200,"Census Tract 3432, New Haven County, Connecticut",130568
+09009343300,"Census Tract 3433, New Haven County, Connecticut",138438
+09009343400,"Census Tract 3434, New Haven County, Connecticut",123321
+09009344100,"Census Tract 3441, New Haven County, Connecticut",116778
+09009344200,"Census Tract 3442, New Haven County, Connecticut",126327
+09009345100,"Census Tract 3451, New Haven County, Connecticut",73824
+09009345201,"Census Tract 3452.01, New Haven County, Connecticut",91020
+09009345202,"Census Tract 3452.02, New Haven County, Connecticut",94846
+09009345300,"Census Tract 3453, New Haven County, Connecticut",102765
+09009345400,"Census Tract 3454, New Haven County, Connecticut",79293
+09009346101,"Census Tract 3461.01, New Haven County, Connecticut",113424
+09009346102,"Census Tract 3461.02, New Haven County, Connecticut",122063
+09009347100,"Census Tract 3471, New Haven County, Connecticut",113167
+09009347200,"Census Tract 3472, New Haven County, Connecticut",106806
+09009348111,"Census Tract 3481.11, New Haven County, Connecticut",115750
+09009348122,"Census Tract 3481.22, New Haven County, Connecticut",135694
+09009348123,"Census Tract 3481.23, New Haven County, Connecticut",140583
+09009348124,"Census Tract 3481.24, New Haven County, Connecticut",57958
+09009348125,"Census Tract 3481.25, New Haven County, Connecticut",63190
+09009350101,"Census Tract 3501.01, New Haven County, Connecticut",12248
+09009350200,"Census Tract 3502, New Haven County, Connecticut",30875
+09009350300,"Census Tract 3503, New Haven County, Connecticut",38594
+09009350400,"Census Tract 3504, New Haven County, Connecticut",32317
+09009350500,"Census Tract 3505, New Haven County, Connecticut",27059
+09009350800,"Census Tract 3508, New Haven County, Connecticut",46080
+09009350900,"Census Tract 3509, New Haven County, Connecticut",72731
+09009351000,"Census Tract 3510, New Haven County, Connecticut",48304
+09009351100,"Census Tract 3511, New Haven County, Connecticut",44713
+09009351200,"Census Tract 3512, New Haven County, Connecticut",46250
+09009351300,"Census Tract 3513, New Haven County, Connecticut",48471
+09009351400,"Census Tract 3514, New Haven County, Connecticut",43777
+09009351500,"Census Tract 3515, New Haven County, Connecticut",59232
+09009351601,"Census Tract 3516.01, New Haven County, Connecticut",55722
+09009351602,"Census Tract 3516.02, New Haven County, Connecticut",71377
+09009351700,"Census Tract 3517, New Haven County, Connecticut",35338
+09009351800,"Census Tract 3518, New Haven County, Connecticut",55665
+09009351900,"Census Tract 3519, New Haven County, Connecticut",98854
+09009352000,"Census Tract 3520, New Haven County, Connecticut",71000
+09009352100,"Census Tract 3521, New Haven County, Connecticut",54063
+09009352200,"Census Tract 3522, New Haven County, Connecticut",43909
+09009352300,"Census Tract 3523, New Haven County, Connecticut",50804
+09009352400,"Census Tract 3524, New Haven County, Connecticut",45567
+09009352500,"Census Tract 3525, New Haven County, Connecticut",58393
+09009352600,"Census Tract 3526, New Haven County, Connecticut",49483
+09009352701,"Census Tract 3527.01, New Haven County, Connecticut",61250
+09009352702,"Census Tract 3527.02, New Haven County, Connecticut",65117
+09009352800,"Census Tract 3528, New Haven County, Connecticut",64917
+09009361100,"Census Tract 3611, New Haven County, Connecticut",102816
+09009361200,"Census Tract 3612, New Haven County, Connecticut",106071
+09009361300,"Census Tract 3613, New Haven County, Connecticut",100365
+09009361401,"Census Tract 3614.01, New Haven County, Connecticut",39500
+09009361402,"Census Tract 3614.02, New Haven County, Connecticut",66923
+09009361500,"Census Tract 3615, New Haven County, Connecticut",40563
+09009990000,"Census Tract 9900, New Haven County, Connecticut",NA
+09011650100,"Census Tract 6501, New London County, Connecticut",111534
+09011660101,"Census Tract 6601.01, New London County, Connecticut",125435
+09011660103,"Census Tract 6601.03, New London County, Connecticut",114069
+09011660104,"Census Tract 6601.04, New London County, Connecticut",97457
+09011690300,"Census Tract 6903, New London County, Connecticut",50293
+09011690400,"Census Tract 6904, New London County, Connecticut",38804
+09011690500,"Census Tract 6905, New London County, Connecticut",30969
+09011690700,"Census Tract 6907, New London County, Connecticut",48750
+09011690800,"Census Tract 6908, New London County, Connecticut",65052
+09011690900,"Census Tract 6909, New London County, Connecticut",84297
+09011693300,"Census Tract 6933, New London County, Connecticut",92250
+09011693400,"Census Tract 6934, New London County, Connecticut",68954
+09011693500,"Census Tract 6935, New London County, Connecticut",116688
+09011693600,"Census Tract 6936, New London County, Connecticut",96196
+09011693700,"Census Tract 6937, New London County, Connecticut",143542
+09011695201,"Census Tract 6952.01, New London County, Connecticut",95091
+09011695202,"Census Tract 6952.02, New London County, Connecticut",89495
+09011696100,"Census Tract 6961, New London County, Connecticut",52620
+09011696200,"Census Tract 6962, New London County, Connecticut",75991
+09011696300,"Census Tract 6963, New London County, Connecticut",107616
+09011696401,"Census Tract 6964.01, New London County, Connecticut",44109
+09011696500,"Census Tract 6965, New London County, Connecticut",63958
+09011696600,"Census Tract 6966, New London County, Connecticut",98500
+09011696701,"Census Tract 6967.01, New London County, Connecticut",53839
+09011696800,"Census Tract 6968, New London County, Connecticut",50074
+09011697000,"Census Tract 6970, New London County, Connecticut",59049
+09011700100,"Census Tract 7001, New London County, Connecticut",95553
+09011701100,"Census Tract 7011, New London County, Connecticut",88484
+09011701200,"Census Tract 7012, New London County, Connecticut",105024
+09011702100,"Census Tract 7021, New London County, Connecticut",103719
+09011702300,"Census Tract 7023, New London County, Connecticut",75903
+09011702400,"Census Tract 7024, New London County, Connecticut",74335
+09011702500,"Census Tract 7025, New London County, Connecticut",45493
+09011702600,"Census Tract 7026, New London County, Connecticut",114643
+09011702700,"Census Tract 7027, New London County, Connecticut",76176
+09011702800,"Census Tract 7028, New London County, Connecticut",57098
+09011702900,"Census Tract 7029, New London County, Connecticut",145536
+09011703000,"Census Tract 7030, New London County, Connecticut",124159
+09011705101,"Census Tract 7051.01, New London County, Connecticut",91923
+09011705102,"Census Tract 7051.02, New London County, Connecticut",61977
+09011705200,"Census Tract 7052, New London County, Connecticut",90500
+09011705300,"Census Tract 7053, New London County, Connecticut",114917
+09011705400,"Census Tract 7054, New London County, Connecticut",108333
+09011707100,"Census Tract 7071, New London County, Connecticut",85266
+09011708100,"Census Tract 7081, New London County, Connecticut",84583
+09011709100,"Census Tract 7091, New London County, Connecticut",87583
+09011709200,"Census Tract 7092, New London County, Connecticut",44829
+09011710100,"Census Tract 7101, New London County, Connecticut",83158
+09011711100,"Census Tract 7111, New London County, Connecticut",78399
+09011712100,"Census Tract 7121, New London County, Connecticut",89948
+09011713100,"Census Tract 7131, New London County, Connecticut",90750
+09011714101,"Census Tract 7141.01, New London County, Connecticut",69185
+09011714103,"Census Tract 7141.03, New London County, Connecticut",124079
+09011714104,"Census Tract 7141.04, New London County, Connecticut",126750
+09011715100,"Census Tract 7151, New London County, Connecticut",108953
+09011716101,"Census Tract 7161.01, New London County, Connecticut",85208
+09011716102,"Census Tract 7161.02, New London County, Connecticut",115984
+09011870100,"Census Tract 8701, New London County, Connecticut",96490
+09011870200,"Census Tract 8702, New London County, Connecticut",69430
+09011870300,"Census Tract 8703, New London County, Connecticut",36725
+09011870501,"Census Tract 8705.01, New London County, Connecticut",71337
+09011870502,"Census Tract 8705.02, New London County, Connecticut",81094
+09011870701,"Census Tract 8707.01, New London County, Connecticut",96053
+09011870703,"Census Tract 8707.03, New London County, Connecticut",89453
+09011870704,"Census Tract 8707.04, New London County, Connecticut",96691
+09011980000,"Census Tract 9800, New London County, Connecticut",NA
+09011990100,"Census Tract 9901, New London County, Connecticut",NA
+09013526101,"Census Tract 5261.01, Tolland County, Connecticut",132888
+09013526102,"Census Tract 5261.02, Tolland County, Connecticut",124722
+09013528100,"Census Tract 5281, Tolland County, Connecticut",102759
+09013529100,"Census Tract 5291, Tolland County, Connecticut",116393
+09013530100,"Census Tract 5301, Tolland County, Connecticut",67675
+09013530200,"Census Tract 5302, Tolland County, Connecticut",54947
+09013530301,"Census Tract 5303.01, Tolland County, Connecticut",58388
+09013530302,"Census Tract 5303.02, Tolland County, Connecticut",94890
+09013530400,"Census Tract 5304, Tolland County, Connecticut",72583
+09013530500,"Census Tract 5305, Tolland County, Connecticut",90375
+09013530600,"Census Tract 5306, Tolland County, Connecticut",120667
+09013533102,"Census Tract 5331.02, Tolland County, Connecticut",115296
+09013533103,"Census Tract 5331.03, Tolland County, Connecticut",104911
+09013533104,"Census Tract 5331.04, Tolland County, Connecticut",160508
+09013535101,"Census Tract 5351.01, Tolland County, Connecticut",101607
+09013535102,"Census Tract 5351.02, Tolland County, Connecticut",102548
+09013535200,"Census Tract 5352, Tolland County, Connecticut",123089
+09013538100,"Census Tract 5381, Tolland County, Connecticut",NA
+09013538201,"Census Tract 5382.01, Tolland County, Connecticut",110726
+09013538202,"Census Tract 5382.02, Tolland County, Connecticut",105144
+09013840100,"Census Tract 8401, Tolland County, Connecticut",78351
+09013850100,"Census Tract 8501, Tolland County, Connecticut",99549
+09013850200,"Census Tract 8502, Tolland County, Connecticut",93026
+09013860100,"Census Tract 8601, Tolland County, Connecticut",113983
+09013881100,"Census Tract 8811, Tolland County, Connecticut",53428
+09013881200,"Census Tract 8812, Tolland County, Connecticut",NA
+09013881300,"Census Tract 8813, Tolland County, Connecticut",36360
+09013881500,"Census Tract 8815, Tolland County, Connecticut",57904
+09013890100,"Census Tract 8901, Tolland County, Connecticut",66543
+09013890202,"Census Tract 8902.02, Tolland County, Connecticut",104063
+09013890203,"Census Tract 8902.03, Tolland County, Connecticut",89792
+09013890204,"Census Tract 8902.04, Tolland County, Connecticut",91797
+09015800300,"Census Tract 8003, Windham County, Connecticut",28274
+09015800400,"Census Tract 8004, Windham County, Connecticut",65612
+09015800501,"Census Tract 8005.01, Windham County, Connecticut",47500
+09015800502,"Census Tract 8005.02, Windham County, Connecticut",72750
+09015800600,"Census Tract 8006, Windham County, Connecticut",35000
+09015800700,"Census Tract 8007, Windham County, Connecticut",42500
+09015815000,"Census Tract 8150, Windham County, Connecticut",85083
+09015820000,"Census Tract 8200, Windham County, Connecticut",92143
+09015825000,"Census Tract 8250, Windham County, Connecticut",89625
+09015830100,"Census Tract 8301, Windham County, Connecticut",90441
+09015900100,"Census Tract 9001, Windham County, Connecticut",98015
+09015900200,"Census Tract 9002, Windham County, Connecticut",73009
+09015901101,"Census Tract 9011.01, Windham County, Connecticut",95291
+09015901102,"Census Tract 9011.02, Windham County, Connecticut",92880
+09015902200,"Census Tract 9022, Windham County, Connecticut",98000
+09015902500,"Census Tract 9025, Windham County, Connecticut",93467
+09015903101,"Census Tract 9031.01, Windham County, Connecticut",52392
+09015903102,"Census Tract 9031.02, Windham County, Connecticut",67620
+09015903200,"Census Tract 9032, Windham County, Connecticut",80965
+09015904101,"Census Tract 9041.01, Windham County, Connecticut",85869
+09015904102,"Census Tract 9041.02, Windham County, Connecticut",79042
+09015904400,"Census Tract 9044, Windham County, Connecticut",56602
+09015904500,"Census Tract 9045, Windham County, Connecticut",70767
+09015905101,"Census Tract 9051.01, Windham County, Connecticut",82048
+09015905102,"Census Tract 9051.02, Windham County, Connecticut",67813
+09015906100,"Census Tract 9061, Windham County, Connecticut",95364
+09015907100,"Census Tract 9071, Windham County, Connecticut",71328
+09015907200,"Census Tract 9072, Windham County, Connecticut",73295
+09015907300,"Census Tract 9073, Windham County, Connecticut",67926
+09015908100,"Census Tract 9081, Windham County, Connecticut",86394

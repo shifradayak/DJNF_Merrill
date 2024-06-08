@@ -57,13 +57,11 @@ Notably, the map tool itself shows that the [most hard-hit communities](https://
 
 -   Chart of spills broken down by type across the years
 
--   Map of where the most spills have occurred in Connecticut (numbers-wise and per 1,000 residents)
+-   Maps of where the most spills have occurred in Connecticut (numbers-wise and per 1,000 residents)
 
 -   Chart of top dischargers
 
--   Map of biggest spills overlaid on income levels or non-white population percentage in different towns
-
--   Scatterplot showing the relationship between a demographic measure of some kind and number of spills
+-   Maps of biggest spills overlaid on income levels and non-white population percentage in different Census tracts
 
 -   Behind-the-scenes video explaining my process for the code and visualizations
 
@@ -86,12 +84,17 @@ Notably, the map tool itself shows that the [most hard-hit communities](https://
     -   What are trends with corrective actions for spills?
         Outside of this dataset, have there been any legal responses or settlements related to any of these spills?
 
+    -   Mathematically, what's the correlation between non-white population percentage and number of spills?
+        What about the correlation between median household income and number of spills?
+
     -   How does Connecticut compare to other states?
         Looking at recent years, is it doing better or worse than other parts of the nation in terms of spills?
 
 Estimated delivery: Mid-July 2024
 
 ### Cleaning, Analyzing and Visualizing the Data
+
+Here's a step-by-step look at how I analyzed this data and gathered some major findings.
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -111,7 +114,382 @@ spills <- read_csv("spills.csv") |>
   clean_names()
 ```
 
-1.  **What have spill numbers looked like between 1996 and 2022?**
+Often, a small subset of companies is responsible for a lot of spills.
+I started by seeing if this was the case in Connecticut.
+
+**What entities have been at fault for spills between 1996 and 2022?**
+
+Before bringing this data into R, I ran it through OpenRefine to do some preliminary cleaning.
+The way that company/discharger names are stylized is very inconsistent, so I wanted a slightly more accurate count by combining some non-unique company names (e.g. EXXON MOBIL and exxon mobil).
+OpenRefine didn't catch everything, so I wrote a couple lines of code to manually rename some items that seemed to be within the top 10 dischargers or so.
+I also standardized some discharger names that have changed over the years, such as companies that have now rebranded to become Eversource Energy.
+I also filtered out spills labeled as coming from certain dischargers or that didn't have a discharger name attached to them — more of my reasoning is explained in comments below.
+
+```{r output=FALSE, include=TRUE}
+#Loading in and cleaning up
+#Connecticut Light and Power does business as/is a subsidiary of Eversource, so I standardized all of those names
+
+companies <- read_csv("companies_cleaned_spills.csv") |>
+  clean_names () |>
+  rename (responsible_party = responsibile_party_discharger) |>
+  mutate (responsible_party = case_when (
+    responsible_party == "cumberland farms" ~ "CUMBERLAND FARMS",
+    responsible_party == "Cumberland Farms" ~ "CUMBERLAND FARMS",
+    responsible_party == "Cumberland Farms Inc." ~ "CUMBERLAND FARMS",
+    responsible_party == "EVERSOURCE" ~ "EVERSOURCE ENERGY",
+    responsible_party == "Eversource" ~ "EVERSOURCE ENERGY",
+    responsible_party == "Eversource Energy" ~ "EVERSOURCE ENERGY",
+    responsible_party == "eversource" ~ "EVERSOURCE ENERGY",
+    responsible_party == "CONNECTICUT LIGHT & POWER" ~ "EVERSOURCE ENERGY",
+    responsible_party == "CT DOT" ~ "CT TRANSIT",
+    responsible_party == "ct dot" ~ "CT TRANSIT",
+    responsible_party == "DOT" ~ "CT TRANSIT",
+    responsible_party == "alliance energy" ~ "alliance global",
+    responsible_party == "Alliance Energy" ~ "alliance global",
+    responsible_party == "alliance" ~ "alliance global",
+    responsible_party == "ALLIANCE ENERGY" ~ "alliance global",
+    responsible_party == "CL AND P" ~ "EVERSOURCE ENERGY",
+    responsible_party == "cl and p" ~ "EVERSOURCE ENERGY",
+    responsible_party == "C. L. & P" ~ "EVERSOURCE ENERGY",
+    responsible_party == "CL&P" ~ "EVERSOURCE ENERGY",
+    responsible_party == "UNITED ILLUMINATING" ~ "United Illuminating",
+    responsible_party == "p&w" ~ "PRATT & WHITNEY",
+    responsible_party == "P&W" ~ "PRATT & WHITNEY",
+    responsible_party == "NORTHEAST UTILITIES" ~ "EVERSOURCE ENERGY",
+    responsible_party == "cwpm" ~ "CWPM",
+    responsible_party == "cwpm" ~ "CWPM",
+    responsible_party == "auto tlc" ~ "AUTOMATIC TLC",
+    responsible_party == "TLC" ~ "AUTOMATIC TLC",
+    TRUE ~ responsible_party
+  ))
+  
+#Grouping by dischargers  
+companies <- companies |>
+  group_by (responsible_party) |>
+  summarise (
+    number_of_spills = n()
+  ) |>
+  arrange(desc(number_of_spills)) 
+
+#Taking out spills that don't have a named discharger, since we're only looking at companies
+companies_no_unknown <- companies |>
+  filter(!str_detect(responsible_party, regex('UNKNOWN|unk|N/A|same|as above|UNDETERMINED', ignore_case=TRUE)))
+
+#Taking out spills attributed to motor vehicle accidents, since most don't involve a company
+companies_no_unknown <- companies_no_unknown |>
+  filter(!str_detect(responsible_party, regex('M.V.A.|MVA|M.V.A|PRIVATE VEHICLE|MV ACCIDENT|PRIVATE AUTO|PRIVATE MV', ignore_case=TRUE)))
+
+#Taking out spills attributed to "saa," since that broadly encompasses all state administrative agencies rather than one specific company
+companies_no_unknown <- companies_no_unknown |>
+  filter(!str_detect(responsible_party, regex('saa', ignore_case=TRUE)))
+
+#Exporting as a csv
+companies_no_unknown <- companies_no_unknown |>
+  slice(1:10) |>
+  write_csv("top_company_dischargers.csv")
+```
+
+Here's a [chart](https://public.flourish.studio/visualisation/18258842/) showing the top dischargers.
+Numbers might be slightly off, since we aggregated all subsidiaries and companies that used to go by different names but have since merged or rebranded.
+Taking that into account, it seems like Eversource and its subsidiaries are polluting/spilling far more than any other single entity in the state.
+
+```{r, results= 'asis'}
+cat('<div class="flourish-embed flourish-chart" data-src="visualisation/18258842"><script src="https://public.flourish.studio/resources/embed.js"></script></div>')
+```
+
+Eversource, Global Partners, United Illuminating, ExxonMobil and Automatic TLC are all energy or gas companies of some kind, making the top polluters overwhelmingly related to electricity, energy or oil and gas.
+Cumberland Farms is a gas station and convenience store, so depending on the nature of their spills, they could also be factored into this count.
+I'd say this is fairly unsurprising — a lot of spills tend to be oil and fuel-related.
+
+I also noticed that lots of the spill incidents did not have a discharger name recorded.
+The code below shows us that more than 56% of total spills recorded between 1996 and 2022 aren't attached to a specific responsible party.
+Talking to sources about the implications of this would be interesting — does this mean that responsible parties aren't held accountable?
+Why are dischargers so often not recorded?
+
+```{r}
+unknown_spills <- spills |>
+  filter(is.na(responsibile_party_discharger) | str_detect(responsibile_party_discharger, regex("UNKNOWN|UNK|unknown|Unknown|N/A|UNDETERMINED|unk.|UNKNOWN POLLUTER|UNK.|unknown at this time", ignore_case = TRUE)))
+
+(nrow(unknown_spills) / nrow(spills)) *100
+
+```
+
+**What parts of Connecticut have seen the most impacts from spills?**
+
+Let's move on to grouping by place, to see if there are trends in where spills have been reported.
+To narrow down the scope, let's look at roughly the last decade of recorded data (2010 and after).
+
+```{r output=FALSE, include=TRUE}
+
+#Filtering for 2010 and after
+after_2010_spills <- spills |>
+  filter (year > 2009)
+
+#Standardizing stylization of place names 
+after_2010_spills$town_of_release <- toupper(after_2010_spills$town_of_release)
+
+
+#Cleaning up some messy/wrong names 
+after_2010_spills <- after_2010_spills |>
+  mutate(
+    town_of_release = case_when (
+      town_of_release == "GRONTON" ~ "GROTON",
+      town_of_release == "GROTOM" ~ "GROTON",
+      town_of_release == "MIFORD" ~ "MILFORD",
+      town_of_release == "MILLFORD" ~ "MILFORD",
+      town_of_release == "MONTOVILLE" ~ "MONTVILLE",
+      town_of_release == "OOLD SAYBROOK" ~ "OLD SAYBROOK",
+      town_of_release == "WATERTOWM" ~ "WATERTOWN",
+      town_of_release == "NORTHFORD" ~ "NORTH BRANFORD",
+      .default = town_of_release
+    )
+  )
+
+#Grouping by place 
+spills_by_town <- after_2010_spills |>
+  group_by (town_of_release) |>
+  summarise (
+    reports_by_town = n()
+  ) |>
+  arrange(desc(reports_by_town)) |>
+  slice(1:170)
+
+#Exporting as CSV so we can map in Flourish  
+spills_by_town |>
+  write_csv("spills_by_town.csv")
+  
+
+
+```
+
+To clean up the data by town (in the chunk of code above), I cross-compared with name keys in a GeoJSON file of Connecticut municipalities, and took out any instances of towns that didn't correspond to the shapefile data (or spills that had no town attached to them).
+I uploaded that GeoJSON data and the above data of spills by town to Flourish to create a custom map.
+
+Here's the [resulting map](https://public.flourish.studio/visualisation/18244615/) of spills by town.
+More spills were reported from towns in central Connecticut and southwestern Connecticut.
+
+```{r, results = 'asis'}
+cat('<div class="flourish-embed flourish-map" data-src="visualisation/18244615"><script src="https://public.flourish.studio/resources/embed.js"></script></div>')
+
+```
+
+That's just with raw numbers.
+To see what the impact on people is, we can further expand this map by normalizing the number of spills per 1,000 residents in each town.
+I used the same GeoJSON data, paired with data below.
+
+```{r output=FALSE, include=TRUE}
+#Reading in and joining a table that has populations for each town 
+town_populations <- read_csv("pop_towns2022.csv") |>
+  clean_names () |>
+  rename (town_of_release = town)
+
+#Making joining easier by getting rid of the N/A row in the spills by town table and renaming
+spills_by_town <- spills_by_town |>
+  arrange(town_of_release)
+
+#Joining and calculating spills per 1000 people
+spills_per_thousand <- spills_by_town |>
+ inner_join(town_populations, by=c("town_of_release")) |>
+  mutate (per_thousand_spill_rate = (reports_by_town/population)*1000) |>
+  arrange(desc(per_thousand_spill_rate))
+
+#Exporting 
+spills_per_thousand |> write_csv("spills_per_thousand.csv")
+```
+
+Here's a [map](https://public.flourish.studio/visualisation/18244185/) that shows those results charted.
+
+```{r, results='asis'}
+cat ('<div class="flourish-embed flourish-map" data-src="visualisation/18244185"><script src="https://public.flourish.studio/resources/embed.js"></script></div>')
+
+```
+
+The patterns look different — the southwestern and central towns that saw the largest numbers of spills didn't necessarily see the highest spill rates.
+The highest rates were spread out across the state, with Franklin, Stafford and Bloomfield at the top of the list.
+This would be another interesting thing to ask sources about.
+Why are there so many spills in these places, relative to the number of people who live there?
+Some higher rates make sense — Groton, for instance, is home to a large U.S.
+Navy submarine contracting company.
+But others, like Franklin (a small rural town) might point to less obvious answers.
+
+I was curious about tying this into environmental justice, so I decided to contrast impacts on places with the makeup of those places.
+
+**What's the demographic makeup of parts of the state that have experienced spills?**
+
+For this, I'm going to look at how non-white percentage and median household income might correlate with the amount of spills by town.
+I'm using the Census API to load in data on these variables, starting with non-white percentage (which I had to calculate manually, since the Census Bureau does not provide an aggregate measure of non-white population).
+
+```{r output=FALSE, include=TRUE}
+census_vars <- load_variables(2021, "acs5", cache=TRUE)
+
+#Loading in data for white population 
+ct_demographics <- get_acs(geography = "tract", 
+          variables = c(whitepop ="B02001_002"), 
+          state="CT", 
+          year= 2021)
+
+#Loading in data for total population of each census tract
+ct_population <- get_acs(geography = "tract", 
+            variables = c(totalpop = "B01003_001"), 
+            state = "CT", 
+            year = 2021)
+
+#Joining the two tables, cleaning up column names, and removing any columns we don't need
+ct_demographics <- ct_demographics |>
+ inner_join(ct_population, by=c("GEOID")) |>
+  clean_names() |>
+  select(-moe_x, -name_y, -moe_y, -variable_x, -variable_y) |>
+  rename (census_tract = name_x,
+          white_pop = estimate_x, 
+          total_pop = estimate_y
+  )
+
+#Calculating the total non-white population percentage
+ct_demographics <- ct_demographics |>
+  mutate (
+    white_pct = (white_pop/total_pop)*100
+  ) |>
+  mutate(
+    non_white_pct = (100-white_pct)
+  )
+
+#Exporting 
+ct_demographics |>
+  write_csv("ct_demographics.csv")
+
+```
+
+I want to overlay those non-white percentages for each tract with some of the largest spills that have happened in Connecticut, to see if there are connections.
+After looking at the data arranged by spill, I decided the best way to define "top" was anything recorded as being 10,000 gallons or more.
+Since the demographic data is from the most recent five-year Census, I'm going to filter the spill data by that time period as well, so the timeframes match up.
+Then, I'm going to geocode the addresses of the top spills from that period so we can see them on a map.
+Since the addresses are entered in inconsistent formats, I'm just going to look up each address and manually enter the latitude and longitude values into the dataset.
+
+```{r output=FALSE, include=TRUE}
+#Selecting the years we want to look at
+top_2017_2021_spills <- spills |>
+  filter(year %in% c(2017, 2018, 2019, 2020, 2021)) |>
+  arrange(total_quantity_gallons)
+
+#Standardizing numbers in the quantity column 
+top_2017_2021_spills <- top_2017_2021_spills |> 
+  mutate(total_quantity_gallons = gsub("[+\\-~]", "", total_quantity_gallons)) |>
+  mutate(total_quantity_gallons = as.numeric(total_quantity_gallons))
+
+#Figuring out the top spills
+top_2017_2021_spills <- top_2017_2021_spills |>
+  filter(total_quantity_gallons > 9000) |>
+  arrange(desc(total_quantity_gallons))
+
+#Taking out one inconsistently-reported spill
+top_2017_2021_spills <- top_2017_2021_spills |>
+  filter(!str_detect(release_substance, "CHILLER WATER 1500 GALLONS OF NUTRAL PH WATER"))
+
+#Adding lat and long values 
+top_2017_2021_spills <- top_2017_2021_spills |>
+  mutate (latitude = case_when (
+   location_of_reported_release == "1082 north benson road, McInness Road runs parralel to stream" ~ "41.16168860651233",
+    location_of_reported_release == "263 farmington ave" ~ "41.732834",
+    location_of_reported_release == "200 bloomfield ave" ~ "41.79582769811641", 
+    location_of_reported_release == "11 GLASTONBURY AVE" ~ "41.665117241187346", 
+    location_of_reported_release == "Dayville 56 Alexander Parkway" ~ "41.872053930599705", 
+    location_of_reported_release == "55 SHELLAND ST" ~ "41.22265023721389", 
+    location_of_reported_release == "239 West Service Rd." ~ "41.79738307648949", 
+    location_of_reported_release == "6900 MAIN ST" ~ "41.25207965073338", 
+    location_of_reported_release == "6 HILLCREST DR" ~ "41.559327103632825", 
+    location_of_reported_release == "400 main street" ~ "41.74789958168573", 
+    location_of_reported_release == "1254 Laurel Ridge Drive" ~ "41.59475217004565", 
+    location_of_reported_release == "206 garfield street" ~ "41.693631187132574", 
+    location_of_reported_release == "6 howard ave" ~ "41.16300933956072", 
+    location_of_reported_release == "2 Forbes Street" ~ "41.77641331928542", 
+    location_of_reported_release == "149 west ville ave" ~ "41.3967166877614", 
+    location_of_reported_release == "94 Baldwin Ave." ~ "41.535345140683674", 
+    location_of_reported_release == "Rt. 189 and Rt. 44 - University of Hartford - Reich Family Pavilion" ~ "41.80195983049168"
+    )) |>
+  
+  mutate(longitude = case_when (
+    location_of_reported_release == "1082 north benson road, McInness Road runs parralel to stream" ~ "-73.25377220245423",
+    location_of_reported_release == "263 farmington ave" ~ "-72.791318", 
+    location_of_reported_release == "200 bloomfield ave" ~ "-72.71465723160469", 
+    location_of_reported_release == "11 GLASTONBURY AVE" ~ "-72.63791540397118", 
+    location_of_reported_release == "Dayville 56 Alexander Parkway" ~ "-71.89576719880588", 
+    location_of_reported_release == "55 SHELLAND ST" ~ "-73.098632516012", 
+    location_of_reported_release == "239 West Service Rd." ~ "72.65604183843769", 
+    location_of_reported_release == "6900 MAIN ST" ~ "-73.09598977724993", 
+    location_of_reported_release == "6 HILLCREST DR" ~ "72.86271589083927", 
+    location_of_reported_release == "400 main street" ~ "-72.63383413280191", 
+    location_of_reported_release == "1254 Laurel Ridge Drive" ~ "-72.48578458186292", 
+    location_of_reported_release == "206 garfield street" ~ "-72.732589905816", 
+    location_of_reported_release == "6 howard ave" ~ "-73.20855214061626", 
+    location_of_reported_release == "2 Forbes Street" ~ "-72.60675027697646", 
+    location_of_reported_release == "149 west ville ave" ~ "-73.47991147515009", 
+    location_of_reported_release == "94 Baldwin Ave." ~ "-73.03074004630756", 
+    location_of_reported_release == "Rt. 189 and Rt. 44 - University of Hartford - Reich Family Pavilion" ~ "-72.71653747512859"
+  ))
+
+#Exporting 
+top_2017_2021_spills |>
+  write_csv("top_spills.csv")
+```
+
+Here's the [resulting map](https://public.flourish.studio/visualisation/18287818/).
+We can see that most of the largest spills seem to be clustered in and around areas that also have higher non-white population percentages.
+Fewer areas with smaller non-white populations contain those same clusters of big spills.
+
+```{r, results = 'asis'}
+
+cat('<div class="flourish-embed flourish-map" data-src="visualisation/18287818"><script src="https://public.flourish.studio/resources/embed.js"></script></div>')
+```
+
+Note that this may not be 100% accurate — the way these spills are reported is messy.
+As shown in the code above, I removed one spill because the amount noted in the release_substance column was very different than the amount entered in the quantity column.
+It's possible there were other badly-entered spills, but I'm creating this map under the assumption that most reported values are accurate and do genuinely represent the biggest spills during the five-year Census period.
+
+What about when we compare those same major spills to socioeconomic data?
+Here's the same process repeated, but with median household income this time instead of non-white population.
+
+```{r output=FALSE, include=TRUE}
+
+#Loading in data and selecting relevant columns
+ct_income <- get_acs(geography = "tract", 
+          variables = c(median_inc ="B19013_001"), 
+          state="CT", 
+          year= 2021) |>
+          clean_names() |>
+          rename (median_income = estimate) |>
+          select(-moe, -variable)
+
+#Exporting
+ct_income |>
+  write_csv("ct_median_income.csv")
+
+```
+
+After using the same process of creating a custom map in Flourish with Census tract boundaries, here's the [result.](https://public.flourish.studio/visualisation/18288615/)
+
+```{r, results='asis'}
+
+cat('<div class="flourish-embed flourish-map" data-src="visualisation/18288615"><script src="https://public.flourish.studio/resources/embed.js"></script></div>')
+
+```
+
+The correlation doesn't appear as strong here, because the major spills are spread across tracts with varying household incomes.
+But there are definitely still some notable trends.
+Namely, the richest part of the state (the southwest corner) doesn't house as many spills as areas like Hartford, which have median household incomes on the lower side.
+
+Why can't we calculate actual correlation to confirm the relationship between race and spills, or income and spills?
+That's because the Census Bureau doesn't provide data on those variables at a municipality level.
+The spill data from Connecticut's environment department, on the other hand, is all recorded on a municipality level, so there's no way to compare the two.
+
+We could mutate the dataset to assign each of the spills to its respective county and then compare that to county-level Census data.
+But Connecticut only has eight counties, and my evaluation of Census tracts showed that there's significant variation of non-white population and median household income within these counties.
+So aggregating data by county would have provided a look at the data that's far too broad to see any nuances.
+
+With more time, I could clean the formatting of the addresses and use a geocoding API to assign each spill to its respective Census tract, and then calculate correlation with tract-level data.
+
+To end, I wanted to get an overview of spills generally.
+
+**What have spill numbers looked like between 1996 and 2022?**
 
 ```{r output=FALSE, include=TRUE}
 #Taking out 2024 because not enough data has been recorded yet, and then grouping by year to calculate how many spills reported per year
@@ -121,8 +499,6 @@ spills_by_year <- spills |>
   summarise (
     spill_number = n()
   )
-
-spills_by_year
 ```
 
 ```{r output=FALSE, include=TRUE}
@@ -137,9 +513,9 @@ cat('<div class="flourish-embed flourish-chart" data-src="visualisation/18240536
 
 ```
 
-I'm curious what the biggest types of spills recorded in this dataset have been, and how they may have changed over the years.
+I was also curious what the biggest types of spills recorded in this dataset have been, and how they may have changed over the years.
 
-2.  **What are the trends in top substances spilled over the years?**
+**What are the trends in top substances spilled over the years?**
 
 ```{r output=FALSE, include=TRUE}
 spills_by_type <- spills |>
@@ -248,7 +624,7 @@ Also, if we look at 2001, fuel oil related spills are at their second-highest.
 But the other top substances don't peak — so these top substances aren't the only thing causing the massive peak of reports in 2001, evidently.
 So what is causing the peak?
 
-3.  **What could have contributed to the peak of reported spills in 2001?**
+**What could have contributed to the peak of reported spills in 2001?**
 
 One big factor that could have caused the peak in that year is the 2001 anthrax scare.
 
@@ -292,248 +668,3 @@ spill_types_2002 |>
 ```
 
 Per the code results, anthrax-related reports in 2001 made up more than 5 percent of total reports that year, whereas anthrax-related reports in 2002 made up just over 1 percent of total reports that year, showing a significant difference and lending support to the hypothesis that anthrax reports drove at least part of the massive peak in 2001 reports.
-
-4.  **How have spills varied (both in raw numbers and normalized for population) across different towns in Connecticut?**
-
-Let's move on to grouping by place, to see if there are trends in where spills have been reported.
-To narrow down the scope, let's look at roughly the last decade of recorded data (2010 and after).
-
-```{r output=FALSE, include=TRUE}
-
-#Filtering for 2010 and after
-after_2010_spills <- spills |>
-  filter (year > 2009)
-
-#Standardizing stylization of place names 
-after_2010_spills$town_of_release <- toupper(after_2010_spills$town_of_release)
-
-
-#Cleaning up some messy/wrong names 
-after_2010_spills <- after_2010_spills |>
-  mutate(
-    town_of_release = case_when (
-      town_of_release == "GRONTON" ~ "GROTON",
-      town_of_release == "GROTOM" ~ "GROTON",
-      town_of_release == "MIFORD" ~ "MILFORD",
-      town_of_release == "MILLFORD" ~ "MILFORD",
-      town_of_release == "MONTOVILLE" ~ "MONTVILLE",
-      town_of_release == "OOLD SAYBROOK" ~ "OLD SAYBROOK",
-      town_of_release == "WATERTOWM" ~ "WATERTOWN",
-      town_of_release == "NORTHFORD" ~ "NORTH BRANFORD",
-      .default = town_of_release
-    )
-  )
-
-#Grouping by place 
-spills_by_town <- after_2010_spills |>
-  group_by (town_of_release) |>
-  summarise (
-    reports_by_town = n()
-  ) |>
-  arrange(desc(reports_by_town)) |>
-  slice(1:170)
-
-#Exporting as CSV so we can map in Flourish  
-spills_by_town |>
-  write_csv("spills_by_town.csv")
-  
-
-
-```
-
-To clean up the data by town (in the chunk of code above), I cross-compared with name keys in a GeoJSON file of Connecticut municipalities, and took out any instances of towns that didn't correspond to the shapefile data (or spills that had no town attached to them).
-I uploaded that GeoJSON data and the above data of spills by town to Flourish to create a custom map.
-
-Here's the [resulting map](https://public.flourish.studio/visualisation/18244615/) of spills by town.
-More spills were reported from towns in central Connecticut and southwestern Connecticut.
-
-```{r, results = 'asis'}
-cat('<div class="flourish-embed flourish-map" data-src="visualisation/18244615"><script src="https://public.flourish.studio/resources/embed.js"></script></div>')
-
-```
-
-That's just with raw numbers.
-To see what the impact on people is, we can further expand this map by normalizing the number of spills per 1,000 residents in each town.
-I used the same GeoJSON data, paired with data below.
-
-```{r output=FALSE, include=TRUE}
-#Reading in and joining a table that has populations for each town 
-town_populations <- read_csv("pop_towns2022.csv") |>
-  clean_names () |>
-  rename (town_of_release = town)
-
-#Making joining easier by getting rid of the N/A row in the spills by town table and renaming
-spills_by_town <- spills_by_town |>
-  arrange(town_of_release)
-
-#Joining and calculating spills per 1000 people
-spills_per_thousand <- spills_by_town |>
- inner_join(town_populations, by=c("town_of_release")) |>
-  mutate (per_thousand_spill_rate = (reports_by_town/population)*1000) |>
-  arrange(desc(per_thousand_spill_rate))
-
-#Exporting 
-spills_per_thousand |> write_csv("spills_per_thousand.csv")
-```
-
-Here's a [map](https://public.flourish.studio/visualisation/18244185/) that shows those results charted.
-
-```{r, results='asis'}
-cat ('<div class="flourish-embed flourish-map" data-src="visualisation/18244185"><script src="https://public.flourish.studio/resources/embed.js"></script></div>')
-
-```
-
-The patterns look different — the southwestern and central towns that saw the largest numbers of spills didn't necessarily see the highest spill rates.
-The highest rates were spread out across the state, with Franklin, Stafford and Bloomfield at the top of the list.
-This would be another interesting thing to ask sources about.
-Why are there so many spills in these places, relative to the number of people who live there?
-Some higher rates make sense — Groton, for instance, is home to a large U.S.
-Navy submarine contracting company.
-But others, like Franklin (a small rural town) might point to less obvious answers.
-
-Often, with environmental spills, there's a small subset of companies that's at fault for repeated incidents.
-Let's see if that's the case here.
-
-5.  **What are the trends of actors responsible for these spills?**
-
-Before bringing this data into R, I ran it through OpenRefine to do some preliminary cleaning.
-The way that company/discharger names are stylized is very inconsistent, so I wanted a slightly more accurate count by combining some non-unique company names (e.g. EXXON MOBIL and exxon mobil).
-OpenRefine didn't catch everything, so I wrote a couple lines of code to manually rename some items that seemed to be within the top 10 dischargers or so.
-I also standardized some discharger names that have changed over the years, such as companies that have now rebranded to become Eversource Energy.
-I also filtered out spills labeled as coming from certain dischargers or that didn't have a discharger name attached to them — more of my reasoning is explained in comments below.
-
-```{r output=FALSE, include=TRUE}
-#Loading in and cleaning up
-#Connecticut Light and Power does business as/is a subsidiary of Eversource, so I standardized all of those names
-
-companies <- read_csv("companies_cleaned_spills.csv") |>
-  clean_names () |>
-  rename (responsible_party = responsibile_party_discharger) |>
-  mutate (responsible_party = case_when (
-    responsible_party == "cumberland farms" ~ "CUMBERLAND FARMS",
-    responsible_party == "Cumberland Farms" ~ "CUMBERLAND FARMS",
-    responsible_party == "Cumberland Farms Inc." ~ "CUMBERLAND FARMS",
-    responsible_party == "EVERSOURCE" ~ "EVERSOURCE ENERGY",
-    responsible_party == "Eversource" ~ "EVERSOURCE ENERGY",
-    responsible_party == "Eversource Energy" ~ "EVERSOURCE ENERGY",
-    responsible_party == "eversource" ~ "EVERSOURCE ENERGY",
-    responsible_party == "CONNECTICUT LIGHT & POWER" ~ "EVERSOURCE ENERGY",
-    responsible_party == "CT DOT" ~ "CT TRANSIT",
-    responsible_party == "ct dot" ~ "CT TRANSIT",
-    responsible_party == "DOT" ~ "CT TRANSIT",
-    responsible_party == "alliance energy" ~ "alliance global",
-    responsible_party == "Alliance Energy" ~ "alliance global",
-    responsible_party == "alliance" ~ "alliance global",
-    responsible_party == "ALLIANCE ENERGY" ~ "alliance global",
-    responsible_party == "CL AND P" ~ "EVERSOURCE ENERGY",
-    responsible_party == "cl and p" ~ "EVERSOURCE ENERGY",
-    responsible_party == "C. L. & P" ~ "EVERSOURCE ENERGY",
-    responsible_party == "CL&P" ~ "EVERSOURCE ENERGY",
-    responsible_party == "UNITED ILLUMINATING" ~ "United Illuminating",
-    responsible_party == "p&w" ~ "PRATT & WHITNEY",
-    responsible_party == "P&W" ~ "PRATT & WHITNEY",
-    responsible_party == "NORTHEAST UTILITIES" ~ "EVERSOURCE ENERGY",
-    responsible_party == "cwpm" ~ "CWPM",
-    responsible_party == "cwpm" ~ "CWPM",
-    responsible_party == "auto tlc" ~ "AUTOMATIC TLC",
-    responsible_party == "TLC" ~ "AUTOMATIC TLC",
-    TRUE ~ responsible_party
-  ))
-  
-#Grouping by dischargers  
-companies <- companies |>
-  group_by (responsible_party) |>
-  summarise (
-    number_of_spills = n()
-  ) |>
-  arrange(desc(number_of_spills)) 
-
-#Taking out spills that don't have a named discharger, since we're only looking at companies
-companies_no_unknown <- companies |>
-  filter(!str_detect(responsible_party, regex('UNKNOWN|unk|N/A|same|as above|UNDETERMINED', ignore_case=TRUE)))
-
-#Taking out spills attributed to motor vehicle accidents, since most don't involve a company
-companies_no_unknown <- companies_no_unknown |>
-  filter(!str_detect(responsible_party, regex('M.V.A.|MVA|M.V.A|PRIVATE VEHICLE|MV ACCIDENT|PRIVATE AUTO|PRIVATE MV', ignore_case=TRUE)))
-
-#Taking out spills attributed to "saa," since that broadly encompasses all state administrative agencies rather than one specific company
-companies_no_unknown <- companies_no_unknown |>
-  filter(!str_detect(responsible_party, regex('saa', ignore_case=TRUE)))
-
-#Exporting as a csv
-companies_no_unknown <- companies_no_unknown |>
-  slice(1:10) |>
-  write_csv("top_company_dischargers.csv")
-```
-
-Here's a [chart](https://public.flourish.studio/visualisation/18258842/) showing the top dischargers.
-Numbers might be slightly off, since we aggregated all subsidiaries and companies that used to go by different names but have since merged or rebranded.
-Taking that into account, it seems like Eversource and its subsidiaries are polluting/spilling far more than any other single entity in the state.
-
-```{r, results= 'asis'}
-cat('<div class="flourish-embed flourish-chart" data-src="visualisation/18258842"><script src="https://public.flourish.studio/resources/embed.js"></script></div>')
-```
-
-Eversource, Global Partners, United Illuminating, ExxonMobil and Automatic TLC are all energy or gas companies of some kind, making the top polluters overwhelmingly related to electricity, energy or oil and gas.
-Cumberland Farms is a gas station and convenience store, so depending on the nature of their spills, they could also be factored into this count.
-I'd say this is fairly unsurprising — a lot of spills tend to be oil and fuel-related.
-
-I also noticed that lots of the spill incidents did not have a discharger name recorded.
-The code below shows us that more than 56% of total spills recorded between 1996 and 2022 aren't attached to a specific responsible party.
-Talking to sources about the implications of this would be interesting — does this mean that responsible parties aren't held accountable?
-Why are dischargers so often not recorded?
-
-```{r}
-unknown_spills <- spills |>
-  filter(is.na(responsibile_party_discharger) | str_detect(responsibile_party_discharger, regex("UNKNOWN|UNK|unknown|Unknown|N/A|UNDETERMINED|unk.|UNKNOWN POLLUTER|UNK.|unknown at this time", ignore_case = TRUE)))
-
-(nrow(unknown_spills) / nrow(spills)) *100
-
-```
-
-Finally, let's look at spills from an environmental justice perspective.
-
-6.  **How are demographic factors (race, socioeconomic status) related to spills?**
-
-For this, I'm going to look at how non-white percentage and median household income might correlate with the amount of spills by town.
-I'm using the Census API to load in data on these variables, starting with non-white percentage (which I had to calculate manually, since the Census Bureau does not provide an aggregate measure of non-white population).
-
-```{r output=FALSE, include=TRUE}
-census_vars <- load_variables(2021, "acs5", cache=TRUE)
-
-#Loading in data for white population 
-ct_demographics <- get_acs(geography = "tract", 
-          variables = c(whitepop ="B02001_002"), 
-          state="CT", 
-          year= 2021)
-
-#Loading in data for total population of each census tract
-ct_population <- get_acs(geography = "tract", 
-            variables = c(totalpop = "B01003_001"), 
-            state = "CT", 
-            year = 2021)
-
-#Joining the two tables, cleaning up column names, and removing any columns we don't need
-ct_demographics <- ct_demographics |>
- inner_join(ct_population, by=c("GEOID")) |>
-  clean_names() |>
-  select(-moe_x, -name_y, -moe_y, -variable_x, -variable_y) |>
-  rename (census_tract = name_x,
-          white_pop = estimate_x, 
-          total_pop = estimate_y
-  )
-
-#Calculating the total non-white population percentage
-ct_demographics <- ct_demographics |>
-  mutate (
-    white_pct = (white_pop/total_pop)*100
-  ) |>
-  mutate(
-    non_white_pct = (100-white_pct)
-  )
-
-#Exporting 
-ct_demographics |>
-  write_csv("ct_demographics.csv")
-
-```
